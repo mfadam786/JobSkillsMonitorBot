@@ -1,4 +1,5 @@
 from django.contrib import admin
-from backend.models import location, listing
+from .models import location, listing
 # Register your models here.
-admin.site.register(admin, location, listing)
+admin.site.register(location)
+admin.site.register(listing)

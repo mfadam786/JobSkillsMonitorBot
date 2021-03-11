@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Skills Monitor</title>
-</head>
-<body>
-    <div>
-        <h1>Hello World</h1>
+{% extends './base.html' %}
+{% block content %}
+    <div class="col-xs-4">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="inputJob" placeholder="Enter a job title...">
+                <small id="emailHelp" class="form-text text-muted">subtext here</small>
+            </div>
+            <button type="submit" class="btn btn-success">Go</button>
+        </form>
     </div>
-</body>
-</html>
+{% endblock %}

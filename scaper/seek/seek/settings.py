@@ -12,12 +12,15 @@ BOT_NAME = 'seek'
 SPIDER_MODULES = ['seek.spiders']
 NEWSPIDER_MODULE = 'seek.spiders'
 
+ITEM_PIPELINES = {
+    'seek.pipelines.SeekPipeline': 900,
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'seek (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

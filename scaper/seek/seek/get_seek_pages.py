@@ -28,9 +28,8 @@ def get_seek_pages():
             else:
                 end_of_pages = True
 
-
         else:
-            raise ValueError(f"Error parsing url {START_URL}")
+            raise ValueError(f"Error parsing url {url}")
 
     return urls
 

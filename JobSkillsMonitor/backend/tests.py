@@ -37,9 +37,9 @@ class TestGetLinks(StaticLiveServerTestCase):
 
         for link in links:
             print(link.get_attribute('href'))
-
         self.driver.get('https://en.wikipedia.org/wiki/List_of_programming_languages')
-        print(self.driver.find_element_by_xpath("/html/body/div[3]/div[3]/div[5]/div[1]/div[@class='div-col']/ul[*]/li"))
+        for i in self.driver.find_element_by_xpath("/html/body/div[3]/div[3]/div[5]/div[1]/div[@class='div-col']/ul[*]/li"):
+            print(i.getText())
         
         # length = 0
         # # length = len(self.driver.find_element_by_xpath("//a[@data-automation='jobTitle']"))

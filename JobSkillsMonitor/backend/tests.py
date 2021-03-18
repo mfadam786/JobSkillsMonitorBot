@@ -25,11 +25,11 @@ class TestGetLinks(StaticLiveServerTestCase):
     def test_create_quiz(self):
 
 
-        self.driver.get('https://www.seek.co.nz/jobs-in-information-communication-technology/')
+        # self.driver.get('https://www.seek.co.nz/jobs-in-information-communication-technology/')
 
 
-        for link in self.driver.find_elements_by_xpath("//a[@data-automation='jobTitle']"):
-            print(link.get_attribute('href'))
+        # for link in self.driver.find_elements_by_xpath("//a[@data-automation='jobTitle']"):
+        #     print(link.get_attribute('href'))
 
         
         #------------------------------------------
@@ -39,7 +39,7 @@ class TestGetLinks(StaticLiveServerTestCase):
         languages = []
         languages = self.driver.find_elements_by_xpath("//*[@id='mw-content-text']/div[1]/div[@class='div-col']/ul[*]/li")
 
-        f = open("List_Programming_Languages.txt", "w")
+        f = open("List_Programming_Languages.txt", "w", encoding='utf-8')
         for lang in languages:
             f.write(lang.text + '\n')
             print(lang.text)

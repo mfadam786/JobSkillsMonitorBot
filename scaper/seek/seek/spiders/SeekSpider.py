@@ -1,6 +1,5 @@
 import scrapy
 from ..get_seek_pages import get_seek_pages
-from scrapy.loader import ItemLoader
 from ..items import SeekItem
 
 class JobsSpider(scrapy.Spider):

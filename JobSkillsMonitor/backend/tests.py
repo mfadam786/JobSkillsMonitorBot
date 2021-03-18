@@ -34,15 +34,31 @@ class TestGetLinks(StaticLiveServerTestCase):
         
         #------------------------------------------
 
-        self.driver.get('https://en.wikipedia.org/wiki/List_of_programming_languages')
+        # self.driver.get('https://en.wikipedia.org/wiki/List_of_programming_languages')
                
-        languages = []
-        languages = self.driver.find_elements_by_xpath("//*[@id='mw-content-text']/div[1]/div[@class='div-col']/ul[*]/li")
+        # languages = []
+        # languages = self.driver.find_elements_by_xpath("//*[@id='mw-content-text']/div[1]/div[@class='div-col']/ul[*]/li")
 
-        f = open("List_Programming_Languages.txt", "w", encoding='utf-8')
-        for lang in languages:
-            f.write(lang.text + '\n')
-            print(lang.text)
+        # f = open("List_Programming_Languages.txt", "w", encoding='utf-8')
+        # for lang in languages:
+        #     f.write(lang.text + '\n')
+        #     print(lang.text)
 
-        f.close()
+        # f.close()
+
+        #--------------------------------------------------------------------------------------------
+
+        self.driver.get('https://en.wikipedia.org/wiki/Comparison_of_web_frameworks')
+
+        # print(dir(self.driver))
+
+        # fr = open("Frameworks.txt", "w", encoding='utf-8')
+
+        for table in self.driver.find_elements_by_class_name("wikitable"):
+            # fr.write(framework.text + '\n')
+            print(table.find_elements_by_xpath("//td"))
+
+            for row in table.find_elements_by_css_selector("tr"):
+                print(row)
     
+        # fr.close()

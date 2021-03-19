@@ -11,13 +11,12 @@ class JobsSpider(scrapy.Spider):
     #     yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
+
         job = SeekItem()
         job["id"]= response.url.split("/")[-1]
-
-
         job["title"] = response.xpath('//span[@data-automation="job-detail-title"]//text()').get()
         job["employer"] = response.xpath('//span[@data-automation="advertiser-name"]//text()').get()
-        job["main_content"] = response.xpath('//div[@data-automation="jobDescription"]//text()').getall()
+        job["main_content"] = response.xpath('//div[@data-automation="jobDescription"]//*[not(@data-automation="mobileTemplate")]//*[not(@type="text/css")]/text()').getall()
         job["date_listed"] = response.xpath('//dd[@data-automation="job-detail-date"]//text()').get()
         job["main_location"] = response.xpath('//section[@role="region"]/dl/dd[2]//text()').get()
         job["sub_location"] = response.xpath('//section[@role="region"]/dl/dd[2]/span/span/span/text()').get()

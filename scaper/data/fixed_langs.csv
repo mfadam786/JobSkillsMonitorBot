@@ -1,0 +1,686 @@
+,lang,fixed
+0,A.NET (A#/A sharp),A.NET 
+1,A-0 System,A-0 System
+2,A+ (A (plus),A+ 
+3,ABAP,ABAP
+4,ABC,ABC
+5,ABC ALGOL,ABC ALGOL
+6,ACC,ACC
+7,Accent (Rational Synergy),Accent 
+8,Ace DASL (Distributed Application Specification Language),Ace DASL 
+9,Action!,Action!
+10,ActionScript,ActionScript
+11,Actor,Actor
+12,Ada,Ada
+13,Adenine (Haystack),Adenine 
+14,AdvPL,AdvPL
+15,Agda,Agda
+16,Agilent VEE (Keysight VEE),Agilent VEE 
+17,Agora,Agora
+18,AIMMS,AIMMS
+19,Aldor,Aldor
+20,Alef,Alef
+21,ALF,ALF
+22,ALGOL 58,ALGOL 58
+23,ALGOL 60,ALGOL 60
+24,ALGOL 68,ALGOL 68
+25,ALGOL W,ALGOL W
+26,Alice (Alice ML),Alice 
+27,Alma-0,Alma-0
+28,AmbientTalk,AmbientTalk
+29,Amiga E,Amiga E
+30,AMOS (AMOS BASIC),AMOS 
+31,AMPL,AMPL
+32,AngelScript,AngelScript
+33,Apache Pig latin,Apache Pig latin
+34,"Apex (Salesforce.com, Inc)",Apex 
+35,APL,APL
+36,App Inventor for Android's visual block language (MIT App Inventor),App Inventor for Android's visual block language 
+37,AppleScript,AppleScript
+38,APT,APT
+39,Arc,Arc
+40,ARexx,ARexx
+41,Argus,Argus
+42,Assembly language (ASM),Assembly language 
+43,AutoIt,AutoIt
+44,AutoLISP / Visual LISP,AutoLISP / Visual LISP
+45,Averest,Averest
+46,AWK,AWK
+47,Axum,Axum
+48,B,B
+49,Babbage,Babbage
+50,Ballerina,Ballerina
+51,Bash,Bash
+52,BASIC,BASIC
+53,Batch file (Windows/MS-DOS),Batch file 
+54,bc (basic calculator),bc 
+55,BCPL,BCPL
+56,BeanShell,BeanShell
+57,Bertrand,Bertrand
+58,BETA,BETA
+59,BLISS,BLISS
+60,Blockly,Blockly
+61,BlooP,BlooP
+62,Boo,Boo
+63,Boomerang,Boomerang
+64,Bosque,Bosque
+65,C – ISO/IEC 9899,C – ISO/IEC 9899
+66,C-- (C minus minus),C-- 
+67,C++ (C plus plus) – ISO/IEC 14882,C++ 
+68,C*,C*
+69,C# (C sharp) – ISO/IEC 23270,C# 
+70,C/AL,C/AL
+71,Caché ObjectScript,Caché ObjectScript
+72,C Shell (csh),C Shell 
+73,Caml,Caml
+74,Cayenne (Lennart Augustsson),Cayenne 
+75,CDuce,CDuce
+76,Cecil,Cecil
+77,Cesil (Computer Education in Schools Instruction Language),Cesil 
+78,Céu,Céu
+79,Ceylon,Ceylon
+80,CFEngine,CFEngine
+81,Cg (High-Level Shader/Shading Language [HLSL]),Cg 
+82,Ch,Ch
+83,Chapel (Cascade High Productivity Language),Chapel 
+84,Charm,Charm
+85,CHILL,CHILL
+86,CHIP-8,CHIP-8
+87,ChucK,ChucK
+88,Cilk (also Cilk++ and Cilk plus),Cilk 
+89,CL (IBM i Control Language) (IBM),CL 
+90,Claire,Claire
+91,Clarion,Clarion
+92,Clean,Clean
+93,Clipper,Clipper
+94,CLIPS,CLIPS
+95,CLIST,CLIST
+96,Clojure,Clojure
+97,CLU,CLU
+98,CMS-2,CMS-2
+99,COBOL – ISO/IEC 1989,COBOL – ISO/IEC 1989
+100,CobolScript – COBOL Scripting language,CobolScript – COBOL Scripting language
+101,Cobra,Cobra
+102,CoffeeScript,CoffeeScript
+103,ColdFusion,ColdFusion
+104,COMAL,COMAL
+105,Combined Programming Language (CPL),Combined Programming Language 
+106,COMIT,COMIT
+107,Common Intermediate Language (CIL),Common Intermediate Language 
+108,Common Lisp (also known as CL),Common Lisp 
+109,COMPASS,COMPASS
+110,Component Pascal,Component Pascal
+111,Constraint Handling Rules (CHR),Constraint Handling Rules 
+112,COMTRAN,COMTRAN
+113,Cool,Cool
+114,Coq,Coq
+115,Coral 66,Coral 66
+116,CorVision,CorVision
+117,COWSEL,COWSEL
+118,CPL,CPL
+119,Cryptol,Cryptol
+120,Crystal,Crystal
+121,Csound,Csound
+122,Cuneiform,Cuneiform
+123,Curl,Curl
+124,Curry,Curry
+125,Cybil,Cybil
+126,Cyclone,Cyclone
+127,Cypher Query Language,Cypher Query Language
+128,Cython,Cython
+129,CEEMAC,CEEMAC
+130,D,D
+131,Dart,Dart
+132,Darwin,Darwin
+133,DataFlex,DataFlex
+134,Datalog,Datalog
+135,DATATRIEVE,DATATRIEVE
+136,dBase,dBase
+137,dc,dc
+138,DCL (DIGITAL Command Language),DCL 
+139,Delphi,Delphi
+140,DinkC,DinkC
+141,DIBOL,DIBOL
+142,Dog,Dog
+143,Draco,Draco
+144,DRAKON,DRAKON
+145,Dylan,Dylan
+146,DYNAMO,DYNAMO
+147,DAX (Data Analysis Expressions),DAX 
+148,E,E
+149,Ease,Ease
+150,Easy PL/I,Easy PL/I
+151,EASYTRIEVE PLUS,EASYTRIEVE PLUS
+152,eC,eC
+153,ECMAScript,ECMAScript
+154,Edinburgh IMP,Edinburgh IMP
+155,EGL,EGL
+156,Eiffel,Eiffel
+157,ELAN,ELAN
+158,Elixir,Elixir
+159,Elm,Elm
+160,Emacs Lisp,Emacs Lisp
+161,Emerald,Emerald
+162,Epigram,Epigram
+163,EPL (Easy Programming Language),EPL 
+164,EPL (Eltron Programming Language),EPL 
+165,Erlang,Erlang
+166,es,es
+167,Escher,Escher
+168,ESPOL,ESPOL
+169,Esterel,Esterel
+170,Etoys,Etoys
+171,Euclid,Euclid
+172,Euler,Euler
+173,Euphoria,Euphoria
+174,EusLisp Robot Programming Language,EusLisp Robot Programming Language
+175,CMS EXEC (EXEC),CMS EXEC 
+176,EXEC 2,EXEC 2
+177,Executable UML,Executable UML
+178,Ezhil,Ezhil
+179,F,F
+180,F# (F sharp),F# 
+181,F*,F*
+182,Factor,Factor
+183,Fantom,Fantom
+184,FAUST,FAUST
+185,FFP,FFP
+186,fish,fish
+187,Fjölnir,Fjölnir
+188,FL,FL
+189,Flavors,Flavors
+190,Flex,Flex
+191,Flix,Flix
+192,FlooP,FlooP
+193,FLOW-MASTIC (B0),FLOW-MASTIC 
+194,FOCAL (Formulating On-Line Calculations in Algebraic Language/FOrmula CALculator),FOCAL 
+195,FOCUS,FOCUS
+196,FOIL,FOIL
+197,FORMAC (FORMula MAnipulation Compiler),FORMAC 
+198,@Formula,@Formula
+199,Forth,Forth
+200,Fortran – ISO/IEC 1539,Fortran – ISO/IEC 1539
+201,Fortress,Fortress
+202,FP,FP
+203,Franz Lisp,Franz Lisp
+204,Futhark,Futhark
+205,F-Script,F-Script
+206,Game Maker Language (Scripting language),Game Maker Language 
+207,GameMonkey Script,GameMonkey Script
+208,GAMS (General Algebraic Modeling System),GAMS 
+209,GAP,GAP
+210,G-code,G-code
+211,GDScript (Godot),GDScript 
+212,Genie,Genie
+213,GDL (Geometric Description Language),GDL 
+214,GEORGE,GEORGE
+215,GLSL (OpenGL Shading Language),GLSL 
+216,GNU E,GNU E
+217,GNU Guile (GNU Ubiquitous Intelligent Language for Extensions),GNU Guile 
+218,Go,Go
+219,Go!,Go!
+220,GOAL (Game Oriented Assembly Lisp),GOAL 
+221,Gödel,Gödel
+222,Golo,Golo
+223,GOM (Good Old Mad),GOM 
+224,Google Apps Script,Google Apps Script
+225,Gosu,Gosu
+226,GOTRAN (IBM 1620),GOTRAN 
+227,GPSS (General Purpose Simulation System),GPSS 
+228,GraphTalk (Computer Sciences Corporation),GraphTalk 
+229,GRASS,GRASS
+230,Grasshopper,Grasshopper
+231,Groovy (programming language)|Groovy (Apache Groovy),Groovy 
+232,Hack,Hack
+233,HAGGIS,HAGGIS
+234,HAL/S,HAL/S
+235,Halide (programming language),Halide 
+236,Hamilton C shell,Hamilton C shell
+237,Harbour,Harbour
+238,Hartmann pipelines,Hartmann pipelines
+239,Haskell,Haskell
+240,Haxe,Haxe
+241,Hermes,Hermes
+242,High Level Assembly (HLA),High Level Assembly 
+243,HLSL,HLSL
+244,Hollywood,Hollywood
+245,HolyC (TempleOS),HolyC 
+246,Hop,Hop
+247,Hopscotch,Hopscotch
+248,Hope,Hope
+249,Hugo (Interactive Fiction/IF),Hugo 
+250,Hume,Hume
+251,HyperTalk,HyperTalk
+252,Io,Io
+253,Icon,Icon
+254,IBM Basic assembly language,IBM Basic assembly language
+255,IBM HAScript,IBM HAScript
+256,IBM Informix-4GL,IBM Informix-4GL
+257,IBM RPG,IBM RPG
+258,IDL,IDL
+259,Idris,Idris
+260,Inform,Inform
+261,J,J
+262,J# (J sharp),J# 
+263,J++ (J plus plus),J++ 
+264,JADE,JADE
+265,Jai,Jai
+266,JAL,JAL
+267,Janus (concurrent constraint programming language),Janus 
+268,Janus (time-reversible computing programming language),Janus 
+269,JASS,JASS
+270,Java,Java
+271,JavaFX Script,JavaFX Script
+272,JavaScript(Scripting language),JavaScript
+273,Jess (programming language),Jess 
+274,JCL,JCL
+275,JEAN,JEAN
+276,Join Java,Join Java
+277,JOSS,JOSS
+278,Joule,Joule
+279,JOVIAL,JOVIAL
+280,Joy,Joy
+281,JScript,JScript
+282,JScript .NET,JScript .NET
+283,Julia,Julia
+284,Jython,Jython
+285,K,K
+286,Kaleidoscope,Kaleidoscope
+287,Karel,Karel
+288,KEE,KEE
+289,Kixtart,Kixtart
+290,Klerer-May System,Klerer-May System
+291,KIF (Knowledge Interchange Format),KIF 
+292,Kojo,Kojo
+293,Kotlin,Kotlin
+294,KRC,KRC
+295,KRL,KRL
+296,KRL (KUKA Robot Language),KRL 
+297,KRYPTON,KRYPTON
+298,KornShell (ksh),KornShell 
+299,Kodu,Kodu
+300,Kv (Kivy),Kv 
+301,LabVIEW,LabVIEW
+302,Ladder,Ladder
+303,LANSA,LANSA
+304,Lasso,Lasso
+305,Lava,Lava
+306,LC-3,LC-3
+307,Lean,Lean
+308,Legoscript,Legoscript
+309,LIL,LIL
+310,LilyPond,LilyPond
+311,Limbo,Limbo
+312,Limnor,Limnor
+313,LINC,LINC
+314,Lingo,Lingo
+315,LINQ,LINQ
+316,LIS,LIS
+317,LISA,LISA
+318,Language H,Language H
+319,Lisp – ISO/IEC 13816,Lisp – ISO/IEC 13816
+320,Lite-C,Lite-C
+321,Lithe,Lithe
+322,Little b,Little b
+323,LLL,LLL
+324,Logo,Logo
+325,Logtalk,Logtalk
+326,LotusScript,LotusScript
+327,LPC,LPC
+328,LSE,LSE
+329,LSL,LSL
+330,LiveCode,LiveCode
+331,LiveScript,LiveScript
+332,Lua,Lua
+333,Lucid,Lucid
+334,Lustre,Lustre
+335,LYaPAS,LYaPAS
+336,Lynx,Lynx
+337,M2001,M2001
+338,M4,M4
+339,M#,M#
+340,Machine code,Machine code
+341,MAD (Michigan Algorithm Decoder),MAD 
+342,MAD/I,MAD/I
+343,Magik,Magik
+344,Magma,Magma
+345,Máni,Máni
+346,Maple,Maple
+347,MAPPER (now part of BIS),MAPPER 
+348,MARK-IV (now VISION:BUILDER),MARK-IV 
+349,Mary,Mary
+350,MATLAB,MATLAB
+351,MASM Microsoft Assembly x86,MASM Microsoft Assembly x86
+352,MATH-MATIC,MATH-MATIC
+353,Maude system,Maude system
+354,Maxima (see also Macsyma),Maxima 
+355,Max (Max Msp – Graphical Programming Environment),Max 
+356,MaxScript internal language 3D Studio Max,MaxScript internal language 3D Studio Max
+357,Maya (MEL),Maya 
+358,MDL,MDL
+359,Mercury,Mercury
+360,Mesa,Mesa
+361,MHEG-5 (Interactive TV programming language),MHEG-5 
+362,Microcode,Microcode
+363,MicroScript,MicroScript
+364,Microsoft Power Fx,Microsoft Power Fx
+365,MIIS,MIIS
+366,Milk (programming language),Milk 
+367,MIMIC,MIMIC
+368,Mirah,Mirah
+369,Miranda,Miranda
+370,MIVA Script,MIVA Script
+371,ML,ML
+372,Model 204,Model 204
+373,Modelica,Modelica
+374,Modula,Modula
+375,Modula-2,Modula-2
+376,Modula-3,Modula-3
+377,Mohol,Mohol
+378,MOO,MOO
+379,Mortran,Mortran
+380,Mouse,Mouse
+381,MPD,MPD
+382,MSL,MSL
+383,MUMPS,MUMPS
+384,MuPAD,MuPAD
+385,Mutan,Mutan
+386,Mystic Programming Language (MPL),Mystic Programming Language 
+387,NASM,NASM
+388,Napier88,Napier88
+389,Neko,Neko
+390,Nemerle,Nemerle
+391,NESL,NESL
+392,Net.Data,Net.Data
+393,NetLogo,NetLogo
+394,NetRexx,NetRexx
+395,NewLISP,NewLISP
+396,NEWP,NEWP
+397,Newspeak,Newspeak
+398,NewtonScript,NewtonScript
+399,Nial,Nial
+400,Nickle (NITIN),Nickle 
+401,Nim,Nim
+402,Nix (Systems configuration language),Nix 
+403,NPL,NPL
+404,Not eXactly C (NXC),Not eXactly C 
+405,Not Quite C (NQC),Not Quite C 
+406,NSIS,NSIS
+407,Nu,Nu
+408,NWScript,NWScript
+409,NXT-G,NXT-G
+410,o:XML,o:XML
+411,Oak,Oak
+412,Oberon,Oberon
+413,OBJ2,OBJ2
+414,Object Lisp,Object Lisp
+415,ObjectLOGO,ObjectLOGO
+416,Object REXX,Object REXX
+417,Object Pascal,Object Pascal
+418,Objective-C,Objective-C
+419,Objective-J,Objective-J
+420,Obliq,Obliq
+421,OCaml,OCaml
+422,occam,occam
+423,occam-π,occam-π
+424,Octave,Octave
+425,OmniMark,OmniMark
+426,Opa,Opa
+427,Opal,Opal
+428,OpenCL,OpenCL
+429,OpenEdge ABL,OpenEdge ABL
+430,OPL,OPL
+431,OpenVera,OpenVera
+432,OPS5,OPS5
+433,OptimJ,OptimJ
+434,Orc,Orc
+435,ORCA/Modula-2,ORCA/Modula-2
+436,Oriel,Oriel
+437,Orwell,Orwell
+438,Oxygene,Oxygene
+439,Oz,Oz
+440,P,P
+441,P4,P4
+442,P′′,P′′
+443,ParaSail (programming language),ParaSail 
+444,PARI/GP,PARI/GP
+445,Pascal – ISO 7185,Pascal – ISO 7185
+446,Pascal Script,Pascal Script
+447,PCASTL,PCASTL
+448,PCF,PCF
+449,PEARL,PEARL
+450,PeopleCode,PeopleCode
+451,Perl,Perl
+452,PDL,PDL
+453,Pharo,Pharo
+454,PHP,PHP
+455,Pico,Pico
+456,Picolisp,Picolisp
+457,Pict,Pict
+458,Pike,Pike
+459,PILOT,PILOT
+460,Pipelines,Pipelines
+461,Pizza,Pizza
+462,PL-11,PL-11
+463,PL/0,PL/0
+464,PL/B,PL/B
+465,PL/C,PL/C
+466,PL/I – ISO 6160,PL/I – ISO 6160
+467,PL/M,PL/M
+468,PL/P,PL/P
+469,PL/SQL,PL/SQL
+470,PL360,PL360
+471,PLANC,PLANC
+472,Plankalkül,Plankalkül
+473,Planner,Planner
+474,PLEX,PLEX
+475,PLEXIL,PLEXIL
+476,Plus,Plus
+477,POP-11,POP-11
+478,POP-2,POP-2
+479,PostScript,PostScript
+480,PortablE,PortablE
+481,POV-Ray SDL,POV-Ray SDL
+482,Powerhouse,Powerhouse
+483,PowerBuilder – 4GL GUI application generator from Sybase,PowerBuilder – 4GL GUI application generator from Sybase
+484,PowerShell,PowerShell
+485,PPL,PPL
+486,Processing,Processing
+487,Processing.js,Processing.js
+488,Prograph,Prograph
+489,PROIV,PROIV
+490,Project Verona,Project Verona
+491,Prolog,Prolog
+492,PROMAL,PROMAL
+493,Promela,Promela
+494,PROSE modeling language,PROSE modeling language
+495,PROTEL,PROTEL
+496,ProvideX,ProvideX
+497,Pro*C,Pro*C
+498,Pure,Pure
+499,Pure Data,Pure Data
+500,PureScript,PureScript
+501,Python,Python
+502,Q (programming language from Kx Systems),Q 
+503,Q# (Microsoft programming language),Q# 
+504,Qalb,Qalb
+505,Quantum Computation Language,Quantum Computation Language
+506,QtScript,QtScript
+507,QuakeC,QuakeC
+508,QPL,QPL
+509,.QL,.QL
+510,R,R
+511,R++,R++
+512,Racket,Racket
+513,Raku,Raku
+514,RAPID,RAPID
+515,Rapira,Rapira
+516,Ratfiv,Ratfiv
+517,Ratfor,Ratfor
+518,rc,rc
+519,Reason,Reason
+520,REBOL,REBOL
+521,Red,Red
+522,Redcode,Redcode
+523,REFAL,REFAL
+524,REXX,REXX
+525,Rlab,Rlab
+526,ROOP,ROOP
+527,RPG,RPG
+528,RPL,RPL
+529,RSL,RSL
+530,RTL/2,RTL/2
+531,Ruby,Ruby
+532,Rust,Rust
+533,S,S
+534,S2,S2
+535,S3,S3
+536,S-Lang,S-Lang
+537,S-PLUS,S-PLUS
+538,SA-C,SA-C
+539,SabreTalk,SabreTalk
+540,SAIL,SAIL
+541,SAS,SAS
+542,SASL,SASL
+543,Sather,Sather
+544,Sawzall,Sawzall
+545,Scala,Scala
+546,Scheme,Scheme
+547,Scilab,Scilab
+548,Scratch,Scratch
+549,Script.NET,Script.NET
+550,Sed,Sed
+551,Seed7,Seed7
+552,Self,Self
+553,SenseTalk,SenseTalk
+554,SequenceL,SequenceL
+555,Serpent,Serpent
+556,SETL,SETL
+557,SIMPOL,SIMPOL
+558,SIGNAL,SIGNAL
+559,SiMPLE,SiMPLE
+560,SIMSCRIPT,SIMSCRIPT
+561,Simula,Simula
+562,Simulink,Simulink
+563,Singularity,Singularity
+564,SISAL,SISAL
+565,SLIP,SLIP
+566,SMALL,SMALL
+567,Smalltalk,Smalltalk
+568,SML,SML
+569,Strongtalk,Strongtalk
+570,Snap!,Snap!
+571,SNOBOL (SPITBOL),SNOBOL 
+572,Snowball,Snowball
+573,SOL,SOL
+574,Solidity,Solidity
+575,SOPHAEROS,SOPHAEROS
+576,Source,Source
+577,SPARK,SPARK
+578,Speakeasy,Speakeasy
+579,Speedcode,Speedcode
+580,SPIN,SPIN
+581,SP/k,SP/k
+582,SPS,SPS
+583,SQL,SQL
+584,SQR,SQR
+585,Squeak,Squeak
+586,Squirrel,Squirrel
+587,SR,SR
+588,S/SL,S/SL
+589,Starlogo,Starlogo
+590,Strand,Strand
+591,Stata,Stata
+592,Stateflow,Stateflow
+593,Subtext,Subtext
+594,SBL,SBL
+595,SuperCollider,SuperCollider
+596,SuperTalk,SuperTalk
+597,Swift (Apple programming language),Swift 
+598,Swift (parallel scripting language),Swift 
+599,SYMPL,SYMPL
+600,SystemVerilog,SystemVerilog
+601,T,T
+602,TACL,TACL
+603,TACPOL,TACPOL
+604,TADS (Text Adventure Development System),TADS 
+605,TAL,TAL
+606,Tcl,Tcl
+607,Tea,Tea
+608,TECO (text Editor and Corrector),TECO 
+609,TELCOMP,TELCOMP
+610,TeX,TeX
+611,TEX (Text Executive Programming Language),TEX 
+612,TIE,TIE
+613,"TMG (TransMo Griffer), compiler-compiler",TMG 
+614,Tom,Tom
+615,Toi,Toi
+616,Topspeed (Clarion),Topspeed 
+617,TPU (text Processing Utility),TPU 
+618,Trac,Trac
+619,TTM,TTM
+620,T-SQL (Transact-SQL),T-SQL 
+621,Transcript (LiveCode),Transcript 
+622,TTCN (Tree and Tabular Combined Notation),TTCN 
+623,Turing,Turing
+624,TUTOR (PLATO Author Language),TUTOR 
+625,TXL,TXL
+626,TypeScript,TypeScript
+627,Tynker,Tynker
+628,Ubercode,Ubercode
+629,UCSD Pascal,UCSD Pascal
+630,Umple,Umple
+631,Unicon,Unicon
+632,Uniface,Uniface
+633,UNITY,UNITY
+634,Unix shell,Unix shell
+635,UnrealScript,UnrealScript
+636,Vala,Vala
+637,Verilog,Verilog
+638,VHDL,VHDL
+639,Vim script,Vim script
+640,Viper (Ethereum/Ether (ETH)),Viper 
+641,Visual DataFlex,Visual DataFlex
+642,Visual DialogScript,Visual DialogScript
+643,Visual FoxPro,Visual FoxPro
+644,Visual J++ (Visual J plus plus),Visual J++ 
+645,Visual LISP,Visual LISP
+646,Visual Objects,Visual Objects
+647,Visual Prolog,Visual Prolog
+648,"WATFIV, WATFOR (WATerloo FORtran IV)","WATFIV, WATFOR "
+649,WebAssembly,WebAssembly
+650,WebDNA,WebDNA
+651,Whiley,Whiley
+652,Winbatch,Winbatch
+653,Wolfram Language,Wolfram Language
+654,Wyvern,Wyvern
+655,X++ (X plus plus/Microsoft Dynamics AX),X++ 
+656,X10,X10
+657,xBase,xBase
+658,xBase++ (xBase plus plus),xBase++ 
+659,XBL,XBL
+660,XC (targets XMOS architecture),XC 
+661,xHarbour,xHarbour
+662,XL,XL
+663,Xojo,Xojo
+664,XOTcl,XOTcl
+665,Xod,Xod
+666,XPL,XPL
+667,XPL0,XPL0
+668,XQuery,XQuery
+669,XSB,XSB
+670,XSharp (X#),XSharp 
+671,XSLT,XSLT
+672,Xtend,Xtend
+673,Yorick,Yorick
+674,YQL,YQL
+675,Yoix,Yoix
+676,YUI,YUI
+677,Z notation,Z notation
+678,"Zebra, ZPL, ZPL2","Zebra, ZPL, ZPL2"
+679,Zeno,Zeno
+680,ZetaLisp,ZetaLisp
+681,Zig,Zig
+682,ZOPL,ZOPL
+683,ZPL,ZPL
+684,Z++,Z++

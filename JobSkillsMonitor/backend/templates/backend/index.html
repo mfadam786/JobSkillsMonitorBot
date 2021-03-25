@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Skills Monitor</title>
-</head>
-<body>
-    <div>
-        <h1>Hello World</h1>
+{% extends './base.html' %}
+{% block content %}
+<div class="row h-100 justify-content-center align-items-center">
+        <div class="my-3 py-4 row w-100 border rounded shaded">
+            <div class="col-md-12">
+            <form class ="frm p-3 w-75">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputJob" placeholder="Enter a job title...">
+                </div>
+                <button type="submit" class="btn btn-info px-5">Go</button>
+            </form>
+        </div>   
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

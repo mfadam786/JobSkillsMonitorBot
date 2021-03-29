@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Skills Monitor</title>
-</head>
-<body>
+{% extends './base.html' %}
+{% block content %}
     <div>
-        <h1>Test Hello World</h1>
+        <img src="data:image/png;base64,{{ data }}" width="550" height="450">
     </div>
-</body>
-</html>
+{% endblock %}

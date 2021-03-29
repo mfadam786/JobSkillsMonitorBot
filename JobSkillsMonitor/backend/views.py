@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from .models import Listing
 import pandas as pd
+import matplotlib.pyplot as plt
+import urllib, base64
 import numpy as np
+import io
 import datetime
 # Create your views here.
 
@@ -61,3 +64,22 @@ def store_data(request):
 
     print(i)
     return render(request, 'backend/test.html')
+
+def testPage(request):
+    listings = Listing.objects.filter(
+        job_role = "Management",
+    )
+
+    print(len(listings))
+
+    plt.plot([1, 2, 5, 7, 9, 3, 4])
+
+    fig = plt.gcf()
+
+    #converting graph into string buffer and converting 64bit code into image
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png")
+    buf.seek(0)
+    string = base64.b64encode(buf.read())
+    uri = urllib.parse.quote(string)
+    return render(request, 'backend/test.html',{"data":uri})

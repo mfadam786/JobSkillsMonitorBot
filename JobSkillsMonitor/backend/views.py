@@ -3,11 +3,20 @@ from .models import Listing
 import pandas as pd
 import numpy as np
 import datetime
+import requests
 # Create your views here.
 
 def index(request):
     return render(request, 'backend/index.html')
 
+def test_maps(request):
+
+    regions = Listing.objects.values_list('region')
+
+    r = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/Auckland.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1616991171828&autocomplete=true&country=nz')
+
+    print(r.status_code)
+    return render(request, 'backend/map_test.html', {'regions': regions})
 def store_data(request):
 
     csv_data = pd.read_csv('../scaper/data/scraped.csv', index_col=0)

@@ -2,36 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Change a map's style</title>
+<title>Add a default marker to a web map</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#menu {
+    position: absolute;
+    background: #efefef;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
 </style>
 </head>
 <body>
-
-<style>
-    #menu {
-        position: absolute;
-        background: #efefef;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-    }
-    .marker {
-  background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-</style>
-
 <div id="map"></div>
-
+ 
 <div id="menu">
     <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
     <!-- See a list of Mapbox-hosted public styles at -->
@@ -48,57 +36,33 @@ body { margin: 0; padding: 0; }
     <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
     <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
 </div>
-{{ regions }}
-<script>
-var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-77.032, 38.913]
-    },
-    properties: {
-      title: 'Mapbox',
-      description: 'Washington, D.C.'
-    }
-  },
-  }]
-};
 
+<script>
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw';
-    var map = new mapboxgl.Map({
-        container: 'map', // container ID
+var map = new mapboxgl.Map({
+        container: 'map',
         style: 'mapbox://styles/smitcr7/ckmu1gkhy4k9s17pgprvhq1ub', // style URL
         center: [173.621343, -41.376809], // starting position [lng, lat]
         zoom: 5 // starting zoom
-    });
-    
-
-    var layerList = document.getElementById('menu');
-    var inputs = layerList.getElementsByTagName('input');
-
-    function switchLayer(layer) {
-        var layerId = layer.target.id;
-        map.setStyle('mapbox://styles/' + layerId);
-    }
-
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].onclick = switchLayer;
-    }
-    // add markers to map
-geojson.features.forEach(function(marker) {
-
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
-
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
 });
-</script>
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
 
+function switchLayer(layer) {
+	var layerId = layer.target.id;
+	map.setStyle('mapbox://styles/' + layerId);
+}
+
+for (var i = 0; i < inputs.length; i++) {
+	inputs[i].onclick = switchLayer;
+}
+
+// Create a default Marker and add it to the map.
+var marker1 = new mapboxgl.Marker()
+.setLngLat([173.621343, -41.376809])
+.addTo(map);
+ 
+</script>
+ 
 </body>
 </html>

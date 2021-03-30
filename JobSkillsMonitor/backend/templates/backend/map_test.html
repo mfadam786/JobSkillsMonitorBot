@@ -19,7 +19,16 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 <div id="map"></div>
- 
+<style>
+ .marker {
+  background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+</style>
 <div id="menu">
     <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
     <!-- See a list of Mapbox-hosted public styles at -->
@@ -38,7 +47,7 @@ body { margin: 0; padding: 0; }
 </div>
 
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw';
+mapboxgl.accessToken = 'pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw';
 var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/smitcr7/ckmu1gkhy4k9s17pgprvhq1ub', // style URL
@@ -58,10 +67,24 @@ for (var i = 0; i < inputs.length; i++) {
 }
 
 // Create a default Marker and add it to the map.
-var marker1 = new mapboxgl.Marker()
-.setLngLat([173.621343, -41.376809])
-.addTo(map);
- 
+
+
+
+
+ var geojson = JSON.parse('{{geojson | escapejs}}');
+ // add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+});
+  
 </script>
  
 </body>

@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import datetime
 import requests
+import json
+from requests.structures import CaseInsensitiveDict
 # Create your views here.
 
 def index(request):
@@ -13,10 +15,16 @@ def test_maps(request):
 
     regions = Listing.objects.values_list('region')
 
-    # r = requests.get('https://api.mapbox.com/geocoding/v5/mapbox.places/Auckland.json?access_token=pk.eyJ1Ijoic2VhcmNoLW1hY2hpbmUtdXNlci0xIiwiYSI6ImNrN2Y1Nmp4YjB3aG4zZ253YnJoY21kbzkifQ.JM5ZeqwEEm-Tonrk5wOOMw&cachebuster=1616991171828&autocomplete=true&country=nz')
+    url = "https://api.mapbox.com/geocoding/v5/mapbox.places/Otago;Auckland.json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1"
 
-    # print(r.status_code)
-    return render(request, 'backend/map_test.html')
+    headers = CaseInsensitiveDict()
+    headers["Accept"] = "application/json"
+
+    r = requests.get(url, headers=headers)
+    geoJson = json.dumps(r.json())
+    print(geoJson)
+    # print('============' + r.status_code + '===============')
+    return render(request, 'backend/map_test.html', {'geojson': geoJson})
 def store_data(request):
 
     csv_data = pd.read_csv('../scaper/data/scraped.csv', index_col=0)

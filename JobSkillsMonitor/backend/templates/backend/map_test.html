@@ -28,6 +28,14 @@ body { margin: 0; padding: 0; }
   border-radius: 50%;
   cursor: pointer;
 }
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 </style>
 <div id="menu">
     <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
@@ -72,8 +80,10 @@ for (var i = 0; i < inputs.length; i++) {
 
 
  var geojson = JSON.parse('{{geojson | escapejs}}');
+ var region_count = JSON.parse('{{region_count | escapejs}}');
+
  // add markers to map
-geojson.features.forEach(function(marker) {
+geojson.features.forEach(function(marker, index) {
 
   // create a HTML element for each feature
   var el = document.createElement('div');
@@ -82,6 +92,8 @@ geojson.features.forEach(function(marker) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML(marker.text + " : " + region_count[marker.text] + " jobs available"))
     .addTo(map);
 });
   

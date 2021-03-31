@@ -29,6 +29,15 @@ def test_maps(request):
     r = requests.get(urls[0], headers=headers)
     json_dict = r.json()
 
+    for url in urls[1:]:
+        
+        r = requests.get(url, headers=headers)
+        json_dict['features'].append(r.json()['features'][0])
+        
+    geoJson = json.dumps(json_dict)
+
+
+  
     
 
     return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})

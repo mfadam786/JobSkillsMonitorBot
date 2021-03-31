@@ -37,6 +37,13 @@ def test_maps(request):
     geoJson = json.dumps(json_dict)
 
 
+    regions = Listing.objects.values_list('region', flat=True)
+    for region in list(regions):
+
+        if region in region_count:
+            region_count[region] += 1
+        else:
+            region_count[region] =  1
   
     
 

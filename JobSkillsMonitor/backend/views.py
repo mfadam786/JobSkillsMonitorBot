@@ -13,18 +13,28 @@ def index(request):
 
 def test_maps(request):
 
-    regions = Listing.objects.values_list('region')
-
-    url = "https://api.mapbox.com/geocoding/v5/mapbox.places/Otago;Auckland.json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1"
 
     headers = CaseInsensitiveDict()
     headers["Accept"] = "application/json"
 
-    r = requests.get(url, headers=headers)
-    geoJson = json.dumps(r.json())
-    print(geoJson)
-    # print('============' + r.status_code + '===============')
-    return render(request, 'backend/map_test.html', {'geojson': geoJson})
+    regions = Listing.objects.values_list('region').distinct()
+    urls = []
+
+    region_count = {}
+
+
+    for region in regions:
+        urls.append("https://api.mapbox.com/geocoding/v5/mapbox.places/" + str(region) + ".json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1")
+
+    r = requests.get(urls[0], headers=headers)
+    json_dict = r.json()
+
+    
+
+    return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
+
+
+
 def store_data(request):
 
     csv_data = pd.read_csv('../scaper/data/scraped.csv', index_col=0)

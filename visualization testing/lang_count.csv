@@ -1,0 +1,686 @@
+lang,count
+A.NET ,0
+A-0 System,0
+A+ ,4
+ABAP,5
+ABC,0
+ABC ALGOL,0
+ACC,1822
+Accent ,0
+Ace DASL ,0
+Action!,0
+ActionScript,0
+Actor,221
+Ada,361
+Adenine ,0
+AdvPL,0
+Agda,0
+Agilent VEE ,0
+Agora,0
+AIMMS,0
+Aldor,0
+Alef,0
+ALF,73
+ALGOL 58,0
+ALGOL 60,0
+ALGOL 68,0
+ALGOL W,0
+Alice ,0
+Alma-0,0
+AmbientTalk,0
+Amiga E,0
+AMOS ,0
+AMPL,127
+AngelScript,0
+Apache Pig latin,0
+Apex ,13
+APL,2
+App Inventor for Android's visual block language ,0
+AppleScript,0
+APT,571
+Arc,2205
+ARexx,0
+Argus,0
+Assembly language ,1
+AutoIt,1
+AutoLISP / Visual LISP,0
+Averest,0
+AWK,58
+Axum,0
+B,42516
+Babbage,0
+Ballerina,0
+Bash,32
+BASIC,174
+Batch file ,0
+bc ,7
+BCPL,0
+BeanShell,0
+Bertrand,0
+BETA,5
+BLISS,0
+Blockly,0
+BlooP,0
+Boo,300
+Boomerang,0
+Bosque,0
+C – ISO/IEC 9899,0
+C-- ,0
+C++ ,50
+C*,0
+C# ,156
+C/AL,4
+Caché ObjectScript,0
+C Shell ,0
+Caml,0
+Cayenne ,0
+CDuce,0
+Cecil,0
+Cesil ,0
+Céu,0
+Ceylon,0
+CFEngine,0
+Cg ,24
+Ch,17503
+Chapel ,0
+Charm,3
+CHILL,5
+CHIP-8,0
+ChucK,0
+Cilk ,0
+CL ,87
+Claire,11
+Clarion,0
+Clean,165
+Clipper,0
+CLIPS,17
+CLIST,0
+Clojure,0
+CLU,3582
+CMS-2,0
+COBOL – ISO/IEC 1989,0
+CobolScript – COBOL Scripting language,0
+Cobra,0
+CoffeeScript,1
+ColdFusion,2
+COMAL,0
+Combined Programming Language ,0
+COMIT,1
+Common Intermediate Language ,0
+Common Lisp ,0
+COMPASS,62
+Component Pascal,0
+Constraint Handling Rules ,0
+COMTRAN,0
+Cool,70
+Coq,0
+Coral 66,0
+CorVision,0
+COWSEL,0
+CPL,0
+Cryptol,0
+Crystal,5
+Csound,0
+Cuneiform,0
+Curl,1
+Curry,0
+Cybil,0
+Cyclone,40
+Cypher Query Language,0
+Cython,0
+CEEMAC,0
+D,60635
+Dart,4
+Darwin,2
+DataFlex,1
+Datalog,0
+DATATRIEVE,0
+dBase,0
+dc,109
+DCL ,2
+Delphi,4
+DinkC,0
+DIBOL,0
+Dog,23
+Draco,0
+DRAKON,0
+Dylan,1
+DYNAMO,21
+DAX ,9
+E,75338
+Ease,2848
+Easy PL/I,0
+EASYTRIEVE PLUS,0
+eC,21242
+ECMAScript,0
+Edinburgh IMP,0
+EGL,0
+Eiffel,0
+ELAN,21
+Elixir,3
+Elm,19
+Emacs Lisp,0
+Emerald,0
+Epigram,0
+EPL ,0
+EPL ,0
+Erlang,1
+es,36600
+Escher,0
+ESPOL,0
+Esterel,0
+Etoys,0
+Euclid,0
+Euler,0
+Euphoria,0
+EusLisp Robot Programming Language,0
+CMS EXEC ,0
+EXEC 2,0
+Executable UML,0
+Ezhil,0
+F,46889
+F# ,2
+F*,0
+Factor,127
+Fantom,0
+FAUST,0
+FFP,2
+fish,30
+Fjölnir,0
+FL,2708
+Flavors,0
+Flex,1378
+Flix,0
+FlooP,0
+FLOW-MASTIC ,0
+FOCAL ,1
+FOCUS,1713
+FOIL,0
+FORMAC ,0
+@Formula,0
+Forth,1
+Fortran – ISO/IEC 1539,0
+Fortress,0
+FP,50
+Franz Lisp,0
+Futhark,0
+F-Script,0
+Game Maker Language ,0
+GameMonkey Script,0
+GAMS ,0
+GAP,102
+G-code,0
+GDScript ,0
+Genie,0
+GDL ,0
+GEORGE,0
+GLSL ,0
+GNU E,0
+GNU Guile ,0
+Go,3996
+Go!,7
+GOAL ,110
+Gödel,0
+Golo,0
+GOM ,0
+Google Apps Script,0
+Gosu,0
+GOTRAN ,0
+GPSS ,0
+GraphTalk ,0
+GRASS,19
+Grasshopper,2
+Groovy ,1
+Hack,27
+HAGGIS,0
+HAL/S,0
+Halide ,0
+Hamilton C shell,0
+Harbour,16
+Hartmann pipelines,0
+Haskell,0
+Haxe,0
+Hermes,0
+High Level Assembly ,0
+HLSL,0
+Hollywood,2
+HolyC ,0
+Hop,331
+Hopscotch,0
+Hope,26
+Hugo ,0
+Hume,0
+HyperTalk,0
+Io,31016
+Icon,52
+IBM Basic assembly language,0
+IBM HAScript,0
+IBM Informix-4GL,0
+IBM RPG,0
+IDL,159
+Idris,0
+Inform,1693
+J,11142
+J# ,0
+J++ ,0
+JADE,3
+Jai,0
+JAL,6
+Janus ,0
+Janus ,0
+JASS,0
+Java,1021
+JavaFX Script,0
+JavaScript,601
+Jess ,0
+JCL,0
+JEAN,8
+Join Java,0
+JOSS,0
+Joule,0
+JOVIAL,0
+Joy,690
+JScript,3
+JScript .NET,0
+Julia,12
+Jython,0
+K,35931
+Kaleidoscope,0
+Karel,0
+KEE,775
+Kixtart,0
+Klerer-May System,0
+KIF ,0
+Kojo,0
+Kotlin,52
+KRC,0
+KRL,0
+KRL ,0
+KRYPTON,0
+KornShell ,0
+Kodu,0
+Kv ,0
+LabVIEW,0
+Ladder,2
+LANSA,0
+Lasso,0
+Lava,6
+LC-3,0
+Lean,279
+Legoscript,0
+LIL,0
+LilyPond,0
+Limbo,0
+Limnor,0
+LINC,13
+Lingo,2
+LINQ,10
+LIS,2496
+LISA,278
+Language H,1
+Lisp – ISO/IEC 13816,0
+Lite-C,0
+Lithe,0
+Little b,35
+LLL,3
+Logo,4
+Logtalk,0
+LotusScript,0
+LPC,0
+LSE,169
+LSL,0
+LiveCode,0
+LiveScript,0
+Lua,209
+Lucid,11
+Lustre,0
+LYaPAS,0
+Lynx,0
+M2001,0
+M4,0
+M#,0
+Machine code,0
+MAD ,2
+MAD/I,0
+Magik,2
+Magma,0
+Máni,0
+Maple,0
+MAPPER ,0
+MARK-IV ,0
+Mary,184
+MATLAB,4
+MASM Microsoft Assembly x86,0
+MATH-MATIC,0
+Maude system,0
+Maxima ,0
+Max ,10
+MaxScript internal language 3D Studio Max,0
+Maya ,0
+MDL,0
+Mercury,31
+Mesa,1
+MHEG-5 ,0
+Microcode,0
+MicroScript,0
+Microsoft Power Fx,0
+MIIS,0
+Milk ,3
+MIMIC,0
+Mirah,0
+Miranda,0
+MIVA Script,0
+ML,540
+Model 204,0
+Modelica,0
+Modula,16
+Modula-2,0
+Modula-3,0
+Mohol,0
+MOO,85
+Mortran,0
+Mouse,1
+MPD,0
+MSL,0
+MUMPS,0
+MuPAD,0
+Mutan,0
+Mystic Programming Language ,0
+NASM,0
+Napier88,0
+Neko,0
+Nemerle,0
+NESL,3
+Net.Data,0
+NetLogo,0
+NetRexx,0
+NewLISP,0
+NEWP,0
+Newspeak,0
+NewtonScript,0
+Nial,5
+Nickle ,0
+Nim,567
+Nix ,43
+NPL,0
+Not eXactly C ,0
+Not Quite C ,0
+NSIS,234
+Nu,3379
+NWScript,0
+NXT-G,0
+o:XML,0
+Oak,11
+Oberon,0
+OBJ2,0
+Object Lisp,0
+ObjectLOGO,0
+Object REXX,0
+Object Pascal,0
+Objective-C,8
+Objective-J,0
+Obliq,0
+OCaml,0
+occam,0
+occam-π,0
+Octave,0
+OmniMark,0
+Opa,4
+Opal,0
+OpenCL,2
+OpenEdge ABL,0
+OPL,2609
+OpenVera,0
+OPS5,0
+OptimJ,0
+Orc,642
+ORCA/Modula-2,0
+Oriel,0
+Orwell,0
+Oxygene,0
+Oz,31
+P,58211
+P4,3
+P′′,0
+ParaSail ,0
+PARI/GP,0
+Pascal – ISO 7185,0
+Pascal Script,0
+PCASTL,0
+PCF,1
+PEARL,0
+PeopleCode,0
+Perl,35
+PDL,0
+Pharo,0
+PHP,180
+Pico,4
+Picolisp,0
+Pict,48
+Pike,0
+PILOT,23
+Pipelines,218
+Pizza,7
+PL-11,0
+PL/0,0
+PL/B,0
+PL/C,0
+PL/I – ISO 6160,0
+PL/M,0
+PL/P,0
+PL/SQL,12
+PL360,0
+PLANC,0
+Plankalkül,0
+Planner,13
+PLEX,1104
+PLEXIL,0
+Plus,263
+POP-11,0
+POP-2,0
+PostScript,0
+PortablE,6
+POV-Ray SDL,0
+Powerhouse,17
+PowerBuilder – 4GL GUI application generator from Sybase,0
+PowerShell,111
+PPL,7104
+Processing,123
+Processing.js,0
+Prograph,0
+PROIV,0
+Project Verona,0
+Prolog,0
+PROMAL,0
+Promela,0
+PROSE modeling language,0
+PROTEL,0
+ProvideX,0
+Pro*C,0
+Pure,12
+Pure Data,0
+PureScript,0
+Python,286
+Q ,104
+Q# ,0
+Qalb,0
+Quantum Computation Language,0
+QtScript,0
+QuakeC,0
+QPL,0
+.QL,0
+R,71764
+R++,0
+Racket,0
+Raku,5
+RAPID,220
+Rapira,0
+Ratfiv,0
+Ratfor,0
+rc,4805
+Reason,75
+REBOL,0
+Red,4219
+Redcode,0
+REFAL,0
+REXX,0
+Rlab,1
+ROOP,2
+RPG,1
+RPL,3
+RSL,8
+RTL/2,0
+Ruby,74
+Rust,439
+S,68083
+S2,5
+S3,55
+S-Lang,0
+S-PLUS,0
+SA-C,0
+SabreTalk,0
+SAIL,3
+SAS,171
+SASL,0
+Sather,0
+Sawzall,0
+Scala,478
+Scheme,57
+Scilab,0
+Scratch,17
+Script.NET,0
+Sed,3907
+Seed7,0
+Self,807
+SenseTalk,0
+SequenceL,0
+Serpent,0
+SETL,0
+SIMPOL,0
+SIGNAL,14
+SiMPLE,159
+SIMSCRIPT,0
+Simula,19
+Simulink,0
+Singularity,0
+SISAL,0
+SLIP,3
+SMALL,539
+Smalltalk,2
+SML,3
+Strongtalk,0
+Snap!,0
+SNOBOL ,0
+Snowball,1
+SOL,5629
+Solidity,2
+SOPHAEROS,0
+Source,688
+SPARK,114
+Speakeasy,0
+Speedcode,0
+SPIN,7
+SP/k,0
+SPS,13
+SQL,887
+SQR,0
+Squeak,0
+Squirrel,0
+SR,261
+S/SL,0
+Starlogo,0
+Strand,2
+Stata,0
+Stateflow,0
+Subtext,0
+SBL,0
+SuperCollider,0
+SuperTalk,0
+Swift ,10
+Swift ,10
+SYMPL,0
+SystemVerilog,0
+T,74033
+TACL,31
+TACPOL,0
+TADS ,0
+TAL,3226
+Tcl,5
+Tea,8660
+TECO ,0
+TELCOMP,0
+TeX,141
+TEX ,19
+TIE,3999
+TMG ,2
+Tom,5769
+Toi,28
+Topspeed ,0
+TPU ,0
+Trac,1667
+TTM,1
+T-SQL ,18
+Transcript ,0
+TTCN ,0
+Turing,132
+TUTOR ,0
+TXL,0
+TypeScript,190
+Tynker,0
+Ubercode,0
+UCSD Pascal,0
+Umple,0
+Unicon,0
+Uniface,0
+UNITY,2731
+Unix shell,3
+UnrealScript,0
+Vala,0
+Verilog,0
+VHDL,0
+Vim script,0
+Viper ,0
+Visual DataFlex,0
+Visual DialogScript,0
+Visual FoxPro,0
+Visual J++ ,0
+Visual LISP,0
+Visual Objects,2
+Visual Prolog,0
+"WATFIV, WATFOR ",0
+WebAssembly,0
+WebDNA,0
+Whiley,0
+Winbatch,0
+Wolfram Language,0
+Wyvern,0
+X++ ,0
+X10,0
+xBase,0
+xBase++ ,0
+XBL,0
+XC ,40
+xHarbour,0
+XL,7
+Xojo,0
+XOTcl,0
+Xod,0
+XPL,229
+XPL0,0
+XQuery,1
+XSB,0
+XSharp ,0
+XSLT,6
+Xtend,154
+Yorick,0
+YQL,0
+Yoix,0
+YUI,0
+Z notation,0
+"Zebra, ZPL, ZPL2",0
+Zeno,4
+ZetaLisp,0
+Zig,1
+ZOPL,0
+ZPL,0
+Z++,0

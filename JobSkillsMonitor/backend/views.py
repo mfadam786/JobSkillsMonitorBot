@@ -66,13 +66,29 @@ def store_data(request):
     return render(request, 'backend/test.html')
 
 def testPage(request):
-    listings = Listing.objects.filter(
+    listings = Listing.objects.all().filter(
         job_role = "Management",
-    )
+    ).values()
 
     print(len(listings))
 
-    plt.plot([1, 2, 5, 7, 9, 3, 4])
+    i = [0, 0, 0, 0]
+    
+    for job in listings:
+        if (job['work_type'] == 'Part Time'):
+            i[0]+=1
+        elif (job['work_type'] == 'Full Time'):
+            i[1]+=1
+        elif (job['work_type'] == 'Contract/Temp'):
+            i[2]+=1
+        else:
+            i[3]+=1
+
+    work_type_count = { 'part_time' : i[0], 'full_time' : i[1], 'contract' : i[2], 'casual' : i[3] }
+    
+    print(work_type_count)
+
+    plt.plot(i)
 
     fig = plt.gcf()
 
@@ -82,4 +98,16 @@ def testPage(request):
     buf.seek(0)
     string = base64.b64encode(buf.read())
     uri = urllib.parse.quote(string)
+
+    fig = plt.figure()
+    ax = fig.add_axes([0, 0, 1, 1])
+    langs = ['part_time', 'full_time', 'contract', 'casual']
+    students = i
+    ax.bar(langs,students)
+
+    fig.savefig(buf, format="png")
+    buf.seek(0)
+    string = base64.b64encode(buf.read())
+    uri = urllib.parse.quote(string)
+
     return render(request, 'backend/test.html',{"data":uri})

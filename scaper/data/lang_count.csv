@@ -1,17 +1,17 @@
 ,lang,count
 0,A.NET ,0
 1,A-0 System,0
-2,A+ ,4
-3,ABAP,5
+2,A+ ,6
+3,ABAP,4
 4,ABC,0
 5,ABC ALGOL,0
-6,ACC,1822
+6,ACC,13
 7,Accent ,0
 8,Ace DASL ,0
 9,Action!,0
 10,ActionScript,0
-11,Actor,221
-12,Ada,361
+11,Actor,0
+12,Ada,0
 13,Adenine ,0
 14,AdvPL,0
 15,Agda,0
@@ -20,56 +20,56 @@
 18,AIMMS,0
 19,Aldor,0
 20,Alef,0
-21,ALF,73
+21,ALF,0
 22,ALGOL 58,0
 23,ALGOL 60,0
 24,ALGOL 68,0
 25,ALGOL W,0
-26,Alice ,0
+26,Alice ,1
 27,Alma-0,0
 28,AmbientTalk,0
 29,Amiga E,0
 30,AMOS ,0
-31,AMPL,127
+31,AMPL,0
 32,AngelScript,0
 33,Apache Pig latin,0
-34,Apex ,13
-35,APL,2
+34,Apex ,21
+35,APL,1
 36,App Inventor for Android's visual block language ,0
 37,AppleScript,0
-38,APT,571
-39,Arc,2205
+38,APT,1
+39,Arc,0
 40,ARexx,0
 41,Argus,0
 42,Assembly language ,1
 43,AutoIt,1
 44,AutoLISP / Visual LISP,0
 45,Averest,0
-46,AWK,58
+46,AWK,0
 47,Axum,0
-48,B,42516
+48,B,9
 49,Babbage,0
 50,Ballerina,0
-51,Bash,32
-52,BASIC,174
+51,Bash,25
+52,BASIC,117
 53,Batch file ,0
-54,bc ,7
+54,bc ,2
 55,BCPL,0
 56,BeanShell,0
 57,Bertrand,0
-58,BETA,5
+58,BETA,3
 59,BLISS,0
 60,Blockly,0
 61,BlooP,0
-62,Boo,300
+62,Boo,0
 63,Boomerang,0
 64,Bosque,0
 65,C – ISO/IEC 9899,0
 66,C-- ,0
-67,C++ ,50
+67,C++ ,65
 68,C*,0
-69,C# ,156
-70,C/AL,4
+69,C# ,278
+70,C/AL,3
 71,Caché ObjectScript,0
 72,C Shell ,0
 73,Caml,0
@@ -80,23 +80,23 @@
 78,Céu,0
 79,Ceylon,0
 80,CFEngine,0
-81,Cg ,24
-82,Ch,17503
+81,Cg ,0
+82,Ch,0
 83,Chapel ,0
-84,Charm,3
-85,CHILL,5
+84,Charm,0
+85,CHILL,4
 86,CHIP-8,0
 87,ChucK,0
 88,Cilk ,0
-89,CL ,87
-90,Claire,11
+89,CL ,0
+90,Claire,8
 91,Clarion,0
-92,Clean,165
+92,Clean,102
 93,Clipper,0
-94,CLIPS,17
+94,CLIPS,0
 95,CLIST,0
 96,Clojure,0
-97,CLU,3582
+97,CLU,0
 98,CMS-2,0
 99,COBOL – ISO/IEC 1989,0
 100,CobolScript – COBOL Scripting language,0
@@ -105,67 +105,67 @@
 103,ColdFusion,2
 104,COMAL,0
 105,Combined Programming Language ,0
-106,COMIT,1
+106,COMIT,0
 107,Common Intermediate Language ,0
 108,Common Lisp ,0
-109,COMPASS,62
+109,COMPASS,3
 110,Component Pascal,0
 111,Constraint Handling Rules ,0
 112,COMTRAN,0
-113,Cool,70
+113,Cool,33
 114,Coq,0
 115,Coral 66,0
 116,CorVision,0
 117,COWSEL,0
 118,CPL,0
 119,Cryptol,0
-120,Crystal,5
+120,Crystal,4
 121,Csound,0
 122,Cuneiform,0
-123,Curl,1
+123,Curl,0
 124,Curry,0
 125,Cybil,0
-126,Cyclone,40
+126,Cyclone,9
 127,Cypher Query Language,0
 128,Cython,0
 129,CEEMAC,0
-130,D,60635
-131,Dart,4
+130,D,4
+131,Dart,0
 132,Darwin,2
 133,DataFlex,1
 134,Datalog,0
 135,DATATRIEVE,0
 136,dBase,0
-137,dc,109
-138,DCL ,2
-139,Delphi,4
+137,dc,2
+138,DCL ,0
+139,Delphi,3
 140,DinkC,0
 141,DIBOL,0
-142,Dog,23
+142,Dog,6
 143,Draco,0
 144,DRAKON,0
 145,Dylan,1
-146,DYNAMO,21
+146,DYNAMO,1
 147,DAX ,9
-148,E,75338
-149,Ease,2848
+148,E,24
+149,Ease,27
 150,Easy PL/I,0
 151,EASYTRIEVE PLUS,0
-152,eC,21242
+152,eC,4
 153,ECMAScript,0
 154,Edinburgh IMP,0
 155,EGL,0
 156,Eiffel,0
-157,ELAN,21
-158,Elixir,3
-159,Elm,19
+157,ELAN,0
+158,Elixir,2
+159,Elm,0
 160,Emacs Lisp,0
 161,Emerald,0
 162,Epigram,0
 163,EPL ,0
 164,EPL ,0
-165,Erlang,1
-166,es,36600
+165,Erlang,0
+166,es,0
 167,Escher,0
 168,ESPOL,0
 169,Esterel,0
@@ -178,37 +178,37 @@
 176,EXEC 2,0
 177,Executable UML,0
 178,Ezhil,0
-179,F,46889
-180,F# ,2
+179,F,5
+180,F# ,0
 181,F*,0
-182,Factor,127
+182,Factor,6
 183,Fantom,0
 184,FAUST,0
-185,FFP,2
-186,fish,30
+185,FFP,0
+186,fish,2
 187,Fjölnir,0
-188,FL,2708
+188,FL,0
 189,Flavors,0
-190,Flex,1378
+190,Flex,13
 191,Flix,0
 192,FlooP,0
 193,FLOW-MASTIC ,0
 194,FOCAL ,1
-195,FOCUS,1713
+195,FOCUS,604
 196,FOIL,0
 197,FORMAC ,0
 198,@Formula,0
-199,Forth,1
+199,Forth,0
 200,Fortran – ISO/IEC 1539,0
 201,Fortress,0
-202,FP,50
+202,FP,0
 203,Franz Lisp,0
 204,Futhark,0
 205,F-Script,0
 206,Game Maker Language ,0
 207,GameMonkey Script,0
 208,GAMS ,0
-209,GAP,102
+209,GAP,42
 210,G-code,0
 211,GDScript ,0
 212,Genie,0
@@ -217,9 +217,9 @@
 215,GLSL ,0
 216,GNU E,0
 217,GNU Guile ,0
-218,Go,3996
-219,Go!,7
-220,GOAL ,110
+218,Go,246
+219,Go!,4
+220,GOAL ,103
 221,Gödel,0
 222,Golo,0
 223,GOM ,0
@@ -228,15 +228,15 @@
 226,GOTRAN ,0
 227,GPSS ,0
 228,GraphTalk ,0
-229,GRASS,19
-230,Grasshopper,2
-231,Groovy ,1
-232,Hack,27
+229,GRASS,4
+230,Grasshopper,1
+231,Groovy ,5
+232,Hack,4
 233,HAGGIS,0
 234,HAL/S,0
 235,Halide ,0
 236,Hamilton C shell,0
-237,Harbour,16
+237,Harbour,7
 238,Hartmann pipelines,0
 239,Haskell,0
 240,Haxe,0
@@ -245,54 +245,54 @@
 243,HLSL,0
 244,Hollywood,2
 245,HolyC ,0
-246,Hop,331
+246,Hop,1
 247,Hopscotch,0
-248,Hope,26
+248,Hope,13
 249,Hugo ,0
 250,Hume,0
 251,HyperTalk,0
-252,Io,31016
-253,Icon,52
+252,Io,1
+253,Icon,0
 254,IBM Basic assembly language,0
 255,IBM HAScript,0
 256,IBM Informix-4GL,0
 257,IBM RPG,0
-258,IDL,159
+258,IDL,0
 259,Idris,0
-260,Inform,1693
-261,J,11142
+260,Inform,44
+261,J,5
 262,J# ,0
 263,J++ ,0
-264,JADE,3
+264,JADE,2
 265,Jai,0
-266,JAL,6
+266,JAL,0
 267,Janus ,0
 268,Janus ,0
 269,JASS,0
-270,Java,1021
+270,Java,288
 271,JavaFX Script,0
-272,JavaScript,601
+272,JavaScript,403
 273,Jess ,0
 274,JCL,0
-275,JEAN,8
+275,JEAN,0
 276,Join Java,0
 277,JOSS,0
 278,Joule,0
 279,JOVIAL,0
-280,Joy,690
+280,Joy,5
 281,JScript,3
 282,JScript .NET,0
-283,Julia,12
+283,Julia,4
 284,Jython,0
-285,K,35931
+285,K,2
 286,Kaleidoscope,0
 287,Karel,0
-288,KEE,775
+288,KEE,0
 289,Kixtart,0
 290,Klerer-May System,0
 291,KIF ,0
 292,Kojo,0
-293,Kotlin,52
+293,Kotlin,32
 294,KRC,0
 295,KRL,0
 296,KRL ,0
@@ -301,38 +301,38 @@
 299,Kodu,0
 300,Kv ,0
 301,LabVIEW,0
-302,Ladder,2
+302,Ladder,0
 303,LANSA,0
 304,Lasso,0
-305,Lava,6
+305,Lava,3
 306,LC-3,0
-307,Lean,279
+307,Lean,86
 308,Legoscript,0
 309,LIL,0
 310,LilyPond,0
 311,Limbo,0
 312,Limnor,0
-313,LINC,13
+313,LINC,0
 314,Lingo,2
-315,LINQ,10
-316,LIS,2496
-317,LISA,278
-318,Language H,1
+315,LINQ,7
+316,LIS,0
+317,LISA,6
+318,Language H,0
 319,Lisp – ISO/IEC 13816,0
 320,Lite-C,0
 321,Lithe,0
-322,Little b,35
-323,LLL,3
-324,Logo,4
+322,Little b,0
+323,LLL,0
+324,Logo,2
 325,Logtalk,0
 326,LotusScript,0
 327,LPC,0
-328,LSE,169
+328,LSE,0
 329,LSL,0
 330,LiveCode,0
 331,LiveScript,0
-332,Lua,209
-333,Lucid,11
+332,Lua,3
+333,Lucid,0
 334,Lustre,0
 335,LYaPAS,0
 336,Lynx,0
@@ -342,24 +342,24 @@
 340,Machine code,0
 341,MAD ,2
 342,MAD/I,0
-343,Magik,2
+343,Magik,1
 344,Magma,0
 345,Máni,0
 346,Maple,0
 347,MAPPER ,0
 348,MARK-IV ,0
-349,Mary,184
-350,MATLAB,4
+349,Mary,3
+350,MATLAB,2
 351,MASM Microsoft Assembly x86,0
 352,MATH-MATIC,0
 353,Maude system,0
 354,Maxima ,0
-355,Max ,10
+355,Max ,3
 356,MaxScript internal language 3D Studio Max,0
-357,Maya ,0
+357,Maya ,1
 358,MDL,0
-359,Mercury,31
-360,Mesa,1
+359,Mercury,8
+360,Mesa,0
 361,MHEG-5 ,0
 362,Microcode,0
 363,MicroScript,0
@@ -370,16 +370,16 @@
 368,Mirah,0
 369,Miranda,0
 370,MIVA Script,0
-371,ML,540
+371,ML,16
 372,Model 204,0
 373,Modelica,0
-374,Modula,16
+374,Modula,0
 375,Modula-2,0
 376,Modula-3,0
 377,Mohol,0
-378,MOO,85
+378,MOO,0
 379,Mortran,0
-380,Mouse,1
+380,Mouse,0
 381,MPD,0
 382,MSL,0
 383,MUMPS,0
@@ -390,7 +390,7 @@
 388,Napier88,0
 389,Neko,0
 390,Nemerle,0
-391,NESL,3
+391,NESL,0
 392,Net.Data,0
 393,NetLogo,0
 394,NetRexx,0
@@ -398,26 +398,26 @@
 396,NEWP,0
 397,Newspeak,0
 398,NewtonScript,0
-399,Nial,5
+399,Nial,0
 400,Nickle ,0
-401,Nim,567
-402,Nix ,43
+401,Nim,0
+402,Nix ,0
 403,NPL,0
 404,Not eXactly C ,0
 405,Not Quite C ,0
-406,NSIS,234
-407,Nu,3379
+406,NSIS,0
+407,Nu,0
 408,NWScript,0
 409,NXT-G,0
 410,o:XML,0
-411,Oak,11
+411,Oak,2
 412,Oberon,0
 413,OBJ2,0
 414,Object Lisp,0
 415,ObjectLOGO,0
 416,Object REXX,0
 417,Object Pascal,0
-418,Objective-C,8
+418,Objective-C,5
 419,Objective-J,0
 420,Obliq,0
 421,OCaml,0
@@ -425,22 +425,22 @@
 423,occam-π,0
 424,Octave,0
 425,OmniMark,0
-426,Opa,4
+426,Opa,0
 427,Opal,0
 428,OpenCL,2
 429,OpenEdge ABL,0
-430,OPL,2609
+430,OPL,0
 431,OpenVera,0
 432,OPS5,0
 433,OptimJ,0
-434,Orc,642
+434,Orc,0
 435,ORCA/Modula-2,0
 436,Oriel,0
 437,Orwell,0
 438,Oxygene,0
-439,Oz,31
-440,P,58211
-441,P4,3
+439,Oz,0
+440,P,6
+441,P4,0
 442,P′′,0
 443,ParaSail ,0
 444,PARI/GP,0
@@ -450,17 +450,17 @@
 448,PCF,1
 449,PEARL,0
 450,PeopleCode,0
-451,Perl,35
+451,Perl,18
 452,PDL,0
 453,Pharo,0
-454,PHP,180
-455,Pico,4
+454,PHP,83
+455,Pico,0
 456,Picolisp,0
-457,Pict,48
+457,Pict,0
 458,Pike,0
-459,PILOT,23
-460,Pipelines,218
-461,Pizza,7
+459,PILOT,8
+460,Pipelines,144
+461,Pizza,3
 462,PL-11,0
 463,PL/0,0
 464,PL/B,0
@@ -468,24 +468,24 @@
 466,PL/I – ISO 6160,0
 467,PL/M,0
 468,PL/P,0
-469,PL/SQL,12
+469,PL/SQL,7
 470,PL360,0
 471,PLANC,0
 472,Plankalkül,0
-473,Planner,13
-474,PLEX,1104
+473,Planner,4
+474,PLEX,0
 475,PLEXIL,0
-476,Plus,263
+476,Plus,175
 477,POP-11,0
 478,POP-2,0
 479,PostScript,0
-480,PortablE,6
+480,PortablE,2
 481,POV-Ray SDL,0
-482,Powerhouse,17
+482,Powerhouse,8
 483,PowerBuilder – 4GL GUI application generator from Sybase,0
-484,PowerShell,111
-485,PPL,7104
-486,Processing,123
+484,PowerShell,86
+485,PPL,0
+486,Processing,78
 487,Processing.js,0
 488,Prograph,0
 489,PROIV,0
@@ -497,11 +497,11 @@
 495,PROTEL,0
 496,ProvideX,0
 497,Pro*C,0
-498,Pure,12
+498,Pure,8
 499,Pure Data,0
 500,PureScript,0
-501,Python,286
-502,Q ,104
+501,Python,212
+502,Q ,0
 503,Q# ,0
 504,Qalb,0
 505,Quantum Computation Language,0
@@ -509,143 +509,143 @@
 507,QuakeC,0
 508,QPL,0
 509,.QL,0
-510,R,71764
+510,R,25
 511,R++,0
 512,Racket,0
-513,Raku,5
-514,RAPID,220
+513,Raku,0
+514,RAPID,62
 515,Rapira,0
 516,Ratfiv,0
 517,Ratfor,0
-518,rc,4805
-519,Reason,75
+518,rc,0
+519,Reason,18
 520,REBOL,0
-521,Red,4219
+521,Red,49
 522,Redcode,0
 523,REFAL,0
 524,REXX,0
-525,Rlab,1
-526,ROOP,2
-527,RPG,1
-528,RPL,3
-529,RSL,8
+525,Rlab,0
+526,ROOP,0
+527,RPG,0
+528,RPL,0
+529,RSL,0
 530,RTL/2,0
-531,Ruby,74
-532,Rust,439
-533,S,68083
-534,S2,5
-535,S3,55
+531,Ruby,50
+532,Rust,7
+533,S,43
+534,S2,0
+535,S3,9
 536,S-Lang,0
 537,S-PLUS,0
 538,SA-C,0
 539,SabreTalk,0
-540,SAIL,3
-541,SAS,171
+540,SAIL,0
+541,SAS,29
 542,SASL,0
 543,Sather,0
 544,Sawzall,0
-545,Scala,478
-546,Scheme,57
+545,Scala,24
+546,Scheme,39
 547,Scilab,0
-548,Scratch,17
+548,Scratch,14
 549,Script.NET,0
-550,Sed,3907
+550,Sed,0
 551,Seed7,0
-552,Self,807
+552,Self,93
 553,SenseTalk,0
 554,SequenceL,0
 555,Serpent,0
 556,SETL,0
 557,SIMPOL,0
-558,SIGNAL,14
-559,SiMPLE,159
+558,SIGNAL,4
+559,SiMPLE,123
 560,SIMSCRIPT,0
-561,Simula,19
+561,Simula,0
 562,Simulink,0
 563,Singularity,0
 564,SISAL,0
-565,SLIP,3
-566,SMALL,539
-567,Smalltalk,2
-568,SML,3
+565,SLIP,1
+566,SMALL,371
+567,Smalltalk,1
+568,SML,0
 569,Strongtalk,0
 570,Snap!,0
 571,SNOBOL ,0
 572,Snowball,1
-573,SOL,5629
-574,Solidity,2
+573,SOL,0
+574,Solidity,1
 575,SOPHAEROS,0
-576,Source,688
-577,SPARK,114
+576,Source,123
+577,SPARK,57
 578,Speakeasy,0
 579,Speedcode,0
-580,SPIN,7
+580,SPIN,1
 581,SP/k,0
-582,SPS,13
-583,SQL,887
+582,SPS,0
+583,SQL,479
 584,SQR,0
 585,Squeak,0
 586,Squirrel,0
-587,SR,261
+587,SR,1
 588,S/SL,0
 589,Starlogo,0
-590,Strand,2
+590,Strand,0
 591,Stata,0
 592,Stateflow,0
 593,Subtext,0
 594,SBL,0
 595,SuperCollider,0
 596,SuperTalk,0
-597,Swift ,10
-598,Swift ,10
+597,Swift ,19
+598,Swift ,19
 599,SYMPL,0
 600,SystemVerilog,0
-601,T,74033
-602,TACL,31
+601,T,11
+602,TACL,0
 603,TACPOL,0
 604,TADS ,0
-605,TAL,3226
-606,Tcl,5
-607,Tea,8660
+605,TAL,0
+606,Tcl,0
+607,Tea,4
 608,TECO ,0
 609,TELCOMP,0
-610,TeX,141
-611,TEX ,19
-612,TIE,3999
+610,TeX,0
+611,TEX ,0
+612,TIE,7
 613,TMG ,2
-614,Tom,5769
-615,Toi,28
+614,Tom,12
+615,Toi,1
 616,Topspeed ,0
 617,TPU ,0
-618,Trac,1667
-619,TTM,1
-620,T-SQL ,18
+618,Trac,0
+619,TTM,0
+620,T-SQL ,22
 621,Transcript ,0
 622,TTCN ,0
-623,Turing,132
+623,Turing,0
 624,TUTOR ,0
 625,TXL,0
-626,TypeScript,190
+626,TypeScript,137
 627,Tynker,0
 628,Ubercode,0
 629,UCSD Pascal,0
 630,Umple,0
 631,Unicon,0
 632,Uniface,0
-633,UNITY,2731
+633,UNITY,6
 634,Unix shell,3
 635,UnrealScript,0
 636,Vala,0
 637,Verilog,0
 638,VHDL,0
 639,Vim script,0
-640,Viper ,0
+640,Viper ,1
 641,Visual DataFlex,0
 642,Visual DialogScript,0
 643,Visual FoxPro,0
 644,Visual J++ ,0
 645,Visual LISP,0
-646,Visual Objects,2
+646,Visual Objects,0
 647,Visual Prolog,0
 648,"WATFIV, WATFOR ",0
 649,WebAssembly,0
@@ -659,28 +659,28 @@
 657,xBase,0
 658,xBase++ ,0
 659,XBL,0
-660,XC ,40
+660,XC ,0
 661,xHarbour,0
-662,XL,7
+662,XL,0
 663,Xojo,0
 664,XOTcl,0
 665,Xod,0
-666,XPL,229
+666,XPL,0
 667,XPL0,0
-668,XQuery,1
+668,XQuery,0
 669,XSB,0
 670,XSharp ,0
-671,XSLT,6
-672,Xtend,154
+671,XSLT,5
+672,Xtend,0
 673,Yorick,0
 674,YQL,0
 675,Yoix,0
 676,YUI,0
 677,Z notation,0
 678,"Zebra, ZPL, ZPL2",0
-679,Zeno,4
+679,Zeno,0
 680,ZetaLisp,0
-681,Zig,1
+681,Zig,0
 682,ZOPL,0
 683,ZPL,0
 684,Z++,0

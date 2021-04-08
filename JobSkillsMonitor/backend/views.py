@@ -8,6 +8,9 @@ import datetime
 def index(request):
     return render(request, 'backend/index.html')
 
+def results(request):
+    return render(request, 'backend/results.html')
+
 def store_data(request):
 
     csv_data = pd.read_csv('../scaper/data/scraped.csv', index_col=0)

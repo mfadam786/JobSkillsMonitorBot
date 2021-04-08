@@ -3,10 +3,32 @@ from .models import Listing
 import pandas as pd
 import numpy as np
 import datetime
+
+from django.views import generic
 # Create your views here.
 
 def index(request):
     return render(request, 'backend/index.html')
+
+def search(request):
+    template_name = 'backend/results.html'
+
+    job_title = request.POST['job_title']
+
+    if (job_title == ''):
+        return render(request, 'backend/index.html')
+    else:
+
+        listing_table = Listing.objects
+
+        for word in job_title.split(' '):
+            job_listing = listing_table.all().filter(job_title__icontains=word).values()
+            
+        job_count = len(job_listing)
+        
+        context = { 'job_listing' : job_listing, 'searched_job' : job_title, 'job_count' : job_count }
+
+        return render(request, template_name, context)
 
 def store_data(request):
 

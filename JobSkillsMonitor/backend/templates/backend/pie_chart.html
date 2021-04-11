@@ -1,0 +1,46 @@
+{% extends './base.html' %}
+{% block content %}
+    <div id="container" style="width: 75%;">
+        <canvas id="pie-chart"></canvas>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+      <script>
+    
+        var config = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ data|safe }},
+              backgroundColor: [
+                '#5ae8e3', '#59e379', '#fffd73', '#db5858'
+              ],
+              label: 'Work Type'
+            }],
+            labels: {{ labels|safe }}
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Job count by work type',
+		          verticalAlign: "center",
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000000'
+                }
+            },
+            responsive: true,
+        }
+        };
+    
+        window.onload = function() {
+          var ctx = document.getElementById('pie-chart').getContext('2d');
+          window.myPie = new Chart(ctx, config);
+        };
+    
+      </script>
+      
+{% endblock %}

@@ -99,6 +99,58 @@ def testPage(request):
     string = base64.b64encode(buf.read())
     uri = urllib.parse.quote(string)
 
+    fig.savefig(buf, format="png")
+    buf.seek(0)
+    string = base64.b64encode(buf.read())
+    uri = urllib.parse.quote(string)
+
+    return render(request, 'backend/test.html',{"data":uri})
+
+def testPage1(request):
+    listings = Listing.objects.all().filter(
+        job_role = "Help Desk & IT Support",
+    ).values()
+
+    print(len(listings))
+
+    i = [0, 0, 0, 0]
+    
+    for job in listings:
+        if (job['work_type'] == 'Part Time'):
+            i[0]+=1
+        elif (job['work_type'] == 'Full Time'):
+            i[1]+=1
+        elif (job['work_type'] == 'Contract/Temp'):
+            i[2]+=1
+        else:
+            i[3]+=1
+
+    work_type_count = { 'part_time' : i[0], 'full_time' : i[1], 'contract' : i[2], 'casual' : i[3] }
+    
+    print(work_type_count)
+
+    plt.rcdefaults()
+    fig, ax = plt.subplots()
+
+    people = work_type_count.keys()
+    y_pos = np.arange(len(work_type_count))
+    performance = work_type_count.values()
+    error = np.random.rand(len(work_type_count))
+
+    ax.barh(y_pos, performance, xerr=error, align='center')
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(people)
+    ax.invert_yaxis()
+    ax.set_xlabel('Job Count')
+    ax.set_title('Jobs based on their work type')
+
+    #converting graph into string buffer and converting 64bit code into image
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png")
+    buf.seek(0)
+    string = base64.b64encode(buf.read())
+    uri = urllib.parse.quote(string)
+
     fig = plt.figure()
     ax = fig.add_axes([0, 0, 1, 1])
     langs = ['part_time', 'full_time', 'contract', 'casual']
@@ -111,3 +163,34 @@ def testPage(request):
     uri = urllib.parse.quote(string)
 
     return render(request, 'backend/test.html',{"data":uri})
+
+def pie_chart(request):
+    labels = []
+    data = []
+
+    listings = Listing.objects.all().filter(job_role="Architects").order_by('job_role').values()
+    
+    i = [0, 0, 0, 0]
+    
+    for job in listings:
+        if (job['work_type'] == 'Part Time'):
+            i[0]+=1
+        elif (job['work_type'] == 'Full Time'):
+            i[1]+=1
+        elif (job['work_type'] == 'Contract/Temp'):
+            i[2]+=1
+        else:
+            i[3]+=1
+
+    work_type_count = { 'part_time' : i[0], 'full_time' : i[1], 'contract' : i[2], 'casual' : i[3] }
+    
+    for key, value in work_type_count.items():
+        labels.append(key)
+        data.append(value)
+
+    context = {
+        'labels' : labels,
+        'data' : data
+    }
+
+    return render(request, 'backend/pie_chart.html', context)

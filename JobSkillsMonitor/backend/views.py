@@ -15,6 +15,9 @@ def search(request):
 
     job_title = request.POST['job_title']
 
+    job_listings = []
+    jobs = []
+
     if (job_title == ''):
         return render(request, 'backend/index.html')
     else:
@@ -22,11 +25,15 @@ def search(request):
         listing_table = Listing.objects
 
         for word in job_title.split(' '):
-            job_listing = listing_table.all().filter(job_title__icontains=word).values()
+            jobs += listing_table.all().filter(job_title__icontains=word).values()
             
-        job_count = len(job_listing)
+        for job in jobs:
+            if job not in job_listings:
+                job_listings.append(job)
+
+        job_count = len(job_listings)
         
-        context = { 'job_listing' : job_listing, 'searched_job' : job_title, 'job_count' : job_count }
+        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count }
 
         return render(request, template_name, context)
 

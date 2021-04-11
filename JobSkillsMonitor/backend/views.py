@@ -6,6 +6,7 @@ import datetime
 import requests
 import json
 from requests.structures import CaseInsensitiveDict
+from django.views import generic
 # Create your views here.
 
 def index(request):
@@ -88,7 +89,36 @@ def test_maps_sub_regions(request):
     return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
 
 
+  
+def results(request):
+    return render(request, 'backend/results.html')
 
+def search(request):
+    template_name = 'backend/results.html'
+
+    job_title = request.POST['job_title']
+
+    job_listings = []
+    jobs = []
+
+    if (job_title == ''):
+        return render(request, 'backend/index.html')
+    else:
+
+        listing_table = Listing.objects
+
+        for word in job_title.split(' '):
+            jobs += listing_table.all().filter(job_title__icontains=word).values()
+            
+        for job in jobs:
+            if job not in job_listings:
+                job_listings.append(job)
+
+        job_count = len(job_listings)
+        
+        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count }
+
+        return render(request, template_name, context)
 
 def store_data(request):
 

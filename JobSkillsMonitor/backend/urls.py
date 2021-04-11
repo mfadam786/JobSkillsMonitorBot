@@ -9,5 +9,6 @@ app_name = "backend"
 urlpatterns = [
     path('', views.index, name="index"),
     path('results', views.results, name="results"),
+    path('search', views.search, name="search"),
     path('store-data', views.store_data, name="store_data"),
 ]

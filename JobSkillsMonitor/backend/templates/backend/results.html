@@ -12,6 +12,33 @@
                             <li>/top langs/</li>
                         </ol>
                     </p>
+              
+                    {% if job_listing %}
+                      <!-- {% for job in job_listing %}
+                          {{ job.job_title }}
+                          <br/>
+                          {{ job.date_listed }}
+                          <br/>
+                          {{ job.employer }}
+                          <br/>
+                          {{ job.work_type }}
+                          <br/>
+                          {{ job.job_role }}
+                          <br/>
+                          {{ job.region }}
+                          <br/>
+                          {{ job.sub_region }}
+                          <br/>
+                          {{ job.data }}
+                          <br/>
+                          <br/>
+                          <br/>
+                      {% endfor %} -->
+                  {% endif %}
+
+                  {{ job_count }}
+                  <br/>
+                  {{ searched_job }}
                 </div>
             </div>
         </div>   

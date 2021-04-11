@@ -3,13 +3,93 @@ from .models import Listing
 import pandas as pd
 import numpy as np
 import datetime
-
+import requests
+import json
+from requests.structures import CaseInsensitiveDict
 from django.views import generic
 # Create your views here.
 
 def index(request):
     return render(request, 'backend/index.html')
 
+def test_maps_regions(request):
+
+
+    headers = CaseInsensitiveDict()
+    headers["Accept"] = "application/json"
+
+    regions = Listing.objects.values_list('region').distinct()
+    urls = []
+
+    region_count = {}
+
+
+    for region in regions:
+        urls.append("https://api.mapbox.com/geocoding/v5/mapbox.places/" + str(region) + ".json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1")
+
+    r = requests.get(urls[0], headers=headers)
+    json_dict = r.json()
+
+    for url in urls[1:]:
+        
+        r = requests.get(url, headers=headers)
+        json_dict['features'].append(r.json()['features'][0])
+        
+    geoJson = json.dumps(json_dict)
+
+
+    regions = Listing.objects.values_list('region', flat=True)
+    for region in list(regions):
+
+        if region in region_count:
+            region_count[region] += 1
+        else:
+            region_count[region] =  1
+  
+    
+
+    return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
+
+def test_maps_sub_regions(request):
+
+
+    headers = CaseInsensitiveDict()
+    headers["Accept"] = "application/json"
+
+    regions = Listing.objects.values_list('region').distinct()
+    urls = []
+
+    region_count = {}
+
+
+    for region in regions:
+        urls.append("https://api.mapbox.com/geocoding/v5/mapbox.places/" + str(region) + ".json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1")
+
+    r = requests.get(urls[0], headers=headers)
+    json_dict = r.json()
+
+    for url in urls[1:]:
+        
+        r = requests.get(url, headers=headers)
+        json_dict['features'].append(r.json()['features'][0])
+        
+    geoJson = json.dumps(json_dict)
+
+
+    sub_regions = Listing.objects.values_list('sub_region', flat=True).distinct()
+    for region in list(sub_regions):
+        print(region)
+        if region in region_count:
+            region_count[region] += 1
+        else:
+            region_count[region] =  1
+  
+    
+
+    return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
+
+
+  
 def results(request):
     return render(request, 'backend/results.html')
 

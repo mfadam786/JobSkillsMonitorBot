@@ -1,39 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Skills Monitor</title>
-</head>
-<body>
-    <div>
-        <h1>Test Hello World</h1>
-        {% if job_listing %}
-            <!-- {% for job in job_listing %}
-                {{ job.job_title }}
-                <br/>
-                {{ job.date_listed }}
-                <br/>
-                {{ job.employer }}
-                <br/>
-                {{ job.work_type }}
-                <br/>
-                {{ job.job_role }}
-                <br/>
-                {{ job.region }}
-                <br/>
-                {{ job.sub_region }}
-                <br/>
-                {{ job.data }}
-                <br/>
-                <br/>
-                <br/>
-            {% endfor %} -->
-        {% endif %}
+{% extends './base.html' %}
+{% block content %}
+<div class="row h-100 justify-content-center align-items-center">
+        <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
+            <div class="col-md-12">
+                <h2 class="pl-4 inl">Search results for </h2>
+                <h2 class="pl-1 inl">/job here/</h2>
+                <div class="pl-4 mt-4">
+                    <h5>Most In-Demand Languages: </h5>
+                    <p>
+                        <ol>
+                            <li>/top langs/</li>
+                        </ol>
+                    </p>
+              
+                    {% if job_listing %}
+                      <!-- {% for job in job_listing %}
+                          {{ job.job_title }}
+                          <br/>
+                          {{ job.date_listed }}
+                          <br/>
+                          {{ job.employer }}
+                          <br/>
+                          {{ job.work_type }}
+                          <br/>
+                          {{ job.job_role }}
+                          <br/>
+                          {{ job.region }}
+                          <br/>
+                          {{ job.sub_region }}
+                          <br/>
+                          {{ job.data }}
+                          <br/>
+                          <br/>
+                          <br/>
+                      {% endfor %} -->
+                  {% endif %}
 
-        {{ job_count }}
-        <br/>
-        {{ searched_job }}
+                  {{ job_count }}
+                  <br/>
+                  {{ searched_job }}
+                </div>
+            </div>
+        </div>   
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

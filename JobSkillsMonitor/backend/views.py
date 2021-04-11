@@ -10,6 +10,9 @@ from django.views import generic
 def index(request):
     return render(request, 'backend/index.html')
 
+def results(request):
+    return render(request, 'backend/results.html')
+
 def search(request):
     template_name = 'backend/results.html'
 

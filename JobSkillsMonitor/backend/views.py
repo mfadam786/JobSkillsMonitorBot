@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count
 import pandas as pd
 import numpy as np
 import datetime
@@ -7,6 +7,11 @@ import requests
 import json
 from requests.structures import CaseInsensitiveDict
 from django.views import generic
+
+from pathlib import Path
+import glob
+import os
+
 # Create your views here.
 
 def index(request):
@@ -184,4 +189,52 @@ def store_data(request):
     print(Listing.objects.all())
 
     print(i)
+
     return render(request, 'backend/test.html')
+
+def load_lang_counts(request):
+    p = Path('../scaper/data/subsections')
+    csv_files = list(p.glob('*.csv'))
+
+    for csv_file in csv_files:
+        filename = os.path.split(csv_file)
+        
+        job_type = filename[1].split('_')[0]
+
+        new_job_type = Job_Types.objects.filter(job_type = job_type).first()
+
+        if new_job_type is None:
+            new_job_type = Job_Types(job_type = job_type)
+            new_job_type.save()
+        else:
+            print('Job type already exists')
+
+        csv_data = pd.read_csv(csv_file, index_col=0)
+
+        targets = ['lang', 'count']
+
+        data = np.array(csv_data[targets])
+
+        print(data)
+
+        for column in data:
+            lang = column[0]
+            count = column[1]
+
+            new_language = Languages.objects.filter(language = lang).first()
+
+            if new_language is None:
+                new_language = Languages(language = lang)
+                new_language.save()
+            else:
+                print('Language already exists')
+        
+            new_lang_count = Job_Type_Language_Count.objects.filter(language = new_language, job_type = new_job_type, count = count).first()
+            
+            if new_lang_count is None:
+                new_lang_count = Job_Type_Language_Count(language = new_language, job_type = new_job_type, count = count)
+                new_lang_count.save()
+            else:
+                print('Language count data already exists')
+
+        return render(request, 'backend/index.html')

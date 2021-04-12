@@ -8,6 +8,14 @@ import json
 from requests.structures import CaseInsensitiveDict
 from django.views import generic
 
+# tsne stuff
+import sklearn
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+from gensim.models import Word2Vec
+import io
+import urllib, base64
+
 from pathlib import Path
 import glob
 import os
@@ -191,6 +199,59 @@ def store_data(request):
     print(i)
 
     return render(request, 'backend/test.html')
+
+def tsne_search(request):
+    template_name = 'backend/tsne_results.html'
+
+    model = Word2Vec.load("../scaper/models/word2vec_sg.model")
+
+    q = request.POST['tsne_q']
+
+    word = q
+
+    context = {}
+
+
+
+    if word in model.wv.vocab:
+        arr = np.empty((0, 100), dtype='f')
+        word_labels = [word]
+
+        close_words = model.similar_by_word(word)
+        arr = np.append(arr, np.array([model[word]]), axis=0)
+        for wrd_score in close_words:
+            wrd_vector = model[wrd_score[0]]
+            word_labels.append(wrd_score[0])
+            arr = np.append(arr, np.array([wrd_vector]), axis=0)
+
+        tsne = TSNE(n_components=2, random_state=42)
+        np.set_printoptions(suppress=True)
+        Y = tsne.fit_transform(arr)
+        x_coords = Y[:, 0]
+        y_coords = Y[:, 1]
+        plt.scatter(x_coords, y_coords)
+        for label, x, y in zip(word_labels, x_coords, y_coords):
+            plt.annotate(label, xy=(x, y), xytext=(0, 0), textcoords='offset points')
+            plt.xlim(x_coords.min() + 0.00005, x_coords.max() + 0.00005)
+            plt.ylim(y_coords.min() + 0.00005, y_coords.max() + 0.00005)
+
+        fig = plt.gcf()
+        buff = io.BytesIO()
+        fig.savefig(buff, format="png")
+
+        buff.seek(0)
+        string = base64.b64encode(buff.read())
+
+        context["image"]= 'data:image/png;base64,' + urllib.parse.quote(string)
+
+    else:
+        context["error"] = "error that word is not in the vocabulary"
+
+    if q:
+        context["q"] = q
+
+    return render(request, template_name, context)
+
 
 def load_lang_counts(request):
     p = Path('../scaper/data/subsections')

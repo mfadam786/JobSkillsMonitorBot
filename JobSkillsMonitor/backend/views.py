@@ -6,6 +6,9 @@ import urllib, base64
 import numpy as np
 import io
 import datetime
+
+from re import search
+
 # Create your views here.
 
 def index(request):
@@ -165,24 +168,44 @@ def testPage1(request):
     return render(request, 'backend/test.html',{"data":uri})
 
 def pie_chart(request):
+    display = False
     labels = []
     data = []
 
-    listings = Listing.objects.all().filter(job_role="Architects").order_by('job_role').values()
+    listings = Listing.objects.all().filter(job_role="Help Desk & IT Support")[:5].values()
     
+    def getTopProgLanguages():
+        csv_data = pd.read_csv('../scaper/data/fixed_langs.csv', index_col=0)
+
+        targets = ['fixed']
+
+        langs = np.array(csv_data[targets])
+        print(langs)
+        for lang in langs:
+            for listing in listings:
+                print(listing['data'])
+                # for sentences in listing['data']:
+                #     # print(sentences)
+                
+
+    getTopProgLanguages()
+        
     i = [0, 0, 0, 0]
     
     for job in listings:
-        if (job['work_type'] == 'Part Time'):
+        if len(listings) > 0:
+            display = True
+
+        if (job['work_type'] == 'Full Time'):
             i[0]+=1
-        elif (job['work_type'] == 'Full Time'):
+        elif (job['work_type'] == 'Part Time'):
             i[1]+=1
         elif (job['work_type'] == 'Contract/Temp'):
             i[2]+=1
         else:
             i[3]+=1
 
-    work_type_count = { 'part_time' : i[0], 'full_time' : i[1], 'contract' : i[2], 'casual' : i[3] }
+    work_type_count = { 'Full Time' : i[0], 'Part Time' : i[1], 'Contract/Temp' : i[2], 'Casual/Vacation' : i[3] }
     
     for key, value in work_type_count.items():
         labels.append(key)
@@ -190,7 +213,8 @@ def pie_chart(request):
 
     context = {
         'labels' : labels,
-        'data' : data
+        'data' : data,
+        'display' : display
     }
 
     return render(request, 'backend/pie_chart.html', context)

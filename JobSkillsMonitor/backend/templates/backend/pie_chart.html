@@ -1,9 +1,14 @@
 {% extends './base.html' %}
 {% block content %}
-    <div id="container" style="width: 75%;">
-        <canvas id="pie-chart"></canvas>
-      </div>
-    
+    {% if display %}
+      <div id="container" style="width: 75%;">
+          <canvas id="pie-chart"></canvas>
+        </div>
+    {% else %}
+        <div>
+          <p>There is no data matching your search criteria</p>
+        </div>
+    {% endif %}
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
       <script>
     
@@ -13,7 +18,7 @@
             datasets: [{
               data: {{ data|safe }},
               backgroundColor: [
-                '#5ae8e3', '#59e379', '#fffd73', '#db5858'
+              '#59e379', '#fffd73', '#ff8324', '#db5858'
               ],
               label: 'Work Type'
             }],

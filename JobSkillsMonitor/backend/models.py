@@ -16,3 +16,16 @@ class Listing(models.Model):
 
     job_title = models.TextField(max_length=100, default="")
 
+
+class Languages(models.Model):
+    language = models.TextField(max_length=100, default="")
+
+class Job_Types(models.Model):
+    job_type = models.TextField(max_length=100, default="")
+
+
+class Job_Type_Language_Count(models.Model):
+
+    language = models.ForeignKey("Languages", on_delete=models.CASCADE)
+    job_type = models.ForeignKey("Job_Types", on_delete=models.CASCADE)
+    count = models.IntegerField(default=0)

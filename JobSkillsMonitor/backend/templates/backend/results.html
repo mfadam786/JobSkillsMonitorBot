@@ -1,8 +1,43 @@
 {% extends './base.html' %}
 {% block content %}
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#menu {
+    position: absolute;
+    background: #efefef;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
+</style>
+</head>
+<body>
+
+
+
+<div id="menu">
+    <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+    <!-- See a list of Mapbox-hosted public styles at -->
+    <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+    <label for="mapbox/satellite-v9">satellite</label>
+    <input id="mapbox/light-v10" type="radio" name="rtoggle" value="light">
+    <label for="mapbox/light-v10">light</label>
+    <input id="mapbox/dark-v10" type="radio" name="rtoggle" value="dark">
+    <label for="mapbox/dark-v10">dark</label>
+    <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
+    <label for="mapbox/streets-v11">streets</label>
+    <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+    <label for="mapbox/outdoors-v11">outdoors</label>
+    <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
+    <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
+</div>
+
+
 <div class="row h-100 justify-content-center align-items-center">
         <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
                 <h2 class="pl-1 inl">/job here/</h2>
                 <div class="pl-4 mt-4">
@@ -39,9 +74,72 @@
                   {{ job_count }}
                   <br/>
                   {{ searched_job }}
-                </div>
+                </div>            
+            </div>
+            <div class="col-md-6">
+                <div id="map"></div>
             </div>
         </div>   
     </div>
 </div>
+<style>
+ .marker {
+  background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+#map { width: 95%; height: 100% }
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+</style>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw';
+var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/smitcr7/ckmu1gkhy4k9s17pgprvhq1ub', // style URL
+        center: [173.621343, -41.376809], // starting position [lng, lat]
+        zoom: 5 // starting zoom
+});
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
+
+function switchLayer(layer) {
+	var layerId = layer.target.id;
+	map.setStyle('mapbox://styles/' + layerId);
+}
+
+for (var i = 0; i < inputs.length; i++) {
+	inputs[i].onclick = switchLayer;
+}
+
+// Create a default Marker and add it to the map.
+
+ var geojson = JSON.parse('{{geojson | escapejs}}');
+ var region_count = JSON.parse('{{region_count | escapejs}}');
+console.log(region_count)
+ // add markers to map
+geojson.features.forEach(function(marker, index) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML(marker.text + " : " + region_count[marker.text] + " jobs available"))
+    .addTo(map);
+});
+  
+</script>
 {% endblock %}

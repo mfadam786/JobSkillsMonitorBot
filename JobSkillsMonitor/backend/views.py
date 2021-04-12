@@ -50,16 +50,36 @@ def test_maps_regions(request):
 
     return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
 
-def test_maps_sub_regions(request):
+
+def get_job_locations(request, listings):
+
+    regions = []
+    region_count = {}
+    
 
 
+    for job in listings:
+        if job['region'] not in regions:
+            regions.append(job['region'])
+            print(job['region'])
+
+        if job['region'] in region_count:
+            region_count[job['region']] += 1
+        else:
+            region_count[job['region']] =  1
+
+
+    for region in list(regions):
+        if region in region_count:
+            region_count[region] += 1
+        else:
+            region_count[region] =  1
+  
     headers = CaseInsensitiveDict()
     headers["Accept"] = "application/json"
 
-    regions = Listing.objects.values_list('region').distinct()
     urls = []
 
-    region_count = {}
 
 
     for region in regions:
@@ -76,19 +96,11 @@ def test_maps_sub_regions(request):
     geoJson = json.dumps(json_dict)
 
 
-    sub_regions = Listing.objects.values_list('sub_region', flat=True).distinct()
-    for region in list(sub_regions):
-        print(region)
-        if region in region_count:
-            region_count[region] += 1
-        else:
-            region_count[region] =  1
-  
+    regions = Listing.objects.values_list('region', flat=True)
+
+    output = {'geoJson': geoJson, 'region_count': json.dumps(region_count)}
     
-
-    return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
-
-
+    return output
   
 def results(request):
     return render(request, 'backend/results.html')
@@ -115,8 +127,8 @@ def search(request):
                 job_listings.append(job)
 
         job_count = len(job_listings)
-        
-        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count }
+        location_data = get_job_locations(request, job_listings)
+        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'] }
 
         return render(request, template_name, context)
 

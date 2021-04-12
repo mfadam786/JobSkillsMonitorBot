@@ -244,6 +244,8 @@ def tsne_search(request):
 
         context["image"]= 'data:image/png;base64,' + urllib.parse.quote(string)
 
+        plt.clf()
+
     else:
         context["error"] = "error that word is not in the vocabulary"
 

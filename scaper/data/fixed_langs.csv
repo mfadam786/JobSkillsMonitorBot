@@ -1,11 +1,10 @@
 ,lang,fixed
-0,A.NET (A#/A sharp),A.NET 
+0,A.NET (A#/A sharp),A#
 1,A-0 System,A-0 System
 2,A+ (A (plus),A+ 
 3,ABAP,ABAP
 4,ABC,ABC
-5,ABC ALGOL,ABC ALGOL
-6,ACC,ACC
+5,ABC ALGOL,ALGOL
 7,Accent (Rational Synergy),Accent 
 8,Ace DASL (Distributed Application Specification Language),Ace DASL 
 9,Action!,Action!
@@ -21,9 +20,7 @@
 19,Aldor,Aldor
 20,Alef,Alef
 21,ALF,ALF
-22,ALGOL 58,ALGOL 58
-23,ALGOL 60,ALGOL 60
-24,ALGOL 68,ALGOL 68
+22,ALGOL 58,ALGOL
 25,ALGOL W,ALGOL W
 26,Alice (Alice ML),Alice 
 27,Alma-0,Alma-0
@@ -52,7 +49,7 @@
 50,Ballerina,Ballerina
 51,Bash,Bash
 52,BASIC,BASIC
-53,Batch file (Windows/MS-DOS),Batch file 
+53,Batch file (Windows/MS-DOS),Batch
 54,bc (basic calculator),bc 
 55,BCPL,BCPL
 56,BeanShell,BeanShell
@@ -64,7 +61,7 @@
 62,Boo,Boo
 63,Boomerang,Boomerang
 64,Bosque,Bosque
-65,C – ISO/IEC 9899,C – ISO/IEC 9899
+65,C – ISO/IEC 9899,C
 66,C-- (C minus minus),C-- 
 67,C++ (C plus plus) – ISO/IEC 14882,C++ 
 68,C*,C*
@@ -98,8 +95,8 @@
 96,Clojure,Clojure
 97,CLU,CLU
 98,CMS-2,CMS-2
-99,COBOL – ISO/IEC 1989,COBOL – ISO/IEC 1989
-100,CobolScript – COBOL Scripting language,CobolScript – COBOL Scripting language
+99,COBOL – ISO/IEC 1989,COBOL
+100,CobolScript – COBOL Scripting language,CobolScript
 101,Cobra,Cobra
 102,CoffeeScript,CoffeeScript
 103,ColdFusion,ColdFusion
@@ -193,13 +190,12 @@
 191,Flix,Flix
 192,FlooP,FlooP
 193,FLOW-MASTIC (B0),FLOW-MASTIC 
-194,FOCAL (Formulating On-Line Calculations in Algebraic Language/FOrmula CALculator),FOCAL 
-195,FOCUS,FOCUS
+194,FOCAL (Formulating On-Line Calculations in Algebraic Language/FOrmula CALculator),FOCAL
 196,FOIL,FOIL
 197,FORMAC (FORMula MAnipulation Compiler),FORMAC 
 198,@Formula,@Formula
 199,Forth,Forth
-200,Fortran – ISO/IEC 1539,Fortran – ISO/IEC 1539
+200,Fortran – ISO/IEC 1539,Fortran
 201,Fortress,Fortress
 202,FP,FP
 203,Franz Lisp,Franz Lisp
@@ -216,8 +212,7 @@
 214,GEORGE,GEORGE
 215,GLSL (OpenGL Shading Language),GLSL 
 216,GNU E,GNU E
-217,GNU Guile (GNU Ubiquitous Intelligent Language for Extensions),GNU Guile 
-218,Go,Go
+217,GNU Guile (GNU Ubiquitous Intelligent Language for Extensions),GNU Guile
 219,Go!,Go!
 220,GOAL (Game Oriented Assembly Lisp),GOAL 
 221,Gödel,Gödel
@@ -259,15 +254,13 @@
 257,IBM RPG,IBM RPG
 258,IDL,IDL
 259,Idris,Idris
-260,Inform,Inform
 261,J,J
 262,J# (J sharp),J# 
 263,J++ (J plus plus),J++ 
 264,JADE,JADE
 265,Jai,Jai
 266,JAL,JAL
-267,Janus (concurrent constraint programming language),Janus 
-268,Janus (time-reversible computing programming language),Janus 
+267,Janus (concurrent constraint programming language),Janus
 269,JASS,JASS
 270,Java,Java
 271,JavaFX Script,JavaFX Script
@@ -318,7 +311,7 @@
 316,LIS,LIS
 317,LISA,LISA
 318,Language H,Language H
-319,Lisp – ISO/IEC 13816,Lisp – ISO/IEC 13816
+319,Lisp,Lisp
 320,Lite-C,Lite-C
 321,Lithe,Lithe
 322,Little b,Little b
@@ -444,7 +437,7 @@
 442,P′′,P′′
 443,ParaSail (programming language),ParaSail 
 444,PARI/GP,PARI/GP
-445,Pascal – ISO 7185,Pascal – ISO 7185
+445,Pascal – ISO 7185,Pascal
 446,Pascal Script,Pascal Script
 447,PCASTL,PCASTL
 448,PCF,PCF
@@ -475,7 +468,6 @@
 473,Planner,Planner
 474,PLEX,PLEX
 475,PLEXIL,PLEXIL
-476,Plus,Plus
 477,POP-11,POP-11
 478,POP-2,POP-2
 479,PostScript,PostScript
@@ -551,22 +543,18 @@
 549,Script.NET,Script.NET
 550,Sed,Sed
 551,Seed7,Seed7
-552,Self,Self
 553,SenseTalk,SenseTalk
 554,SequenceL,SequenceL
 555,Serpent,Serpent
 556,SETL,SETL
 557,SIMPOL,SIMPOL
 558,SIGNAL,SIGNAL
-559,SiMPLE,SiMPLE
 560,SIMSCRIPT,SIMSCRIPT
 561,Simula,Simula
 562,Simulink,Simulink
 563,Singularity,Singularity
 564,SISAL,SISAL
 565,SLIP,SLIP
-566,SMALL,SMALL
-567,Smalltalk,Smalltalk
 568,SML,SML
 569,Strongtalk,Strongtalk
 570,Snap!,Snap!
@@ -677,10 +665,11 @@
 675,Yoix,Yoix
 676,YUI,YUI
 677,Z notation,Z notation
-678,"Zebra, ZPL, ZPL2","Zebra, ZPL, ZPL2"
+678,"Zebra, ZPL, ZPL2",ZPL
 679,Zeno,Zeno
 680,ZetaLisp,ZetaLisp
 681,Zig,Zig
 682,ZOPL,ZOPL
 683,ZPL,ZPL
 684,Z++,Z++
+685,Golang, Golang

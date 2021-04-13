@@ -7,6 +7,7 @@ import requests
 import json
 from requests.structures import CaseInsensitiveDict
 from django.views import generic
+from django.contrib.postgres.search import SearchQuery, SearchVector
 
 from pathlib import Path
 import glob
@@ -19,42 +20,23 @@ def index(request):
 
 def test_maps_regions(request):
 
-
-    headers = CaseInsensitiveDict()
-    headers["Accept"] = "application/json"
-
-    regions = Listing.objects.values_list('region').distinct()
-    urls = []
-
-    region_count = {}
-
-
-    for region in regions:
-        urls.append("https://api.mapbox.com/geocoding/v5/mapbox.places/" + str(region) + ".json?access_token=pk.eyJ1Ijoic21pdGNyNyIsImEiOiJja210eDR2anIwdzR2MnBuczY0ejd5bm96In0.2cXKqmqTnjjUiJEvXS4GGw&types=region&limit=1")
-
-    r = requests.get(urls[0], headers=headers)
-    json_dict = r.json()
-
-    for url in urls[1:]:
-        
-        r = requests.get(url, headers=headers)
-        json_dict['features'].append(r.json()['features'][0])
-        
-    geoJson = json.dumps(json_dict)
-
-
-    regions = Listing.objects.values_list('region', flat=True)
-    for region in list(regions):
-
-        if region in region_count:
-            region_count[region] += 1
-        else:
-            region_count[region] =  1
-  
+    languages = Languages.objects.all().values()
+    # print(languages)
     
+    # results = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search='C#')
 
-    return render(request, 'backend/map_test.html', {'geojson': geoJson, 'region_count': json.dumps(region_count)})
+    # print(len(results))
+    # print(results[0].data)
+    # print(results.objects.annotate(search=SearchVector('data')).filter(search='Web developer'))
+    # for result in results:
+    count = {}
+    for l in languages[:10]:
+        result = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search=l['language'])
+        len(list(result))
 
+        
+    
+    return render(request, 'backend/index.html')
 
 def get_job_locations(request, listings):
 
@@ -196,13 +178,17 @@ def load_lang_counts(request):
     p = Path('../scaper/data/subsections')
     csv_files = list(p.glob('*.csv'))
 
+    # print(csv_files)
     for csv_file in csv_files:
         filename = os.path.split(csv_file)
         
         job_type = filename[1].split('_')[0]
 
+        print(job_type)
+
         new_job_type = Job_Types.objects.filter(job_type = job_type).first()
 
+        print(new_job_type)
         if new_job_type is None:
             new_job_type = Job_Types(job_type = job_type)
             new_job_type.save()
@@ -220,21 +206,21 @@ def load_lang_counts(request):
         for column in data:
             lang = column[0]
             count = column[1]
+            if(count > 0):
+                new_language = Languages.objects.filter(language = lang).first()
 
-            new_language = Languages.objects.filter(language = lang).first()
+                if new_language is None:
+                    new_language = Languages(language = lang)
+                    new_language.save()
+                else:
+                    print('Language already exists')
 
-            if new_language is None:
-                new_language = Languages(language = lang)
-                new_language.save()
-            else:
-                print('Language already exists')
-        
-            new_lang_count = Job_Type_Language_Count.objects.filter(language = new_language, job_type = new_job_type, count = count).first()
-            
-            if new_lang_count is None:
-                new_lang_count = Job_Type_Language_Count(language = new_language, job_type = new_job_type, count = count)
-                new_lang_count.save()
-            else:
-                print('Language count data already exists')
+                new_lang_count = Job_Type_Language_Count.objects.filter(language = new_language, job_type = new_job_type, count = count).first()
 
-        return render(request, 'backend/index.html')
+                if new_lang_count is None:
+                    new_lang_count = Job_Type_Language_Count(language = new_language, job_type = new_job_type, count = count)
+                    new_lang_count.save()
+                else:
+                    print('Language count data already exists')
+        print('=========================================')
+    return render(request, 'backend/index.html')

@@ -15,33 +15,14 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 
-
-
-<div id="menu">
-    <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
-    <!-- See a list of Mapbox-hosted public styles at -->
-    <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
-    <label for="mapbox/satellite-v9">satellite</label>
-    <input id="mapbox/light-v10" type="radio" name="rtoggle" value="light">
-    <label for="mapbox/light-v10">light</label>
-    <input id="mapbox/dark-v10" type="radio" name="rtoggle" value="dark">
-    <label for="mapbox/dark-v10">dark</label>
-    <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
-    <label for="mapbox/streets-v11">streets</label>
-    <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
-    <label for="mapbox/outdoors-v11">outdoors</label>
-    <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
-    <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
-</div>
-
-
 <div class="row h-100 justify-content-center align-items-center">
-        <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
+        <div class="my-3 py-4 row w-100 h-75 border rounded shaded">
             <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
-                <h2 class="pl-1 inl">/job here/</h2>
+                <h2 class="pl-1 inl">'{{ searched_job }}'</h2>
                 <div class="pl-4 mt-4">
-                    <h5>Most In-Demand Languages: </h5>
+                    <h5>Your search returned <u>{{ job_count }}</u> results</h5>
+                    <h5 class="mt-4">Most In-Demand Languages: </h5>
                     <p>
                         <ol>
                             <li>/top langs/</li>
@@ -70,14 +51,26 @@ body { margin: 0; padding: 0; }
                           <br/>
                       {% endfor %} -->
                   {% endif %}
-
-                  {{ job_count }}
-                  <br/>
-                  {{ searched_job }}
                 </div>            
             </div>
             <div class="col-md-6">
                 <div id="map"></div>
+                <div id="menu">
+                  <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+                  <!-- See a list of Mapbox-hosted public styles at -->
+                  <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+                  <label for="mapbox/satellite-v9">satellite</label>
+                  <input id="mapbox/light-v10" type="radio" name="rtoggle" value="light">
+                  <label for="mapbox/light-v10">light</label>
+                  <input id="mapbox/dark-v10" type="radio" name="rtoggle" value="dark">
+                  <label for="mapbox/dark-v10">dark</label>
+                  <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
+                  <label for="mapbox/streets-v11">streets</label>
+                  <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+                  <label for="mapbox/outdoors-v11">outdoors</label>
+                  <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
+                  <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
+              </div>
             </div>
         </div>   
     </div>

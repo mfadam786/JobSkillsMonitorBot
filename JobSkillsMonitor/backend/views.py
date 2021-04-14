@@ -203,18 +203,20 @@ def store_data(request):
 def tsne_search(request):
     template_name = 'backend/tsne_results.html'
 
-    model = Word2Vec.load("../scaper/models/word2vec_sg.model")
+    model = Word2Vec.load("../scaper/models/word2vec_bi.model")
 
     q = request.POST['tsne_q']
 
-    word = q
+    if len(q.split(" ")) > 1:
+        word = "_".join(q.split(" "))
+    else:
+        word = q
 
     context = {}
 
 
-
     if word in model.wv.vocab:
-        arr = np.empty((0, 100), dtype='f')
+        arr = np.empty((0, 50), dtype='f')
         word_labels = [word]
 
         close_words = model.similar_by_word(word)

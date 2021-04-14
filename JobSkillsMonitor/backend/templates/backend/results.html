@@ -15,72 +15,170 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 
-<div class="row h-100 justify-content-center align-items-center pb-5">
-        <div class="my-3 py-4 row w-100 h-100 border rounded shaded">
+<div id="menu">
+    <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+    <!-- See a list of Mapbox-hosted public styles at -->
+    <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+    <label for="mapbox/satellite-v9">satellite</label>
+    <input id="mapbox/light-v10" type="radio" name="rtoggle" value="light">
+    <label for="mapbox/light-v10">light</label>
+    <input id="mapbox/dark-v10" type="radio" name="rtoggle" value="dark">
+    <label for="mapbox/dark-v10">dark</label>
+    <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
+    <label for="mapbox/streets-v11">streets</label>
+    <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
+    <label for="mapbox/outdoors-v11">outdoors</label>
+    <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
+    <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
+</div>
+
+<div class="row h-100 justify-content-center align-items-center">
+
+        <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
             <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
-                <h2 class="pl-1 inl">'{{ searched_job }}'</h2>
+                <h2 class="pl-1 inl"> {{ searched_job|title }} </h2>
                 <div class="pl-4 mt-4">
-                    <h5>Your search returned <u>{{ job_count }}</u> results</h5><br><br>
-                    <h5 class="mt-4">In-Demand Languages: </h5>
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">There were {{ job_count }} jobs found that match your search
+                      </span>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">Avg ${{ job_pay.pay }} Lower ${{ job_pay.lower_pay }} Higher ${{ job_pay.upper_pay }}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body"><span style="color: black">
+                    <h5>Most In-Demand Languages: </h5>
                     <p>
                         <ol>
-                          <li>top 5 langs here</li>
+                            {% for lang in lang_count|slice:":5" %}
+                              <li>{{lang}}</li>
+                            {% endfor %}
                         </ol>
                     </p>
-                    <h5 class="mt-4">In-Demand Soft-Skills: </h5>
-                    <p>
-                      <ol>
-                        <li>top 5 skills here</li>
-                      </ol>
-                  </p>
-              
-                    {% if job_listing %}
-                      <!-- {% for job in job_listing %}
-                          {{ job.job_title }}
-                          <br/>
-                          {{ job.date_listed }}
-                          <br/>
-                          {{ job.employer }}
-                          <br/>
-                          {{ job.work_type }}
-                          <br/>
-                          {{ job.job_role }}
-                          <br/>
-                          {{ job.region }}
-                          <br/>
-                          {{ job.sub_region }}
-                          <br/>
-                          {{ job.data }}
-                          <br/>
-                          <br/>
-                          <br/>
-                      {% endfor %} -->
-                  {% endif %}
+                    </span>
+                    </div>
+                  </div>
+
+
+                  <br/>
+                  
                 </div>            
             </div>
-            <div class="col-md-6">
-                <div id="map"></div>
-                <div id="menu">
-                  <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
-                  <!-- See a list of Mapbox-hosted public styles at -->
-                  <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
-                  <label for="mapbox/satellite-v9">satellite</label>
-                  <input id="mapbox/light-v10" type="radio" name="rtoggle" value="light">
-                  <label for="mapbox/light-v10">light</label>
-                  <input id="mapbox/dark-v10" type="radio" name="rtoggle" value="dark">
-                  <label for="mapbox/dark-v10">dark</label>
-                  <input id="mapbox/streets-v11" type="radio" name="rtoggle" value="streets">
-                  <label for="mapbox/streets-v11">streets</label>
-                  <input id="mapbox/outdoors-v11" type="radio" name="rtoggle" value="outdoors">
-                  <label for="mapbox/outdoors-v11">outdoors</label>
-                  <input id="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub" type="radio" name="rtoggle" value="outdoors">
-                  <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
-              </div>
-            </div>
-        </div>   
-        <a href="backend/" class="btn btn-info px-5">Search Again</a>
+
+      <div class="col-md-6">
+          <div id="map"></div>
+      </div>
+    </div>   
+  </div>
+
+  <h2>
+    <a href={{ seek_url }}>Browse The Job On Seek</a>
+  </h2>
+  
+  <br/>
+  <br/>
+
+  <h2>
+    <a href={{ indeed_url }}>Browse The Job On Indeed</a>
+  </h2>
+
+  <br/>
+  <br/>
+
+  {% if work_type_data_display %}
+    <div id="container" style="width: 75%;">
+      <canvas id="pie-chart1"></canvas>
     </div>
+  {% else %}
+        <p>There is no work_type data matching your search criteria</p>
+  {% endif %}
+  
+  {% if regional_job_count_data_display %}
+    <div id="container" style="width: 75%;">
+      <canvas id="pie-chart2"></canvas>
+    </div>
+  {% else %}
+        <p>There is no regional_job_count data matching your search criteria</p>
+  {% endif %}
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+      <script>
+    
+        var config1 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ work_type_data|safe }},
+              backgroundColor: [
+              '#59e379', '#fffd73', '#ff8324', '#db5858'
+              ],
+              label: 'Work Type'
+            }],
+            labels: {{ work_type_data_labels|safe }}
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Full Time vs Part Time vs Contract vs Casual jobs',
+		          verticalAlign: "center",
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000000'
+                }
+            },
+            responsive: true,
+        }
+        };
+    
+        var config2 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ regional_job_count_data|safe }},
+              backgroundColor: [
+              '#26c005', '#137be5', '#c891c8', '#6d14b2', '#753efa', '#972e9d', '#25c8af', '#e858e5', '#59e379', '#fffd73', '#ff8324', '#db5858'
+              ],
+              label: 'Regional Job Count'
+            }],
+            labels: {{ regional_job_count_data_labels|safe }}
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Number of jobs per region',
+		          verticalAlign: "center",
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000000'
+                }
+            },
+            responsive: true,
+        }
+        };
+    
+        window.onload = function() {
+          var ctx1 = document.getElementById('pie-chart1').getContext('2d');
+          window.myPie = new Chart(ctx1, config1);
+
+          var ctx2 = document.getElementById('pie-chart2').getContext('2d');
+          window.myPie = new Chart(ctx2, config2);
+        };
+      </script>
+
+</div>
+
 </div>
 <style>
  .marker {
@@ -137,9 +235,11 @@ geojson.features.forEach(function(marker, index) {
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML(marker.text + " : " + region_count[marker.text] + " jobs available"))
+    .setHTML('<span style="color: black">' + marker.text + " : " + region_count[marker.text] + " jobs available</span>"))
     .addTo(map);
 });
+
+map.addControl(new mapboxgl.NavigationControl());
   
 </script>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed
 import pandas as pd
 import numpy as np
 import datetime
@@ -90,6 +90,18 @@ def get_job_locations(request, listings):
 def results(request):
     return render(request, 'backend/results.html')
 
+
+def get_language_count(request, listings):
+    language_count = {}
+    for listing in listings[:50]:
+        temp = Job_Language_Count_Completed.objects.filter(id=listing.id)
+        for t in temp:
+            if t.language in language_count:
+                language_count[t.language] += 1
+            else:
+                language_count[t.language] = 1
+    return(language_count)
+
 def search(request):
     template_name = 'backend/results.html'
 
@@ -97,7 +109,7 @@ def search(request):
 
     job_listings = []
     jobs = []
-    languages_to_count = ['Python', 'Javascript', 'Java', "C#", 'C++', 'SQL', 'PHP', 'GoLang', 'Swift']
+
     if (job_title == ''):
         return render(request, 'backend/index.html')
     else:
@@ -114,10 +126,15 @@ def search(request):
 
         job_count = len(job_listings)
         location_data = get_job_locations(request, job_listings)
+        lang_count = get_language_count(request, job_listings)
 
+        lang_count = {k:lang_count[k] for k in lang_count}
         job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title')).filter(search='web')
 
-        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'], 'job_pay': job_pay[0] }
+    
+
+
+        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'], 'job_pay': job_pay[0], 'lang_count': lang_count }
         
 
 

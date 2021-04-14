@@ -41,3 +41,9 @@ class Job_Language_Count(models.Model):
     language = models.TextField(max_length=50, default="")
     listing = models.ForeignKey("Listing", on_delete=models.CASCADE)
 
+class Job_Language_Count_Completed(models.Model):
+    listing = models.ForeignKey("Listing", on_delete=models.CASCADE)
+    language = models.TextField(max_length=50, default="")
+    count = models.IntegerField(default=0)
+
+

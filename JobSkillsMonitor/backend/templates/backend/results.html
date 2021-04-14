@@ -44,8 +44,8 @@ body { margin: 0; padding: 0; }
                     <div class="card-body">
                       <span style="color: black">There were {{ job_count }} jobs found that match your search
                       </span>
-                    </div>
                   </div>
+                </div>
                 <div class="card">
                     <div class="card-body">
                       <span style="color: black">Avg ${{ job_pay.pay }} Lower ${{ job_pay.lower_pay }} Higher ${{ job_pay.upper_pay }}
@@ -57,22 +57,9 @@ body { margin: 0; padding: 0; }
                     <h5>Most In-Demand Languages: </h5>
                     <p>
                         <ol>
-                            <li>x</li>
-                        </ol>
-                        <ol>
-                            <li>/top langs/</li>
-                        </ol>
-                        <ol>
-                            <li>/top langs/</li>
-                        </ol>
-                        <ol>
-                            <li>/top langs/</li>
-                        </ol>
-                        <ol>
-                            <li>/top langs/</li>
-                        </ol>
-                        <ol>
-                            <li>/top langs/</li>
+                            {% for lang in lang_count|slice:":5" %}
+                              <li>{{lang}}</li>
+                            {% endfor %}
                         </ol>
                     </p>
                     </span>

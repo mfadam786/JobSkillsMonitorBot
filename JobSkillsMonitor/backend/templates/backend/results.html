@@ -35,6 +35,7 @@ body { margin: 0; padding: 0; }
 </div>
 
 <div class="row h-100 justify-content-center align-items-center">
+
         <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
             <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
@@ -65,39 +66,121 @@ body { margin: 0; padding: 0; }
                     </span>
                     </div>
                   </div>
-              
-                    {% if job_listing %}
-                      <!-- {% for job in job_listing %}
-                          {{ job.job_title }}
-                          <br/>
-                          {{ job.date_listed }}
-                          <br/>
-                          {{ job.employer }}
-                          <br/>
-                          {{ job.work_type }}
-                          <br/>
-                          {{ job.job_role }}
-                          <br/>
-                          {{ job.region }}
-                          <br/>
-                          {{ job.sub_region }}
-                          <br/>
-                          {{ job.data }}
-                          <br/>
-                          <br/>
-                          <br/>
-                      {% endfor %} -->
-                  {% endif %}
+
 
                   <br/>
                   
                 </div>            
             </div>
-            <div class="col-md-6">
-                <div id="map"></div>
-            </div>
-        </div>   
+
+      <div class="col-md-6">
+          <div id="map"></div>
+      </div>
+    </div>   
+  </div>
+
+  <h2>
+    <a href={{ seek_url }}>Browse The Job On Seek</a>
+  </h2>
+  
+  <br/>
+  <br/>
+
+  <h2>
+    <a href={{ indeed_url }}>Browse The Job On Indeed</a>
+  </h2>
+
+  <br/>
+  <br/>
+
+  {% if work_type_data_display %}
+    <div id="container" style="width: 75%;">
+      <canvas id="pie-chart1"></canvas>
     </div>
+  {% else %}
+        <p>There is no work_type data matching your search criteria</p>
+  {% endif %}
+  
+  {% if regional_job_count_data_display %}
+    <div id="container" style="width: 75%;">
+      <canvas id="pie-chart2"></canvas>
+    </div>
+  {% else %}
+        <p>There is no regional_job_count data matching your search criteria</p>
+  {% endif %}
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+      <script>
+    
+        var config1 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ work_type_data|safe }},
+              backgroundColor: [
+              '#59e379', '#fffd73', '#ff8324', '#db5858'
+              ],
+              label: 'Work Type'
+            }],
+            labels: {{ work_type_data_labels|safe }}
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Full Time vs Part Time vs Contract vs Casual jobs',
+		          verticalAlign: "center",
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000000'
+                }
+            },
+            responsive: true,
+        }
+        };
+    
+        var config2 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: {{ regional_job_count_data|safe }},
+              backgroundColor: [
+              '#26c005', '#137be5', '#c891c8', '#6d14b2', '#753efa', '#972e9d', '#25c8af', '#e858e5', '#59e379', '#fffd73', '#ff8324', '#db5858'
+              ],
+              label: 'Regional Job Count'
+            }],
+            labels: {{ regional_job_count_data_labels|safe }}
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Number of jobs per region',
+		          verticalAlign: "center",
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000000'
+                }
+            },
+            responsive: true,
+        }
+        };
+    
+        window.onload = function() {
+          var ctx1 = document.getElementById('pie-chart1').getContext('2d');
+          window.myPie = new Chart(ctx1, config1);
+
+          var ctx2 = document.getElementById('pie-chart2').getContext('2d');
+          window.myPie = new Chart(ctx2, config2);
+        };
+      </script>
+
+</div>
+
 </div>
 <style>
  .marker {

@@ -103,6 +103,74 @@ def get_language_count(request, listings):
     return(language_count)
 
 def search(request):
+    def getWorkTypeData(listings):
+        display = False
+        labels = []
+        data = []
+         
+        i = [0, 0, 0, 0]
+        
+        for job in listings:
+            if len(listings) > 0:
+                display = True
+
+            if (job['work_type'] == 'Full Time'):
+                i[0]+=1
+            elif (job['work_type'] == 'Part Time'):
+                i[1]+=1
+            elif (job['work_type'] == 'Contract/Temp'):
+                i[2]+=1
+            else:
+                i[3]+=1
+
+        work_type_count = { 'Full Time' : i[0], 'Part Time' : i[1], 'Contract/Temp' : i[2], 'Casual/Vacation' : i[3] }
+        
+        for key, value in work_type_count.items():
+            labels.append(key)
+            data.append(value)
+
+        context = {
+            'labels' : labels,
+            'data' : data,
+            'display' : display
+        }
+
+        return context
+
+    def getRegionJobCountData(listings):
+        display = False
+        labels = []
+        data = []
+        
+        regions = []
+        regional_job_count = {}
+
+        i = []
+        
+        for job in listings:
+            if len(listings) > 0:
+                display = True
+
+            if job['region'] not in regions:
+                regions.append(job['region'])
+
+            if job['region'] in regional_job_count:
+                regional_job_count[job['region']] += 1
+            else:
+                regional_job_count[job['region']] =  1
+        
+        for key, value in regional_job_count.items():
+            labels.append(key)
+            data.append(value)
+
+        context = {
+            'labels' : labels,
+            'data' : data,
+            'display' : display
+        }
+        
+        return context
+
     template_name = 'backend/results.html'
 
     job_title = request.POST['job_title']
@@ -126,16 +194,44 @@ def search(request):
 
         job_count = len(job_listings)
         location_data = get_job_locations(request, job_listings)
+
+
+        work_type_data = getWorkTypeData(job_listings)
+
+        regional_job_count = getRegionJobCountData(job_listings)
+        
+        seek_search_parameter = ""
+        indeed_search_parameter = ""
+
+        for word in job_title.split():
+            seek_search_parameter += word + "-"
+            indeed_search_parameter += word + "+"
+
+        seek_url = "https://www.seek.co.nz/" + seek_search_parameter + "jobs"
+        indeed_url = "https://nz.indeed.com/jobs?q=" + indeed_search_parameter + "&l="
+
         lang_count = get_language_count(request, job_listings)
 
         lang_count = {k:lang_count[k] for k in lang_count}
         job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title')).filter(search='web')
-
-    
-
-
-        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'], 'job_pay': job_pay[0], 'lang_count': lang_count }
         
+        context = { 
+            'job_listing' : job_listings, 
+            'searched_job' : job_title, 
+            'job_count' : job_count, 
+            'geojson': location_data['geoJson'], 
+            'region_count': location_data['region_count'],
+            'work_type_data_labels' : work_type_data['labels'],
+            'work_type_data' : work_type_data['data'],
+            'work_type_data_display' : work_type_data['display'],
+            'regional_job_count_data_labels' : regional_job_count['labels'],
+            'regional_job_count_data' : regional_job_count['data'],
+            'regional_job_count_data_display' : regional_job_count['display'],
+            'seek_url' : seek_url,
+            'indeed_url' : indeed_url,
+            'job_pay': job_pay[0], 
+            'lang_count': lang_count
+        }
 
 
         return render(request, template_name, context)

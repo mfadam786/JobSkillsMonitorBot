@@ -114,11 +114,11 @@ def search(request):
             if len(listings) > 0:
                 display = True
 
-            if (job['work_type'] == 'Full Time'):
+            if (job.work_type == 'Full Time'):
                 i[0]+=1
-            elif (job['work_type'] == 'Part Time'):
+            elif (job.work_type == 'Part Time'):
                 i[1]+=1
-            elif (job['work_type'] == 'Contract/Temp'):
+            elif (job.work_type == 'Contract/Temp'):
                 i[2]+=1
             else:
                 i[3]+=1
@@ -151,13 +151,13 @@ def search(request):
             if len(listings) > 0:
                 display = True
 
-            if job['region'] not in regions:
-                regions.append(job['region'])
+            if job.region not in regions:
+                regions.append(job.region)
 
-            if job['region'] in regional_job_count:
-                regional_job_count[job['region']] += 1
+            if job.region in regional_job_count:
+                regional_job_count[job.region] += 1
             else:
-                regional_job_count[job['region']] =  1
+                regional_job_count[job.region] =  1
         
         for key, value in regional_job_count.items():
             labels.append(key)

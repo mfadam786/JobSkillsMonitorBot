@@ -4,16 +4,47 @@ html, body {
     background-repeat: repeat;
 }
 
+.container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 form {
     display: block !important;
     margin: auto !important;
-    text-align: center !important;
+    text-align: right !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .shaded {
     background-color: rgba(20, 20, 20, 0.6);
 }
 
-h2 {
+h2, h5, p, li {
+    color: whitesmoke !important;
+}
+
+h2, h5 {
     display:inline !important;
 }
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.col-md-12 {
+    text-align: center !important;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }

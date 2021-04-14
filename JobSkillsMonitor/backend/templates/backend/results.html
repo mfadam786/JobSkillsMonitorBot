@@ -15,19 +15,25 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 
-<div class="row h-100 justify-content-center align-items-center">
-        <div class="my-3 py-4 row w-100 h-75 border rounded shaded">
+<div class="row h-100 justify-content-center align-items-center pb-5">
+        <div class="my-3 py-4 row w-100 h-100 border rounded shaded">
             <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
                 <h2 class="pl-1 inl">'{{ searched_job }}'</h2>
                 <div class="pl-4 mt-4">
-                    <h5>Your search returned <u>{{ job_count }}</u> results</h5>
-                    <h5 class="mt-4">Most In-Demand Languages: </h5>
+                    <h5>Your search returned <u>{{ job_count }}</u> results</h5><br><br>
+                    <h5 class="mt-4">In-Demand Languages: </h5>
                     <p>
                         <ol>
-                            <li>/top langs/</li>
+                          <li>top 5 langs here</li>
                         </ol>
                     </p>
+                    <h5 class="mt-4">In-Demand Soft-Skills: </h5>
+                    <p>
+                      <ol>
+                        <li>top 5 skills here</li>
+                      </ol>
+                  </p>
               
                     {% if job_listing %}
                       <!-- {% for job in job_listing %}
@@ -73,6 +79,7 @@ body { margin: 0; padding: 0; }
               </div>
             </div>
         </div>   
+        <a href="backend/" class="btn btn-info px-5">Search Again</a>
     </div>
 </div>
 <style>

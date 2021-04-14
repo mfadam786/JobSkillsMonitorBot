@@ -19,7 +19,6 @@
         <div class="my-3 py-4 row w-100 border rounded shaded">
             <div class="col-md-12">
                 <h2>T-SNE Word Search</h2>
-                <p>Enter a word... //explanation//</p>
                 <form action="{% url 'backend:tsne' %}" method="POST" class ="frm w-75" >
                     {% csrf_token %}
                     <div class="form-group">

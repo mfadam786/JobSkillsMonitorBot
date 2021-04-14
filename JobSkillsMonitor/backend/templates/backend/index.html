@@ -3,14 +3,31 @@
 <div class="row h-100 justify-content-center align-items-center">
         <div class="my-3 py-4 row w-100 border rounded shaded">
             <div class="col-md-12">
-            <form action="{% url 'backend:search' %}" method="POST" class ="frm p-3 w-75" >
-                {% csrf_token %}
-                <div class="form-group">
-                    <input type="text" class="form-control" name="job_title" id="job_title" placeholder="Enter a job title...">
-                </div>
-                <button type="submit" class="btn btn-info px-5">Go</button>
-            </form>
-        </div>   
-    </div>
+                <h2>Job Search</h2>
+                <p>Enter a job title to discover which skills are currently in-demand for that particular job in New Zealand. inDemand 
+                    searches recent job listings and notes which skills are present as requirements in those listings the most.
+                </p>
+                <form action="{% url 'backend:search' %}" method="POST" class ="frm w-75" >
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="job_title" id="job_title" placeholder="Enter a job title...">
+                    </div>
+                    <button type="submit" class="btn btn-info px-5">Go</button>
+                </form>
+            </div>   
+        </div>
+        <div class="my-3 py-4 row w-100 border rounded shaded">
+            <div class="col-md-12">
+                <h2>T-SNE Word Search</h2>
+                <p>Enter a word... //explanation//</p>
+                <form action="{% url 'backend:tsne' %}" method="POST" class ="frm w-75" >
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="tsne_q" id="tsne_q" placeholder="Enter a word for T-SNE...">
+                    </div>
+                    <button type="submit" class="btn btn-info px-5">Go</button>
+                </form>
+            </div>   
+        </div>
 </div>
 {% endblock %}

@@ -1,0 +1,24 @@
+{% extends './base.html' %}
+{% block content %}
+<div class="row h-100 justify-content-center align-items-center">
+    <div class="my-3 py-4 row w-100 border rounded shaded">
+        <div class="col-md-12 tsne">
+            {% if q %}
+            <h5> You searched for '{{q}}'</h5>
+            {% endif %}
+            {% if image %}
+
+            <div>
+                <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}">
+            </div>
+            {% endif %}
+            {% if error %}
+            <div>
+                <p>{{error}}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <a href="backend/" class="btn btn-info px-5">Search Again</a>
+</div>
+{% endblock %}

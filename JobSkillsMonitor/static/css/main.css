@@ -21,7 +21,7 @@ form {
     background-color: rgba(20, 20, 20, 0.6);
 }
 
-h2, h5, p {
+h2, h5, p, li {
     color: whitesmoke !important;
 }
 
@@ -38,3 +38,13 @@ p {
 .col-md-12 {
     text-align: center !important;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }

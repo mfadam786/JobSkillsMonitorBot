@@ -34,48 +34,45 @@ body { margin: 0; padding: 0; }
     <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
 </div>
 
-
 <div class="row h-100 justify-content-center align-items-center">
-  <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
-    <div class="col-md-6">
-        <h2 class="pl-4 inl">Search results for </h2>
-        <h2 class="pl-1 inl">{{ searched_job }}</h2>
-        <div class="pl-4 mt-4">
-          <h5>Most In-Demand Languages: </h5>
-          <p>
-              <ol>
-                  <li>/top langs/</li>
-              </ol>
-          </p>
-    
-          {% if job_listing %}
-            <!-- {% for job in job_listing %}
-                {{ job.job_title }}
-                <br/>
-                {{ job.date_listed }}
-                <br/>
-                {{ job.employer }}
-                <br/>
-                {{ job.work_type }}
-                <br/>
-                {{ job.job_role }}
-                <br/>
-                {{ job.region }}
-                <br/>
-                {{ job.sub_region }}
-                <br/>
-                {{ job.data }}
-                <br/>
-                <br/>
-                <br/>
-            {% endfor %} -->
-          {% endif %}
 
-          {{ job_count }}
-          <br/>
-          {{ searched_job }}
-        </div>            
-      </div>
+        <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
+            <div class="col-md-6">
+                <h2 class="pl-4 inl">Search results for </h2>
+                <h2 class="pl-1 inl"> {{ searched_job|title }} </h2>
+                <div class="pl-4 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">There were {{ job_count }} jobs found that match your search
+                      </span>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">Avg ${{ job_pay.pay }} Lower ${{ job_pay.lower_pay }} Higher ${{ job_pay.upper_pay }}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body"><span style="color: black">
+                    <h5>Most In-Demand Languages: </h5>
+                    <p>
+                        <ol>
+                            {% for lang in lang_count|slice:":5" %}
+                              <li>{{lang}}</li>
+                            {% endfor %}
+                        </ol>
+                    </p>
+                    </span>
+                    </div>
+                  </div>
+
+
+                  <br/>
+                  
+                </div>            
+            </div>
+
       <div class="col-md-6">
           <div id="map"></div>
       </div>
@@ -240,9 +237,11 @@ geojson.features.forEach(function(marker, index) {
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML(marker.text + " : " + region_count[marker.text] + " jobs available"))
+    .setHTML('<span style="color: black">' + marker.text + " : " + region_count[marker.text] + " jobs available</span>"))
     .addTo(map);
 });
+
+map.addControl(new mapboxgl.NavigationControl());
   
 </script>
 {% endblock %}

@@ -39,14 +39,26 @@ body { margin: 0; padding: 0; }
         <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
             <div class="col-md-6">
                 <h2 class="pl-4 inl">Search results for </h2>
-                <h2 class="pl-1 inl">/job here/</h2>
+                <h2 class="pl-1 inl"> {{ searched_job|title }} </h2>
                 <div class="pl-4 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">There were {{ job_count }} found that match your search
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <div class="card-body"><span style="color: black">
                     <h5>Most In-Demand Languages: </h5>
                     <p>
                         <ol>
                             <li>/top langs/</li>
                         </ol>
                     </p>
+                    </span>
+                    </div>
+                  </div>
               
                     {% if job_listing %}
                       <!-- {% for job in job_listing %}
@@ -71,9 +83,8 @@ body { margin: 0; padding: 0; }
                       {% endfor %} -->
                   {% endif %}
 
-                  {{ job_count }}
                   <br/>
-                  {{ searched_job }}
+                  
                 </div>            
             </div>
             <div class="col-md-6">

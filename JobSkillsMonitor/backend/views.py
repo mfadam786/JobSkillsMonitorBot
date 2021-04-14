@@ -8,7 +8,7 @@ import json
 from requests.structures import CaseInsensitiveDict
 from django.views import generic
 from django.contrib.postgres.search import SearchQuery, SearchVector
-
+from django.db.models import Count
 from pathlib import Path
 import glob
 import os
@@ -32,11 +32,9 @@ def test_maps_regions(request):
     count = {}
     for l in languages[:10]:
         result = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search=l['language'])
-        len(list(result))
 
-        
     
-    return render(request, 'backend/index.html')
+    return render(request, 'backend/test.html', {'count': count})
 
 def get_job_locations(request, listings):
 
@@ -46,14 +44,14 @@ def get_job_locations(request, listings):
 
 
     for job in listings:
-        if job['region'] not in regions:
-            regions.append(job['region'])
-            print(job['region'])
+        if job.region not in regions:
+            regions.append(job.region)
+            print(job.region)
 
-        if job['region'] in region_count:
-            region_count[job['region']] += 1
+        if job.region in region_count:
+            region_count[job.region] += 1
         else:
-            region_count[job['region']] =  1
+            region_count[job.region] =  1
 
 
     for region in list(regions):
@@ -103,15 +101,15 @@ def search(request):
     if (job_title == ''):
         return render(request, 'backend/index.html')
     else:
-
-        listing_table = Listing.objects
-
+        
+        
         for word in job_title.split(' '):
-            jobs += listing_table.all().filter(job_title__icontains=word).values()
+            jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word)
             
         for job in jobs:
             if job not in job_listings:
                 job_listings.append(job)
+
 
         job_count = len(job_listings)
         location_data = get_job_locations(request, job_listings)

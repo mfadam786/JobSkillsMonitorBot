@@ -31,3 +31,13 @@ class Job_Type_Language_Count(models.Model):
     count = models.IntegerField(default=0)
 
 
+class Job_Pay(models.Model):
+    job_title = models.TextField(max_length=100, default="")
+    pay = models.IntegerField(default=0)
+    lower_pay = models.IntegerField(default=0)
+    upper_pay = models.IntegerField(default=0)
+
+class Job_Language_Count(models.Model):
+    language = models.TextField(max_length=50, default="")
+    listing = models.ForeignKey("Listing", on_delete=models.CASCADE)
+

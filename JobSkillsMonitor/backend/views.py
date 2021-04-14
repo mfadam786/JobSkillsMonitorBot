@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay
 import pandas as pd
 import numpy as np
 import datetime
@@ -7,7 +7,7 @@ import requests
 import json
 from requests.structures import CaseInsensitiveDict
 from django.views import generic
-from django.contrib.postgres.search import SearchQuery, SearchVector
+from django.contrib.postgres.search import SearchQuery, SearchVector, SearchRank
 from django.db.models import Count
 from pathlib import Path
 import glob
@@ -46,7 +46,6 @@ def get_job_locations(request, listings):
     for job in listings:
         if job.region not in regions:
             regions.append(job.region)
-            print(job.region)
 
         if job.region in region_count:
             region_count[job.region] += 1
@@ -64,6 +63,7 @@ def get_job_locations(request, listings):
     headers["Accept"] = "application/json"
 
     urls = []
+
 
 
 
@@ -97,14 +97,15 @@ def search(request):
 
     job_listings = []
     jobs = []
-
+    languages_to_count = ['Python', 'Javascript', 'Java', "C#", 'C++', 'SQL', 'PHP', 'GoLang', 'Swift']
     if (job_title == ''):
         return render(request, 'backend/index.html')
     else:
         
-        
         for word in job_title.split(' '):
             jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word)
+            jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word).annotate(search=SearchVector('data')).filter(search='C#')
+
             
         for job in jobs:
             if job not in job_listings:
@@ -113,7 +114,12 @@ def search(request):
 
         job_count = len(job_listings)
         location_data = get_job_locations(request, job_listings)
-        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'] }
+
+        job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title')).filter(search='web')
+
+        context = { 'job_listing' : job_listings, 'searched_job' : job_title, 'job_count' : job_count, 'geojson': location_data['geoJson'], 'region_count': location_data['region_count'], 'job_pay': job_pay[0] }
+        
+
 
         return render(request, template_name, context)
 

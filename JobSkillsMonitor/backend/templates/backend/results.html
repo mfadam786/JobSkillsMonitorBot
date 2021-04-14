@@ -34,7 +34,6 @@ body { margin: 0; padding: 0; }
     <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
 </div>
 
-
 <div class="row h-100 justify-content-center align-items-center">
         <div class="my-3 py-4 row w-100 h-75 border rounded shaded text-light">
             <div class="col-md-6">
@@ -43,15 +42,35 @@ body { margin: 0; padding: 0; }
                 <div class="pl-4 mt-4">
                 <div class="card">
                     <div class="card-body">
-                      <span style="color: black">There were {{ job_count }} found that match your search
+                      <span style="color: black">There were {{ job_count }} jobs found that match your search
                       </span>
                     </div>
                   </div>
-                  
+                <div class="card">
+                    <div class="card-body">
+                      <span style="color: black">Avg ${{ job_pay.pay }} Lower ${{ job_pay.lower_pay }} Higher ${{ job_pay.upper_pay }}
+                      </span>
+                    </div>
+                  </div>
                   <div class="card">
                     <div class="card-body"><span style="color: black">
                     <h5>Most In-Demand Languages: </h5>
                     <p>
+                        <ol>
+                            <li>x</li>
+                        </ol>
+                        <ol>
+                            <li>/top langs/</li>
+                        </ol>
+                        <ol>
+                            <li>/top langs/</li>
+                        </ol>
+                        <ol>
+                            <li>/top langs/</li>
+                        </ol>
+                        <ol>
+                            <li>/top langs/</li>
+                        </ol>
                         <ol>
                             <li>/top langs/</li>
                         </ol>
@@ -148,9 +167,11 @@ geojson.features.forEach(function(marker, index) {
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML(marker.text + " : " + region_count[marker.text] + " jobs available"))
+    .setHTML('<span style="color: black">' + marker.text + " : " + region_count[marker.text] + " jobs available</span>"))
     .addTo(map);
 });
+
+map.addControl(new mapboxgl.NavigationControl());
   
 </script>
 {% endblock %}

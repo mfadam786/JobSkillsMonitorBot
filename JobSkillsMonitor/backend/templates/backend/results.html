@@ -16,44 +16,49 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 
-<div class="row h-100 justify-content-center align-items-center">
+<div class="container w-100 border rounded shaded text-light">
+  <div class="row justify-content-center align-items-center">
+    <div class="left-content col-md-6">
+      <h2 class="pl-4 inl">Search results for </h2>
+      <h2 class="pl-1 inl"> '{{ searched_job|title }}' </h2>
+      <div class="pl-4 mt-2">
+            <h5 class="mb-2">There were <u>{{ job_count }}</u> jobs found that match your search</h5>
+      </div> 
+      <div class="pl-4 mt-3">
+        <div class="card mt-3 bg-info">
+          <div class="card-body"><span style="color: black">
+          <h5>Most In-Demand Languages: </h5>
+          <p>
+              <ol>
+                  {% for lang in lang_count|slice:":5" %}
+                    <li>{{lang}}</li>
+                  {% endfor %}
+              </ol>
+          </p>
+          </span>
+          </div>
+        </div>
+        <br>
+        <span class="text-light">
+          <h5 style="font-size: 1rem">Average Salary: ${{ job_pay.pay }}<br> Lowest Salary: ${{ job_pay.lower_pay }}<br> Highest Salary: ${{ job_pay.upper_pay }}</h5>
+        </span>
+        <div class="mt-4">
+        <h2>
+          <a href={{ seek_url }} class="btn btn-info" style="width: 45%;">Browse This Job On Seek</a>
+        </h2>
+        <h2>
+          <a href={{ indeed_url }} class="btn btn-info" style="width: 45%;">Browse This Job On Indeed</a>
+        </h2></div>                  
+      </div>
+    </div>
+    <div class="right-content col-lg-6"></div>
+  </div>
+</div>
 
-        <div class="py-4 row w-100 border rounded shaded text-light" style="height: 40rem;">
-            <div class="col-md-6" style="max-height: 100%;">
-                <h2 class="pl-4 inl">Search results for </h2>
-                <h2 class="pl-1 inl"> '{{ searched_job|title }}' </h2>
-                <div class="pl-4 mt-2">
-                      <h5 class="mb-2">There were <u>{{ job_count }}</u> jobs found that match your search</h5>
-                </div> 
-                <div class="pl-4 mt-3">
-                  <div class="card mt-3 bg-info">
-                    <div class="card-body"><span style="color: black">
-                    <h5>Most In-Demand Languages: </h5>
-                    <p>
-                        <ol>
-                            {% for lang in lang_count|slice:":5" %}
-                              <li>{{lang}}</li>
-                            {% endfor %}
-                        </ol>
-                    </p>
-                    </span>
-                    </div>
-                  </div>
-                  <br>
-                  <span class="text-light">
-                    <h5 style="font-size: 1rem">Average Salary: ${{ job_pay.pay }}<br> Lowest Salary: ${{ job_pay.lower_pay }}<br> Highest Salary: ${{ job_pay.upper_pay }}</h5>
-                  </span>
-                  <div class="mt-4">
-                  <h2>
-                    <a href={{ seek_url }} class="btn btn-info" style="width: 45%;">Browse This Job On Seek</a>
-                  </h2>
-                  <h2>
-                    <a href={{ indeed_url }} class="btn btn-info" style="width: 45%;">Browse This Job On Indeed</a>
-                  </h2></div>                  
-                </div>            
-            </div>
 
-      <div class="col-md-6" style="max-height: 100%;">
+<div class="row h-60 p-3 justify-content-center align-items-center">
+      <div class="py-4 row w-100 border rounded shaded text-light" style="height: 40rem;">
+      <div class="col-md-5" style="max-height: 100%;">
           <div id="map"></div>
           <div id="menu">
             <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
@@ -72,27 +77,27 @@ body { margin: 0; padding: 0; }
             <label for="smitcr7/ckmu1gkhy4k9s17pgprvhq1ub">Frank</label>
         </div>
       </div>
+      <div class="col-md-7" style="max-height: 100%;">
+          {% if regional_job_count_data_display %}
+          <div id="container" class="py-5" style="width: 100%; margin:auto;">
+            <canvas id="pie-chart2" class="my-5"></canvas>
+          </div>
+        {% else %}
+              <p>There is no regional_job_count data matching your search criteria</p>
+        {% endif %}
+      </div>
     </div>   
   </div>
-
-  <br/>
-  <br/>
-  <div class="py-4 row border rounded shaded text-light" style="height: 60rem;">
-  {% if work_type_data_display %}
-    <div id="container" style="width: 75%; margin:auto;">
-      <canvas id="pie-chart1"></canvas>
-    </div>
-  {% else %}
-        <p>There is no work_type data matching your search criteria</p>
-  {% endif %}
-  
-  {% if regional_job_count_data_display %}
-    <div id="container" style="width: 75%; margin:auto;">
-      <canvas id="pie-chart2"></canvas>
-    </div>
-  {% else %}
-        <p>There is no regional_job_count data matching your search criteria</p>
-  {% endif %}
+  <div class="row h-60 p-3 justify-content-center align-items-center">
+    <div class="py-4 row w-100 border rounded shaded text-light" style="height: 60rem;">
+    {% if work_type_data_display %}
+      <div id="container" style="width: 75%; margin:auto;">
+        <canvas id="pie-chart1"></canvas>
+      </div>
+    {% else %}
+          <p>There is no work_type data matching your search criteria</p>
+    {% endif %}
+  </div>
 </div>
   <div class="w-100"><a href="backend/" style="display: block; margin:auto;" class="btn btn-info my-3 px-4 py-1 w-25">Search Again</a></div>
 

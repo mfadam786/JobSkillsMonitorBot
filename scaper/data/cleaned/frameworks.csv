@@ -1,0 +1,1177 @@
+,framework
+0,Recent
+1,Old
+2,All
+3,.NET Core
+4,1% canary
+5,"""Handcranking"" of Hadoop clusters using config management tools"
+6,10x engineers
+7,.NET 5
+8,A single CI instance for all teams
+9,Acceptance test of journeys
+10,Accumulate-only data
+11,acs-engine
+12,Advanced analytics
+13,Aeron
+14,Aggregates as documents
+15,Agile analytics
+16,Airflow
+17,Akka
+18,Alamofire
+19,Algorithmic IT operations
+20,ALT.NET
+21,Amazon API Gateway
+22,Amazon Rekognition
+23,Amundsen
+24,Analyzing test runs
+25,Android
+26,Android Architecture Components
+27,Android-x86
+28,Anemic REST
+29,Angular
+30,Angular Testing Library
+31,AngularJS
+32,AngularJS and Knockout
+33,Anka
+34,Ansible
+35,Ant
+36,Anthos
+37,AnyStatus
+38,Apache Atlas
+39,Apache Beam
+40,Apache camel
+41,Apache Flink
+42,Apache Kafka
+43,Apache Kylin
+44,Apache Mesos
+45,Apache Pig
+46,Apache Pinot
+47,Apache Pulsar
+48,Apache Spark
+49,Apache Superset
+50,Apex
+51,API expand-contract
+52,API management services
+53,APIs as a product
+54,Aplas
+55,Apollo
+56,Apollo Auto
+57,Apollo Federation
+58,App containers
+59,AppCode
+60,AppHarbor
+61,Appium
+62,Appium Test Distribution
+63,Application appliances
+64,Application Servers
+65,Applying product management to internal platforms
+66,Archery
+67,Architectural fitness function
+68,ArchUnit
+69,Argo CD
+70,ARKit/ARCore
+71,ARM Server SoC
+72,Arrow
+73,asdf-vm
+74,ASP
+75,AssertJ
+76,assertj-swagger
+77,AsyncAPI
+78,Atlas and BeeHive
+79,ATOM
+80,Aurelia
+81,Auth0
+82,Automate database deployment
+83,Automated deployment pipeline
+84,Automated machine learning (AutoML)
+85,Automation of technical tests
+86,Autonomous bubble pattern
+87,AVA
+88,Avro
+89,AWS
+90,AWS Application Load Balancer
+91,AWS Cloud Development Kit
+92,AWS CodePipeline
+93,AWS Data Wrangler
+94,AWS Device Farm
+95,AWS ECS
+96,AWS Fargate
+97,AWS Lambda
+98,AWSume
+99,axe-core
+100,axios
+101,Axon
+102,Azure
+103,Azure Data Factory for orchestration
+104,Azure DevOps
+105,Azure Machine Learning
+106,Azure Pipelines
+107,Azure Service Fabric
+108,Azure Stack
+109,Babel
+110,Babylon.js
+111,Backbone.js
+112,Backend as a service
+113,Backstage
+114,BackstopJS
+115,batect
+116,BEM
+117,BERT
+118,BeyondCorp
+119,BFF - Backend for frontends
+120,Big Data envy
+121,Big enterprise solutions
+122,BigQuery
+123,Binary attestation
+124,Bit.dev
+125,Bitrise
+126,Blackbox
+127,Blazor
+128,Blockchain beyond bitcoin
+129,Blue-green deployment
+130,Bluetooth Mesh
+131,Bokeh
+132,Boot2docker
+133,Bottled Water
+134,Bounded Buy
+135,Bounded low-code platforms
+136,Bridging physical and digital worlds with simple hardware
+137,Brighter
+138,Browser-based templating
+139,Browser-tailored polyfills
+140,Browsersync
+141,Bug bounties
+142,Build pipelines
+143,Build your own radar
+144,Buildah and Podman
+145,Buildkite
+146,bUnit
+147,Butterknife
+148,Buying solutions you can only afford one of
+149,C# 4.0
+150,Caching reverse proxies
+151,Caffe
+152,Cage
+153,Cake and Fake
+154,Calabash
+155,Calatrava
+156,Camunda
+157,Canary builds
+158,Capability modeling
+159,Capture domain events explicitly
+160,Capturing client-side JavaScript errors
+161,Care about hardware
+162,Care about languages
+163,Carthage
+164,CartoDB
+165,Cassandra carefully
+166,Categorization & prioritization of technical debt
+167,Ceph
+168,cfn_nag
+169,Chaos Engineering
+170,Chaos Katas
+171,Chaos Monkey
+172,Chaos Toolkit
+173,Chrome
+174,Chrome OS
+175,CI theatre
+176,Cilium
+177,CircleCI
+178,Citrix for development
+179,Clara rules
+180,Claudia
+181,Client and server rendering with same code
+182,Client-directed query
+183,Client-side MVC
+184,Clinic.js Bubbleprof
+185,Clojure
+186,Clojure.spec
+187,ClojureScript
+188,Cloud
+189,Cloud Foundry
+190,Cloud lift and shift
+191,Cloud sandboxes
+192,Cloud Spanner
+193,Cloud-based image comprehension
+194,Cloud-init
+195,Cloudera Impala
+196,CloudEvents
+197,Cloudflare Workers
+198,CML
+199,CMS as a platform
+200,Co-location by telepresence
+201,CoAP
+202,CockroachDB
+203,Code in configuration
+204,Codefresh
+205,Coding architects
+206,CoffeeScript
+207,Collaborative analytics and data science
+208,Combine
+209,Commitizen
+210,Communication between those responsible for hardware and software
+211,Component-based frameworks
+212,Composer
+213,Concourse
+214,Concurrency abstractions and patterns
+215,Concurrent languages
+216,Conduit
+217,ConfigCat
+218,Configuration in DNS
+219,Consul
+220,Consumer-driven contract testing
+221,Container security scanning
+222,Content Security Policies
+223,Contentful
+224,Contextual bandits
+225,Continuous Delivery (CD)
+226,Continuous delivery for machine learning (CD4ML)
+227,Continuous delivery for mobile devices
+228,Continuous deployment
+229,Continuous integration in the cloud
+230,Conversationally aware APIs
+231,Corda
+232,Core Async
+233,CoreOS
+234,Cosmos
+235,Cosmos DB
+236,Couchbase
+237,Crazy Egg
+238,Cross mobile platforms
+239,Cross-platform mobile toolkits
+240,Crowdin
+241,Crux
+242,Crypto shredding
+243,CSS frameworks
+244,CSS Grid Layout
+245,CSS Modules
+246,CSS-in-JS
+247,Cursive
+248,CVXPY
+249,Cylon.js
+250,Cypress
+251,D3
+252,Dagger
+253,Dagster
+254,Dapper
+255,Dash
+256,Dashing
+257,Dask
+258,Data discoverability
+259,Data integrity at the origin
+260,Data Lake
+261,Data mesh
+262,Data visualizations of development and operations
+263,Data-hungry packages
+264,Database based integration
+265,Database migrations for NoSQL
+266,DataHub
+267,DataStax Enterprise Graph
+268,Datensparsamkeit
+269,Datomic
+270,dbt
+271,Dc.js
+272,Debezium
+273,Decentralized identity
+274,Decision driven BI
+275,Declarative data pipeline definition
+276,Declarative provisioning
+277,Decoupling deployment from release
+278,Decoupling secret management from source code
+279,DeepLearning.scala
+280,DeepWalk
+281,Deequ
+282,Deflect
+283,Deis
+284,Delta Lake
+285,Deltacloud
+286,Deno
+287,Dependabot
+288,Dependency drift fitness function
+289,Dependency management for JavaScript
+290,Dependency Structure Matrices
+291,Deployment and scripting test tools
+292,Deployment drift radiator
+293,Design systems
+294,DesignOps
+295,Detekt
+296,Development environments in the cloud
+297,DevOps
+298,Diagrams as code
+299,DialogFlow
+300,Differential privacy
+301,Digdag
+302,DigitalOcean
+303,Distributed version control
+304,Distroless Docker images
+305,Django REST
+306,Docker
+307,Docker for builds
+308,Docker Notary
+309,Docker Toolbox
+310,Dojo
+311,Domain-scoped events
+312,Domain-Specific Languages
+313,Domain-specific PaaS
+314,Dremio
+315,Dropwizard
+316,Druid
+317,DuckDB
+318,DVC
+319,eBPF
+320,EC2 & S3
+321,ECharts
+322,ECMAScript 2017
+323,Edge Side Includes for page composition
+324,Elastic Search
+325,Elasticsearch LTR
+326,Electron
+327,Eleventy
+328,Elixir
+329,Elm
+330,Embark
+331,Embedded mobile mocks
+332,Embedded servlet containers
+333,Ember.js
+334,Emergent design
+335,EMQ
+336,Enlive
+337,Enterprise Data Warehouse
+338,Enterprise-wide integration test environments
+339,Enzyme
+340,ERNIE
+341,ES6
+342,ESB
+343,ESBs in API Gateway's clothing
+344,esbuild
+345,ESLint
+346,ESP8266
+347,Espresso
+348,Espruino
+349,Ethereum
+350,Ethereum for decentralized applications
+351,Ethical bias testing
+352,Ethical Explorer
+353,Ethical OS
+354,Event API’s
+355,Event driven business intelligence
+356,Event interception
+357,Event Sourcing
+358,Event Storming
+359,Event streaming as the source of truth
+360,EventStore
+361,EVM beyond Ethereum
+362,Evolutionary architecture
+363,Evolutionary database
+364,Exhaustive browser based testing
+365,Experience Design (XD)
+366,Experiment tracking tools for machine learning
+367,Explainability as a first-class model selection criterion
+368,Exposed
+369,F#
+370,Facebook as business platform
+371,Facets
+372,Fairseq
+373,Falco
+374,Faraday
+375,fastai
+376,FastAPI
+377,Fastify
+378,fastlane
+379,Fastly
+380,FBSnapshotTestcase
+381,Feature branching
+382,Feature Store
+383,Federated learning
+384,Fetch
+385,Figma
+386,Firebase
+387,Firefox
+388,Fission
+389,Flagger
+390,Flagr
+391,Flair
+392,Flight.js
+393,Flipper
+394,Flood IO
+395,Flow
+396,Flume
+397,Flutter
+398,Flutter Driver
+399,Flutter for Web
+400,Flux
+401,Flyway
+402,Focus on mean time to recovery
+403,Foreman
+404,Formik
+405,Forward Secrecy
+406,FoundationDB
+407,Four key metrics
+408,FPM
+409,Frank
+410,Frege
+411,Front end instrumentation
+412,Front-end integration via artifact
+413,Functional Java
+414,Functional languages
+415,Future of Java
+416,Galen
+417,Gatling
+418,Gatsby.js
+419,Gauge
+420,GCP Pub/Sub
+421,GemJars
+422,Generated infrastructure diagrams
+423,Generic cloud usage
+424,GenyMotion
+425,Git
+426,Git based CMS/Git for non-code
+427,git-secrets
+428,Gitflow
+429,GitHub
+430,GitHub Actions
+431,GitLab
+432,GitOps
+433,Gitpod
+434,Gitrob
+435,GitUp
+436,GKE
+437,Glitch
+438,Gloo
+439,Go language
+440,Gobot
+441,GoCD
+442,Godot
+443,Google App Engine
+444,Google as corporate platform
+445,Google BigQuery ML
+446,Google Cloud Dataflow
+447,Google Cloud Platform
+448,Google Dart
+449,Google Wave
+450,gopass
+451,Gor
+452,Gorilla REPL
+453,Goss
+454,gossm
+455,GPGPU
+456,Graal Native Image
+457,GraalVM
+458,Gradle
+459,Grafana
+460,Grafeas
+461,Graphite
+462,GraphQL
+463,GraphQL for server-side resource aggregation
+464,GraphQL Inspector
+465,Grasp
+466,Great Expectations
+467,Gremlin
+468,Gremlin
+469,Groovy
+470,Grunt.js
+471,Guerrilla user testing
+472,Gulp
+473,gVisor
+474,GWT
+475,H2O
+476,Hadoop 2.0
+477,Hadoop as a service
+478,HAL
+479,HAML
+480,Hamms
+481,Handwritten CloudFormation
+482,Handwritten CSS
+483,Hangfire
+484,HashiCorp Boundary
+485,HashiCorp Sentinel
+486,HashiCorp Vault
+487,Haskell Hadoop library
+488,Headless Chrome for front-end test
+489,Headless Firefox
+490,Health check pages
+491,Heavyweight test tools
+492,Helm
+493,Heptio Ark
+494,Hermes
+495,Heroku
+496,High performance envy/web scale envy
+497,Highcharts
+498,Hipster batch
+499,Hive
+500,HiveRunner
+501,HoloLens
+502,Homemade infrastructure-as-code (IaC) products
+503,Homomorphic encryption
+504,Honeycomb
+505,Hosted IDE's
+506,Hosted identity management as a service
+507,Hosted solutions for testing iOS
+508,Hosting PII data in the EU
+509,Hot Chocolate
+510,Hotwire
+511,HSTS
+512,HTML 5
+513,HTML5 for offline applications
+514,HTML5 storage instead of cookies
+515,http4k
+516,Humane registry
+517,Humio
+518,Hybrid clouds
+519,Hydra
+520,Hyperapp
+521,Hyperledger
+522,Hyperledger Composer
+523,HyperResource
+524,Hypothesis-driven legacy renovation
+525,Hystrix
+526,iBeacon
+527,Icon fonts
+528,Idempotency filter
+529,IE6 End of Life
+530,IE8
+531,ievms
+532,iFrames for sandboxing
+533,Ignoring OWASP Top 10
+534,imgcook
+535,Immer
+536,Immutable servers
+537,Immutable.js
+538,Import maps for micro frontends
+539,In-process acceptance testing
+540,in-toto
+541,Incremental delivery with COTS
+542,IndexedDB
+543,IndiaStack
+544,InfluxDB
+545,Infrastructure as code
+546,Infrastructure automation of development workstations
+547,Infrastructure configuration scanner
+548,InSpec
+549,Instana
+550,Instrument all the things
+551,Intentional Software
+552,Interledger
+553,Inverse Conway Maneuver
+554,io-ts
+555,Ionic Framework
+556,IPFS
+557,iPhone
+558,Istio
+559,Iterative data warehousing
+560,Jackrabbit Oak
+561,Jade
+562,Jaeger
+563,JAMstack
+564,Jasmine paired with Node.js
+565,Java 8
+566,Java language end of life
+567,Java portal servers
+568,JavaScript as a first class language
+569,JavaScript as a platform
+570,JavaScript micro frameworks
+571,JavaScript MV* frameworks
+572,JavaScript tooling
+573,Jekyll
+574,Jenkins as a deployment pipeline
+575,Jepsen
+576,Jest
+577,jest-when
+578,Jib
+579,joi
+580,Jotai and Zustand
+581,jQuery Mobile
+582,JRuby
+583,jscodeshift
+584,JSF
+585,JSONassert
+586,jsoniter
+587,JSPatch
+588,JuiceFS
+589,Julia
+590,JuMP
+591,Jupyter
+592,Jupyter for automated testing
+593,JupyterLab
+594,JVM as platform
+595,K3s
+596,k6
+597,k9s
+598,Kafka API without Kafka
+599,Kafka Streams
+600,Karate
+601,Katran
+602,Kedro
+603,Keras
+604,Keycloak
+605,Kiali
+606,kind
+607,Knative
+608,Knet.jl
+609,Koin
+610,Kong API Gateway
+611,kops
+612,Kotlin
+613,Kotlin Flow
+614,Kotlin Multiplatform Mobile
+615,KotlinTest
+616,Ktor
+617,kube-bench
+618,Kube-managed cloud services
+619,Kubeflow
+620,Kubernetes
+621,Kubernetes Operators
+622,Kuma
+623,Kustomize
+624,KVM
+625,Laconia
+626,Lambda pinball
+627,LambdaCD
+628,Language Server Protocol
+629,Language workbenches
+630,Large format mobile devices
+631,Layered microservices architecture
+632,Layered platform teams
+633,leaflet.js
+634,LeakCanary
+635,Lean software development
+636,Legacy in a box
+637,Legacy migration feature parity
+638,Lens
+639,Let's Encrypt
+640,LGTM
+641,Librarian-puppet and Librarian-Chef
+642,Light Table
+643,Lighthouse
+644,Lightweight approach to RFCs
+645,Lightweight Architecture Decision Records
+646,Linux containers
+647,Linux Security Modules
+648,LitElement
+649,Litmus
+650,Living CSS Style Guides
+651,Load Impact
+652,Local storage sync
+653,LocalStack
+654,Location based services
+655,Locust
+656,Log aggregation & indexing
+657,Log aggregation for business analytics
+658,Log level per request
+659,Logic in stored procedures
+660,Logic-free markup
+661,Logs as data
+662,Logstash & Graylog2
+663,Loki
+664,Long-lived branches with Gitflow
+665,Longhorn
+666,LoRaWAN
+667,Lottie
+668,Lotus
+669,Low-code platforms
+670,Low-cost robotics
+671,Lua
+672,LVGL
+673,Machine image as a build artifact
+674,Machine image pipelines
+675,Managing stateful systems via container orchestration
+676,Manifold
+677,Manual infrastructure management
+678,Mapbox
+679,MapD
+680,MariaDB
+681,Marquez
+682,Master data management
+683,Masterless Chef/Puppet
+684,Material UI
+685,Materialize
+686,Matomo
+687,Maven
+688,Mechanical sympathy
+689,MediaPipe
+690,MeiliSearch
+691,MemGuard
+692,MemSQL
+693,Mercurial
+694,Mermaid
+695,Mesosphere DCOS
+696,Message buses without smarts
+697,Meteor.js
+698,Micro frontend anarchy
+699,Micro frontends
+700,Micro frontends for mobile
+701,MicroK8s
+702,Micronaut
+703,Microservice envy
+704,Microservices
+705,Microsoft Nano Server
+706,Minimizing application configuration
+707,MinIO
+708,mkcert
+709,MLflow
+710,MMKV
+711,Mobile first
+712,Mobile payment systems
+713,Mobile testing on mobile networks
+714,Mobile web
+715,Mock Service Worker
+716,MockK
+717,Moco
+718,Molecule
+719,MongoDB
+720,Mongoose OS
+721,Monitoring of invariants
+722,Mosquitto
+723,Mountebank
+724,Multi-account cloud setup
+725,MURAL
+726,NaCl
+727,Naive password complexity requirements
+728,Nameko
+729,Nancy
+730,Nashorn
+731,NATS
+732,Neo4J
+733,NestJS
+734,Netflix OSS Full stack
+735,Netlify
+736,New Relic beyond Rails
+737,Next-generation test tools
+738,Next.js
+739,Nightwatch
+740,Node overload
+741,Node.js
+742,Nomad
+743,Non-relational databases
+744,NoPSD
+745,NoSQL
+746,NPM for all the things
+747,nsp
+748,Nuance Mix
+749,NuGet
+750,OAuth
+751,Observability as code
+752,Ocelot
+753,Octopus
+754,Oculus Quest
+755,Offline first web applications
+756,OkHttp
+757,Om
+758,On-demand modules
+759,ONNX
+760,Opacus
+761,Open Application Model (OAM)
+762,Open Policy Agent (OPA)
+763,Open source BI/ETL tools
+764,Open source IaaS
+765,OpenAM
+766,OpenAPM
+767,OpenID Connect
+768,OpenSocial
+769,OpenStack
+770,OpenTelemetry
+771,OpenVR
+772,OpenZeppelin
+773,Operator Framework
+774,Opinionated and automated code formatting
+775,Opstrace
+776,Optimal Workshop
+777,OR-Tools
+778,Origami
+779,OSGi
+780,OSS Index
+781,Out-of-container functional testing
+782,Overambitious API gateways
+783,OWASP ASVS
+784,OWASP Dependency-Check
+785,OWIN
+786,Pa11y
+787,Pace-layered Application Strategy
+788,Packer
+789,Packetbeat
+790,Pact & Pacto
+791,Paged.js
+792,Pageify
+793,Papertrail
+794,Parallel run with reconciliation
+795,Parcel
+796,Particle Photon/Particle Electron
+797,Partition infrastructure along team bounds
+798,Patroni
+799,pdfmake
+800,Peer review equals pull request
+801,Performance testing as a first-class citizen
+802,Perimeterless enterprise
+803,Pester
+804,PhantomJS
+805,Phoenix
+806,Phoenix Environments
+807,PhoneGap/Apache Cordova
+808,Phrase
+809,Physical Web
+810,Pinpoint
+811,Pipelines as code
+812,Pipelines for infrastructure as code
+813,Pitest
+814,Pivotal Cloud Foundry
+815,PlantUML
+816,Platform engineering product teams
+817,Platform roadmaps
+818,PlatformIO
+819,Play Framework 2
+820,Playwright
+821,pnpm
+822,Pointer Events
+823,Polly
+824,Polly.js
+825,Polycloud
+826,Polyglot development environments
+827,Polyglot Persistence
+828,Polyglot programming
+829,Pose
+830,PostCSS
+831,PostgreSQL for NoSQL
+832,Postman
+833,PowerShell
+834,Pragmatic remote pairing
+835,Pre-commit downstream build checks
+836,PredictionIO
+837,Preflight builds
+838,Presto
+839,Prettier
+840,Privacy-focused web analytics
+841,Privacy-preserving record linkage (PPRL) using Bloom filter
+842,Private Clouds
+843,Procedure oriented integration
+844,Production immune system
+845,Productionizing notebooks
+846,Products over projects
+847,Programming in your CI/CD tool
+848,Progressive Enhancement
+849,Progressive Web Applications
+850,Prometheus
+851,Promises for asynchronous programming
+852,Property-based unit testing
+853,Prophet
+854,Prototype On Paper
+855,Prototyping with InVision and Sketch
+856,Protractor for AngularJS
+857,Provisioning testing
+858,Prowler
+859,PSake
+860,Pulumi
+861,Pumba
+862,Puncturing encapsulation with change data capture
+863,Puppet
+864,Puppeteer
+865,Pyright
+866,Python 3
+867,PyTorch
+868,Q & Bluebird
+869,Q#
+870,QA in production
+871,Quarkus
+872,Quick
+873,Quick and Nimble
+874,Quorum
+875,R as Compute Platform
+876,Rackspace Cloud
+877,Rake for Java & .NET
+878,RAML
+879,Rancher
+880,Rapidoid
+881,Rasa
+882,RDF triple stores
+883,RDFa
+884,React Hook Form
+885,React Hooks
+886,React Native
+887,React Styleguidist
+888,React Testing Library
+889,React.js
+890,Reactive architectures
+891,Reactive Extensions for .Net
+892,ReactiveX
+893,Reactor
+894,Reagent
+895,Real-time business intelligence
+896,Realm
+897,ReasonML
+898,Recharts
+899,Recoil
+900,Recommender
+901,Recreating ESB antipatterns with Kafka
+902,Redash
+903,Redis
+904,Redpanda
+905,Redux
+906,Release train
+907,Remote - WSL
+908,Remote mob programming
+909,Remote usability testing
+910,Rendertron
+911,Repsheet
+912,Request-response events in user-facing workflows
+913,Require.js
+914,Require.js & NPM
+915,Resilience4j
+916,Resin.io
+917,Responsive web design
+918,REST without PUT
+919,REST-assured
+920,Restfulie
+921,ReSwift
+922,Retrofit
+923,RIA
+924,Riak
+925,RIBs
+926,Rider
+927,Riemann
+928,Risk-commensurate vendor strategy
+929,River
+930,Robolectric
+931,Rook
+932,Room
+933,Rootless containers
+934,ROS
+935,Roslyn
+936,RPA
+937,Ruby
+938,RubyMotion
+939,Run cost as architecture fitness function
+940,Rust
+941,SaaS performance testing tools
+942,SAFE stack
+943,SAFe™
+944,Sandstorm
+945,Sarama
+946,"SASS, SCSS, LESS, and Stylus"
+947,"Scala, the good parts"
+948,Scikit-learn
+949,ScoutSuite
+950,"Scratch, Alice, and Kodu"
+951,Scrum certification
+952,SDN
+953,Secrets as a service
+954,Secure enclaves
+955,Secure multiparty computing
+956,Security Chaos Engineering
+957,Security Monkey
+958,Security policy as code
+959,Security sandwich
+960,Segregated DOM plus node for JS Testing
+961,Selenium 2 testing of mobile websites
+962,Semantic monitoring
+963,Semi-supervised learning loops
+964,Sensei
+965,Sensu
+966,Sentry
+967,Separate code and pipeline ownership
+968,Separate DevOps team
+969,Server / application container end-of-life
+970,Serverless architecture
+971,Serverless Framework
+972,Serverspec
+973,Service account rotation approach
+974,Service choreography
+975,Service mesh
+976,Shared VPC
+977,ShellCheck
+978,Sidecars for endpoint security
+979,SignalR
+980,Siloed metrics
+981,Silverback
+982,Simple performance trending
+983,Simplest possible feature toggle
+984,Simplest possible ML
+985,Sinatra
+986,Single command deploy
+987,Single threaded servers with asynchronous I/O
+988,single-spa
+989,Singleton infrastructure
+990,Sizzy
+991,Skaffold
+992,Sleepy Puppy
+993,Smart contracts
+994,Smart systems
+995,SMS and USSD as a UI
+996,SnapCI
+997,Snapshot testing only
+998,Snorkel
+999,Snowflake
+1000,Snowpack
+1001,Snowplow Analytics & Piwik
+1002,Snyk
+1003,Social code analysis
+1004,Solidity
+1005,Sonar
+1006,Sonobuoy
+1007,SPA injection
+1008,Spacemacs
+1009,spaCy
+1010,SPDY
+1011,Spec-based codegen
+1012,Spectral
+1013,Spek
+1014,SPIFFE
+1015,Spinnaker
+1016,Splunk
+1017,Spray/akka-http
+1018,Spring Boot
+1019,Spring Cloud
+1020,Spring Cloud Contract
+1021,Squid
+1022,Stanford CoreNLP
+1023,Static site generators
+1024,Stolon
+1025,Storm
+1026,Stratos
+1027,Streamlit
+1028,Strikt
+1029,Structured logging
+1030,Stryker
+1031,Styled components
+1032,Subversion
+1033,Superficial private cloud
+1034,Svelte
+1035,Swagger
+1036,Swashbuckle for .NET Core
+1037,Swift
+1038,SwiftNIO
+1039,SwiftUI
+1040,Switchback experimentation
+1041,SWR
+1042,SysDig
+1043,Systems
+1044,Tablet
+1045,Taiko
+1046,Tailored service templates
+1047,Tailwind CSS
+1048,Talisman
+1049,Tamer
+1050,Tangible interaction
+1051,Tango
+1052,Tarantool
+1053,Taurus
+1054,TDD'ing containers
+1055,Team cognitive load
+1056,Tekton
+1057,Teleport
+1058,Templating in YAML
+1059,Tendermint
+1060,TensorFlow
+1061,Tensorflow Eager Execution
+1062,TensorFlow Lite
+1063,TensorFlow Mobile
+1064,TensorFlow Serving
+1065,Terraform
+1066,Terraform provider GoCD
+1067,Terragrunt
+1068,Terratest
+1069,Test at the appropriate level
+1070,Test recorders
+1071,TestCafe
+1072,Testcontainers
+1073,TestFlight & HockeyApp
+1074,Testinfra
+1075,Testing as a separate organization
+1076,Testing Library
+1077,Testing using real device
+1078,Text it as a service / Rapidpro.io
+1079,TFS
+1080,tfsec
+1081,The three Rs of security
+1082,Thoughtful caching
+1083,Threat Modeling
+1084,Three.js
+1085,TICK Stack
+1086,Ticket-driven platform operating models
+1087,Time series databases
+1088,TimescaleDB
+1089,TLA+
+1090,TLB
+1091,tmate
+1092,Tool-managed Xcodeproj
+1093,TOTP Two-Factor Authentication
+1094,Traefik
+1095,Transfer learning for NLP
+1096,Traveling Ruby
+1097,Treating VMs like physical infrastructure
+1098,Trillian
+1099,Trivy
+1100,troposphere
+1101,Truffle
+1102,Trust over IP stack
+1103,TrustKit
+1104,Tuple
+1105,Twistlock
+1106,Twitter Bootstrap
+1107,TypeScript
+1108,U2F
+1109,Ubiquitous computing
+1110,UI dev environments
+1111,UI/BFF shared types
+1112,UIAutomator
+1113,Unikernels
+1114,Unity beyond gaming
+1115,"Use ""remote native"" processes and approaches"
+1116,User centered design
+1117,Vagrant
+1118,Vapor
+1119,Variable fonts
+1120,VCS with “implicit workflow”
+1121,Velocity as productivity
+1122,Verifiable credentials
+1123,Versioning data for reproducible analytics
+1124,Vert.x
+1125,vFabric
+1126,Visual regression testing tools
+1127,Visual Studio Code
+1128,Visual Studio Live Share
+1129,Visualization and metrics
+1130,Visualizations for business data
+1131,Voice platforms
+1132,VR beyond gaming
+1133,Vue.js
+1134,Vumi
+1135,Wallaby.js
+1136,Wardley mapping
+1137,WCF HTTP
+1138,Web API
+1139,Web as platform
+1140,Web Bluetooth
+1141,Web Components standard
+1142,WebAssembly
+1143,WebFlux
+1144,Webpack
+1145,Webpack 5 Module Federation
+1146,WebRTC
+1147,WebVR
+1148,WeChat
+1149,Weex
+1150,What-If Tool
+1151,Why Did You Render
+1152,Windows Containers
+1153,Windows infrastructure automation
+1154,Windows Phone
+1155,Wire
+1156,WireMock
+1157,wit.ai
+1158,Wolfram Language
+1159,Work-in-Progress limits
+1160,WS-*
+1161,Xamarin
+1162,XState
+1163,Yarn
+1164,Yelp detect-secrets
+1165,Yeoman
+1166,Yocto Project
+1167,Zally
+1168,ZAP
+1169,Zepto.js
+1170,Zero trust architecture
+1171,Zero-code packages
+1172,Zhong Tai
+1173,Zipkin
+1174,Zola
+1175,Zucchini

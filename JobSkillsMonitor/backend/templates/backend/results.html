@@ -306,10 +306,13 @@ geojson.features.forEach(function(marker, index) {
 map.on('zoomend', function() {
   if(map.getZoom() < 5) {
       $( ".marker" ).remove();
+      map.setLayoutProperty('jobHeatMapArea', 'visibility', 'visible');
+
       markersOn = false;
   } else {
     if(markersOn == false) {
         markers();
+        map.setLayoutProperty('jobHeatMapArea', 'visibility', 'none');
     }
   }
 })
@@ -318,15 +321,15 @@ map.on('zoomend', function() {
 map.on('load', function() {
     // Add a geojson point source.
     // Heatmap layers also work with a vector tile source.
-    map.addSource('earthquakes', {
+    map.addSource('jobAreas', {
         'type': 'geojson',
         'data': geojson
     });
 
     map.addLayer({
-            'id': 'earthquakes-heat',
+            'id': 'jobHeatMapArea',
             'type': 'heatmap',
-            'source': 'earthquakes',
+            'source': 'jobAreas',
             'maxzoom': 9,
             'paint': {
                 // Increase the heatmap weight based on frequency and property magnitude

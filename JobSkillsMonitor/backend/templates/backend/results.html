@@ -109,6 +109,27 @@ body { margin: 0; padding: 0; }
   </div>
 </div>
 
+<div>
+    <div class="my-3 py-4 row w-100 border rounded shaded">
+        <div class="col-md-12 tsne">
+          <h3> Words with meaning similar to search query</h3>
+            {% if q %}
+            <h5> You searched for '{{q}}'</h5>
+            {% endif %}
+            {% if image %}
+
+            <div>
+                <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}">
+            </div>
+            {% endif %}
+            {% if error %}
+            <div>
+                <p>{{error}}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
 
 <div class="row h-60 p-3 justify-content-center align-items-center">
       <div class="py-4 row w-100 border rounded shaded text-light" style="height: 40rem;">
@@ -234,7 +255,14 @@ body { margin: 0; padding: 0; }
 
 </div>
 
+
+
 </div>
+
+
+
+
+
 <style>
  .marker {
   background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');

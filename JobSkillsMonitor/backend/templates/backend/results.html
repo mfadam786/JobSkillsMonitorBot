@@ -110,11 +110,10 @@ body { margin: 0; padding: 0; }
 </div>
 
 <div>
-    <div class="my-3 py-4 row w-100 border rounded shaded">
+    <div style="margin-left: .1rem;"class="my-4 py-4 row w-100 border rounded shaded text-light">
         <div class="col-md-12 tsne">
-          <h3> Words with meaning similar to search query</h3>
             {% if q %}
-            <h5> You searched for '{{q}}'</h5>
+            <h3> Words with meaning similar to '{{q}}'</h3>
             {% endif %}
             {% if image %}
 

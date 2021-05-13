@@ -118,7 +118,7 @@ body { margin: 0; padding: 0; }
             {% if image %}
 
             <div>
-                <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}">
+                <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}" style="max-width: -webkit-fill-available;">
             </div>
             {% endif %}
             {% if error %}

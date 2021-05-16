@@ -1,10 +1,11 @@
 {% extends './base.html' %}
 {% block content %}
+{% load static %}
 <div class="row h-100 justify-content-center align-items-center">
     <div class="my-3 py-4 row w-100 border rounded shaded">
         <div class="col-md-12">
-            <h2>Job Search</h2>
-            <p>Enter a job title to discover which programming languages, frameworks and skills are currently in-demand for 
+            <img class="px-5" style="max-width: 50rem;" src="{% static 'images/indemand.png' %}" alt="My image"/>
+            <p class="px-5 justify-content-center align-items-center">Enter a job title to discover which programming languages, frameworks and skills are currently in-demand for 
                 that particular job in New Zealand. inDemand searches recent job listings and notes which skills are present 
                 as requirements in those listings the most. Use this tool to find out which skills are likely to give you the
                 best chance at getting the job you want.

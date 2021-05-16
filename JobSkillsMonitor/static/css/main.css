@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    background-image: url("../../static/images/chevron.png");
+    background-image: url("../../static/images/geometry.png");
     background-repeat: repeat;
 }
 
@@ -18,7 +18,7 @@ form {
 }
 
 .shaded {
-    background-color: rgba(20, 20, 20, 0.6);
+    background-color: rgba(20, 20, 20, 0.75);
 }
 
 h2, h5, p, li {

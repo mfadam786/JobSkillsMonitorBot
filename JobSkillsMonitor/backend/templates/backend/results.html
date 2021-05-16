@@ -15,7 +15,7 @@ body { margin: 0; padding: 0; }
 </style>
 </head>
 <body>
-
+<a href="/backend/" class="p-2 mb-3 btn btn-secondary">← BACK</a>
 <div class="container w-100 border rounded shaded text-light">
   <div class="row">
     <h2 class="pl-4">Search results for </h2>
@@ -101,34 +101,13 @@ body { margin: 0; padding: 0; }
   <div class="row justify-content-center">
     <div class="pl-4 mt-4">
       <h2>
-        <a href={{ seek_url }} class="btn btn-success" style="width: 45%;">Browse This Job On Seek</a>
+        <a href={{ seek_url }} class="btn btn-light" style="width: 45%;">Browse This Job On Seek</a>
       </h2>
       <h2>
-        <a href={{ indeed_url }} class="btn btn-success" style="width: 45%;">Browse This Job On Indeed</a>
+        <a href={{ indeed_url }} class="btn btn-light" style="width: 45%;">Browse This Job On Indeed</a>
       </h2></div>  
   </div>
 </div>
-
-<div>
-    <div style="margin-left: .1rem;"class="my-4 py-4 row w-100 border rounded shaded text-light">
-        <div class="col-md-12 tsne">
-            {% if q %}
-            <h3> Words with meaning similar to '{{q}}'</h3>
-            {% endif %}
-            {% if image %}
-
-            <div>
-                <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}" style="max-width: -webkit-fill-available;">
-            </div>
-            {% endif %}
-            {% if error %}
-            <div>
-                <p>{{error}}</p>
-            </div>
-            {% endif %}
-        </div>
-    </div>
-
 
 <div class="row h-60 p-3 justify-content-center align-items-center">
       <div class="py-4 row w-100 border rounded shaded text-light" style="height: 40rem;">
@@ -173,7 +152,26 @@ body { margin: 0; padding: 0; }
     {% endif %}
   </div>
 </div>
-  <div class="w-100"><a href="backend/" style="display: block; margin:auto;" class="btn btn-info my-3 px-4 py-1 w-25">Search Again</a></div>
+
+<div style="margin-left: .1rem;"class="my-4 py-4 row w-100 border rounded shaded text-light">
+  <div class="col-md-12 tsne">
+      {% if q %}
+      <h3> Words with meaning similar to '{{q}}'</h3>
+      {% endif %}
+      {% if image %}
+
+      <div>
+          <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}" style="max-width: -webkit-fill-available;">
+      </div>
+      {% endif %}
+      {% if error %}
+      <div>
+          <p>{{error}}</p>
+      </div>
+      {% endif %}
+  </div>
+</div>
+  <div class="w-100"><a href="backend/" style="display: block; margin:auto;" class="btn btn-info my-3 px-4 py-1 w-25 h-75">Search Again</a></div>
 
 <div  class="divider" style="height: 2rem; margin:auto; display:block;"></div>
 
@@ -254,9 +252,6 @@ body { margin: 0; padding: 0; }
 
 </div>
 
-
-
-</div>
 
 
 

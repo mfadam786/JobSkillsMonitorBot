@@ -46,4 +46,6 @@ class Job_Language_Count_Completed(models.Model):
     language = models.TextField(max_length=50, default="")
     count = models.IntegerField(default=0)
 
+class Frameworks(models.Model):
+    framework = models.TextField(max_length=100, default="")
 

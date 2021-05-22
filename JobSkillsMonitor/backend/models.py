@@ -49,3 +49,14 @@ class Job_Language_Count_Completed(models.Model):
 class Frameworks(models.Model):
     framework = models.TextField(max_length=100, default="")
 
+
+class Frameword_Listing_Count(models.Model):
+    listing = models.ForeignKey("Listing", on_delete=models.CASCADE)
+    framework = models.ForeignKey("Frameworks", on_delete=models.CASCADE)
+
+class SoftSkills(models.Model):
+    softskill = models.TextField(max_length=100, default="")
+
+class SoftSkills_Listing_Count(models.Model):
+    listings = models.ForeignKey("Listing", on_delete=models.CASCADE)
+    softskill = models.ForeignKey("SoftSkills", on_delete=models.CASCADE) 

@@ -72,15 +72,10 @@ body { margin: 0; padding: 0; }
           <h5>In-Demand Soft Skills: </h5>
           <p>
             <ol>
-              <li>placeholder box</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              {% for s in softskills %}
+                <li>{{s}}</li>
+              {% endfor %} 
+
             </ol>
           </p>
           </span>

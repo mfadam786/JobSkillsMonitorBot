@@ -260,6 +260,7 @@ def search(request):
 
         context = {
             'frameworks': frameworks,
+            'softskills': softskills,
             'job_listing': job_listings,
             'searched_job': job_title,
             'job_count': job_count,

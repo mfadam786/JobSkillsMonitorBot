@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count, SoftSkills_Listing_Count
 import pandas as pd
 import numpy as np
 import datetime
@@ -127,19 +127,15 @@ def get_frameworks(request, listings) :
 
 def get_softskills(request, listings) :
     
-    frameworks = [] 
+    softskills = [] 
     for l in listings[:10]:
-        frameworks_obj = Frameword_Listing_Count.objects.filter(listing=l)
+        softskills_obj = SoftSkills_Listing_Count.objects.filter(listings=l)
 
-        for f in frameworks_obj:
-            frameworks.append(f.framework.framework)
+        for s in softskills_obj:
+            softskills.append(s.softskill.softskill)
             
-    frameworks_counted = Counter(frameworks)
-    return(frameworks_counted)
-
-
-
- 
+    softskills_counted = Counter(softskills)
+    return(softskills_counted)
 
 
 
@@ -258,7 +254,7 @@ def search(request):
 
 
         frameworks = get_frameworks(request, job_listings)
-
+        softskills = get_softskills(request, job_listings)
 
 
 

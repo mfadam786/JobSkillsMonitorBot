@@ -51,15 +51,11 @@ body { margin: 0; padding: 0; }
           <h5>In-Demand Frameworks: </h5>
           <p>
             <ol>
-              <li>placeholder box</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              {% for f in frameworks %}
+                <li>{{f}}</li>
+
+              {% endfor %}
+
             </ol>
           </p>
           </span>

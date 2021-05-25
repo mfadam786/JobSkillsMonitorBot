@@ -114,21 +114,9 @@ def get_language_count(request, listings):
 
 
 def get_frameworks(request, listings) :
-    # print(listings[0])
 
-    # first_listing = listings[0]
     frameworks = [] 
-    
-    # frameworks = Frameword_Listing_Count.objects.filter(listing=listings[2])
-    # for l in listings:
-    #     frameworks = Frameword_Listing_Count.objects.filter(listing=l.id)
-    #     print(frameworks)
 
-    # while(frameworks.length < 9):
-    #     temp_frameworks = Frameword_Listing_Count.objects.filter(listing=listings[0])
-
-
-    # if(not frameworks):
 
     for l in listings[:10]:
         frameworks_obj = Frameword_Listing_Count.objects.filter(listing=l)
@@ -138,18 +126,11 @@ def get_frameworks(request, listings) :
             
     frameworks_counted = Counter(frameworks)
 
-    # print(frameworks_counted)
 
     return(frameworks_counted)
 
 
-        
-    # print(frameworks)
-    # for f in frameworks:
-    #     print(f.framework.framework)
-
-    # return frameworks
-
+ 
 
 
 

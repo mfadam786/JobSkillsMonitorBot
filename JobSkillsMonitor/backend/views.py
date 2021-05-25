@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count
 import pandas as pd
 import numpy as np
 import datetime
@@ -111,6 +111,30 @@ def get_language_count(request, listings):
             else:
                 language_count[t.language] = 1
     return(language_count)
+
+
+def get_frameworks(request, listings) :
+    print(listings[0])
+
+    # first_listing = listings[0]
+    frameworks = [] 
+    # frameworks = Frameword_Listing_Count.objects.filter(listing=listings[2])
+    for l in listings:
+        frameworks = Frameword_Listing_Count.objects.filter(listing=l.id)
+        print(frameworks)
+
+    # while(frameworks.length < 9):
+    #     temp_frameworks = Frameword_Listing_Count.objects.filter(listing=listings[0])
+
+
+    # if(not frameworks):
+        
+    # print(frameworks)
+
+    # return frameworks
+
+
+
 
 def search(request):
     def getWorkTypeData(listings):
@@ -224,6 +248,12 @@ def search(request):
 
         lang_count = {k:lang_count[k] for k in lang_count}
         job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title')).filter(search='web')
+
+
+        get_frameworks(request, job_listings)
+
+
+
 
         context = {
             'job_listing': job_listings,

@@ -116,8 +116,6 @@ def get_language_count(request, listings):
 def get_frameworks(request, listings) :
 
     frameworks = [] 
-
-
     for l in listings[:10]:
         frameworks_obj = Frameword_Listing_Count.objects.filter(listing=l)
 
@@ -125,9 +123,20 @@ def get_frameworks(request, listings) :
             frameworks.append(f.framework.framework)
             
     frameworks_counted = Counter(frameworks)
-
-
     return(frameworks_counted)
+
+def get_softskills(request, listings) :
+    
+    frameworks = [] 
+    for l in listings[:10]:
+        frameworks_obj = Frameword_Listing_Count.objects.filter(listing=l)
+
+        for f in frameworks_obj:
+            frameworks.append(f.framework.framework)
+            
+    frameworks_counted = Counter(frameworks)
+    return(frameworks_counted)
+
 
 
  

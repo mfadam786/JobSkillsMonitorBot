@@ -102,7 +102,7 @@ body { margin: 0; padding: 0; }
 
 <div class="row h-60 p-3 justify-content-center align-items-center">
       <div class="py-4 row w-100 border rounded shaded text-light" style="height: 40rem;">
-      <div class="col-md-5" style="max-height: 100%;">
+      <div class="col-md-5" style="max-height: 100%; min-height: 60%;">
           <div id="map"></div>
           <div id="menu">
             <input id="mapbox/satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
@@ -124,7 +124,7 @@ body { margin: 0; padding: 0; }
       <div class="col-md-7" style="max-height: 100%;">
           {% if regional_job_count_data_display %}
           <div id="container" class="py-5" style="width: 100%; margin:auto;">
-            <canvas id="pie-chart2" class="my-5"></canvas>
+            <canvas id="pie-chart2"></canvas>
           </div>
         {% else %}
               <p>There is no regional_job_count data matching your search criteria</p>
@@ -133,7 +133,7 @@ body { margin: 0; padding: 0; }
     </div>   
   </div>
   <div class="row h-60 p-3 justify-content-center align-items-center">
-    <div class="py-4 row w-100 border rounded shaded text-light" style="height: 35rem;">
+    <div class="py-4 row w-100 border rounded shaded text-light" style="max-height: 35rem;">
     {% if work_type_data_display %}
       <div id="container" style="width: 75%; margin:auto;">
         <canvas id="pie-chart1" class="mb-4"></canvas>

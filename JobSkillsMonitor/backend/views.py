@@ -285,7 +285,7 @@ def search(request):
             'lang_count': lang_count
         }
 
-        model = Word2Vec.load("../scaper/models/word2vec_bi_updated.model")
+        model = Word2Vec.load("../scaper/models/word2vec_bi_manual_cb.model")
 
         q = job_title
 
@@ -296,14 +296,14 @@ def search(request):
 
 
 
-        if word in model.wv.vocab:
-            arr = np.empty((0, 50), dtype='f')
+        if word in model.wv.key_to_index.keys():
+            arr = np.empty((0, 100), dtype='f')
             word_labels = [word]
 
-            close_words = model.similar_by_word(word)
-            arr = np.append(arr, np.array([model[word]]), axis=0)
+            close_words = model.wv.most_similar(word)
+            arr = np.append(arr, np.array([model.wv[word]]), axis=0)
             for wrd_score in close_words:
-                wrd_vector = model[wrd_score[0]]
+                wrd_vector = model.wv[wrd_score[0]]
                 word_labels.append(wrd_score[0])
                 arr = np.append(arr, np.array([wrd_vector]), axis=0)
 

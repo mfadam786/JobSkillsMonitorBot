@@ -22,7 +22,7 @@ def
 # print(all_entries)
 
 
-# csv_data = pd.read_csv('../scaper/data/cleaned/soft_skills.csv')
+# csv_data = pd.read_csv('../scaper/data/cleaned/soft_skills_glove_twitter_200_clean.csv')
 
 # targers = ['softskills']
 

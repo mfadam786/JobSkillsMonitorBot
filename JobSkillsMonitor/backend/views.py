@@ -297,37 +297,24 @@ def search(request):
 
 
         if word in model.wv.key_to_index.keys():
-            arr = np.empty((0, 100), dtype='f')
-            word_labels = [word]
 
-            close_words = model.wv.most_similar(word)
-            arr = np.append(arr, np.array([model.wv[word]]), axis=0)
-            for wrd_score in close_words:
-                wrd_vector = model.wv[wrd_score[0]]
-                word_labels.append(wrd_score[0])
-                arr = np.append(arr, np.array([wrd_vector]), axis=0)
+            # todo
+            # please insert a call here to database to retreive all framework names and all lanuage names
 
-            tsne = TSNE(n_components=2, random_state=42)
-            np.set_printoptions(suppress=True)
-            Y = tsne.fit_transform(arr)
-            x_coords = Y[:, 0]
-            y_coords = Y[:, 1]
-            plt.scatter(x_coords, y_coords)
-            for label, x, y in zip(word_labels, x_coords, y_coords):
-                plt.annotate(label, xy=(x, y), xytext=(0, 0), textcoords='offset points')
-                plt.xlim(x_coords.min() + 0.00005, x_coords.max() + 0.00005)
-                plt.ylim(y_coords.min() + 0.00005, y_coords.max() + 0.00005)
+            # framework_names =
+            # language_names =
 
-            fig = plt.gcf()
-            buff = io.BytesIO()
-            fig.savefig(buff, format="png")
 
-            buff.seek(0)
-            string = base64.b64encode(buff.read())
 
-            context["image"] = 'data:image/png;base64,' + urllib.parse.quote(string)
+            close_words = model.wv.most_similar('word', topn=100)
 
-            plt.clf()
+            # for i in range(len(close_words)):
+            #     word = close_words[i]
+            #     if word in framework_names or word in language_names:
+            #         del close_words[i]
+
+            context["close_words"] = close_words[:10]
+
 
         else:
             context["error"] = "error that word is not in the vocabulary"

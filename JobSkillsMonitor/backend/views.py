@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count, SoftSkills_Listing_Count
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count, SoftSkills_Listing_Count, Frameworks
 import pandas as pd
 import numpy as np
 import datetime
@@ -298,22 +298,24 @@ def search(request):
 
         if word in model.wv.key_to_index.keys():
 
-            # todo
-            # please insert a call here to database to retreive all framework names and all lanuage names
 
-            # framework_names =
-            # language_names =
+            framework_names = [x["framework"].lower() for x in Frameworks.objects.all().values()]
 
+            language_names = [x["language"].lower() for x in Languages.objects.all().values()]
 
 
-            close_words = model.wv.most_similar('word', topn=100)
+            close_words = [x[0] for x in model.wv.most_similar('word', topn=100)]
 
-            # for i in range(len(close_words)):
-            #     word = close_words[i]
-            #     if word in framework_names or word in language_names:
-            #         del close_words[i]
 
-            context["close_words"] = close_words[:10]
+            good_words = []
+            for word in close_words:
+
+                if word not in framework_names or word in language_names:
+                    good_words.append(word)
+                if len(good_words) == 10:
+                    break
+
+            context["close_words"] = good_words
 
 
         else:

@@ -149,11 +149,29 @@ body { margin: 0; padding: 0; }
       {% if q %}
       <h3> Words commonly associated with '{{q}}'</h3>
       {% endif %}
-      {% if image %}
+      {% if close_words %}
 
-      <div>
-          <img id="tsne_res"  class="my-3" alt="tsne cluster" src="{{ image }}" style="max-width: -webkit-fill-available;">
+    <div class="center-content col-lg-4">
+
+      <div class="pl-1 mt-3">
+        <div class="card mt-3 bg-info">
+          <div class="card-body"><span style="color: black">
+
+          <p>
+            <ol>
+              {% for f in close_words %}
+                <li>{{f}}</li>
+
+              {% endfor %}
+
+            </ol>
+          </p>
+          </span>
+          </div>
+        </div>
       </div>
+
+    </div>
       {% endif %}
       {% if error %}
       <div>

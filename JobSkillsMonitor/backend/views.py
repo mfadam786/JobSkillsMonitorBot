@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count, SoftSkills_Listing_Count
+from .models import Listing, Languages, Job_Types, Job_Type_Language_Count, Job_Pay, Job_Language_Count, Job_Language_Count_Completed, Frameword_Listing_Count, SoftSkills_Listing_Count, Frameworks
 import pandas as pd
 import numpy as np
 import datetime
@@ -297,37 +297,26 @@ def search(request):
 
 
         if word in model.wv.key_to_index.keys():
-            arr = np.empty((0, 100), dtype='f')
-            word_labels = [word]
 
-            close_words = model.wv.most_similar(word)
-            arr = np.append(arr, np.array([model.wv[word]]), axis=0)
-            for wrd_score in close_words:
-                wrd_vector = model.wv[wrd_score[0]]
-                word_labels.append(wrd_score[0])
-                arr = np.append(arr, np.array([wrd_vector]), axis=0)
 
-            tsne = TSNE(n_components=2, random_state=42)
-            np.set_printoptions(suppress=True)
-            Y = tsne.fit_transform(arr)
-            x_coords = Y[:, 0]
-            y_coords = Y[:, 1]
-            plt.scatter(x_coords, y_coords)
-            for label, x, y in zip(word_labels, x_coords, y_coords):
-                plt.annotate(label, xy=(x, y), xytext=(0, 0), textcoords='offset points')
-                plt.xlim(x_coords.min() + 0.00005, x_coords.max() + 0.00005)
-                plt.ylim(y_coords.min() + 0.00005, y_coords.max() + 0.00005)
+            framework_names = [x["framework"].lower() for x in Frameworks.objects.all().values()]
 
-            fig = plt.gcf()
-            buff = io.BytesIO()
-            fig.savefig(buff, format="png")
+            language_names = [x["language"].lower() for x in Languages.objects.all().values()]
 
-            buff.seek(0)
-            string = base64.b64encode(buff.read())
 
-            context["image"] = 'data:image/png;base64,' + urllib.parse.quote(string)
+            close_words = [x[0] for x in model.wv.most_similar('word', topn=100)]
 
-            plt.clf()
+
+            good_words = []
+            for word in close_words:
+
+                if word not in framework_names or word in language_names:
+                    good_words.append(word)
+                if len(good_words) == 10:
+                    break
+
+            context["close_words"] = good_words
+
 
         else:
             context["error"] = "error that word is not in the vocabulary"

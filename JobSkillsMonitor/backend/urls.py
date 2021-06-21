@@ -11,7 +11,7 @@ urlpatterns = [
     
     path('results', views.results, name="results"),
     path('search', views.search, name="search"),
-    path('test_maps/regions', views.test_maps_regions, name='test_maps_regions'),
+    # path('test_maps/regions', views.test_maps_regions, name='test_maps_regions'),
     path("tsne", views.tsne_search, name="tsne")
 
 ]

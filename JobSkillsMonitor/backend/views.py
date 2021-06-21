@@ -28,23 +28,23 @@ import os
 def index(request):
     return render(request, 'backend/index.html')
 
-def test_maps_regions(request):
+# def test_maps_regions(request):
 
-    languages = Languages.objects.all().values()
-    # print(languages)
+#     languages = Languages.objects.all().values()
+#     # print(languages)
     
-    # results = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search='C#')
+#     # results = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search='C#')
 
-    # print(len(results))
-    # print(results[0].data)
-    # print(results.objects.annotate(search=SearchVector('data')).filter(search='Web developer'))
-    # for result in results:
-    count = {}
-    for l in languages[:10]:
-        result = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search=l['language'])
+#     # print(len(results))
+#     # print(results[0].data)
+#     # print(results.objects.annotate(search=SearchVector('data')).filter(search='Web developer'))
+#     # for result in results:
+#     count = {}
+#     for l in languages[:10]:
+#         result = Listing.objects.annotate(search=SearchVector('data')).filter(search='Web developer').annotate(search=SearchVector('data')).filter(search=l['language'])
 
     
-    return render(request, 'backend/test.html', {'count': count})
+#     return render(request, 'backend/test.html', {'count': count})
 
 def get_job_locations(request, listings):
 
@@ -145,8 +145,13 @@ def get_softskills(request, listings) :
     return(new_shortened_softskills_counted_list)
 
 
+import time
+
 
 def search(request):
+    
+    start = time.time()
+
     def getWorkTypeData(listings):
         display = False
         labels = []
@@ -228,7 +233,7 @@ def search(request):
         
         for word in job_title.split(' '):
             jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word)
-            jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word).annotate(search=SearchVector('data')).filter(search='C#')
+            jobs += Listing.objects.annotate(search=SearchVector('job_title')).filter(search=word).annotate(search=SearchVector('data'))
 
             
         for job in jobs:
@@ -257,7 +262,7 @@ def search(request):
         lang_count = get_language_count(request, job_listings)
 
         lang_count = {k:lang_count[k] for k in lang_count}
-        job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title')).filter(search='web')
+        job_pay = Job_Pay.objects.annotate(search=SearchVector('job_title'))
 
 
         frameworks = get_frameworks(request, job_listings)
@@ -327,6 +332,9 @@ def search(request):
 
 
 
+        end = time.time()
+        print(end - start)
+        
         return render(request, template_name, context)
 
 def tsne_search(request):

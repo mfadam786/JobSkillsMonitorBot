@@ -56,7 +56,7 @@ for i in scraped_df["sent_tokens"].values:
 bigram = Phrases(sent_corp, min_count=25)
 
 a_words = ["senior", "junior", "intermediate", "beginner", "database", "data", "web", "frontend", "backend", "fullstack",
-           "security", "software", "marketing", "programming", "developement", "product","technology", "advanced",
+           "security", "software", "marketing", "programming", "development", "product","technology", "advanced",
            "scientific", "research" ]
 
 b_words="""engineer
